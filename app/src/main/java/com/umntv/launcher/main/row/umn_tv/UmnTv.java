@@ -13,6 +13,8 @@ public class UmnTv {
     public static final String TITLE_MEDIA_CENTER = "MEDIA CENTER";
     public static final String TITLE_DOWNLOAD_CENTER = "DOWNLOAD CENTER";
     public static final String TITLE_APP_DRAWER = "APP DRAWER";
+    public static final String TITLE_REMOTE_SUPPORT = "REMOTE SUPPORT";
+    public static final String TITLE_PRELOAD_TV = "PRELOAD TV";
 
     private static final List<UmnTvCard> umnTvCards = new ArrayList<>();
 
@@ -21,10 +23,10 @@ public class UmnTv {
             String[] title = {
                     "UNIVERSAL MEDIA",
                     TITLE_MEDIA_CENTER,
-                    "NETWORK",
+                    TITLE_REMOTE_SUPPORT,
+                    TITLE_PRELOAD_TV,
+                    TITLE_APP_DRAWER,
                     TITLE_DOWNLOAD_CENTER,
-                    TITLE_FAQ,
-                    TITLE_APP_DRAWER
             };
             String[] apkLinkDownload = {
                     "https://umntv.net/UMNTV/UMN LIVE [2.7.0] 100.apk",
@@ -32,23 +34,23 @@ public class UmnTv {
                     null,
                     null,
                     null,
-                    null
+                    null,
             };
             String[] link = {
                     null,
                     null,
-                    "https://umntvdealers.net/?page_id=34",
                     null,
                     null,
-                    null
+                    null,
+                    null,
             };
             int[] cardImage = {
                     R.drawable.umn_tv_ic_live_tv,
                     R.drawable.umn_tv_ic_media_center,
-                    R.drawable.umn_tv_ic_network,
+                    R.drawable.ic_utilities_remote_support,
+                    R.drawable.ic_utilities_preload_tv_new,
+                    R.drawable.ic_apps_app_drawer,
                     R.drawable.umn_tv_ic_download_center,
-                    R.drawable.umn_tv_ic_movies_and_series,
-                    R.drawable.ic_apps_app_drawer
             };
             String[] packageName = {
                     "ar.tvplayer.tv",
@@ -56,15 +58,15 @@ public class UmnTv {
                     null,
                     null,
                     null,
-                    null
+                    null,
             };
             String[] backgroundImageUrl = {
                     ResourceHelpers.toStringUri(R.drawable.ic_umn_tv_live_tv_banner),
                     ResourceHelpers.toStringUri(R.drawable.ic_umn_tv_media_center_bg_dark),
-                    ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_network),
+                    ResourceHelpers.toStringUri(R.drawable.ic_utilities_bg),
+                    ResourceHelpers.toStringUri(R.drawable.ic_utilities_bg),
+                    ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
                     ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_download_center),
-                    ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_movies_and_series),
-                    ResourceHelpers.toStringUri(R.drawable.ic_apps_banner)
             };
 
             for (int index = 0; index < title.length; ++index) {

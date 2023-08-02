@@ -1,11 +1,2 @@
-rootProject.name = "Mate Launcher ( media.umn.tv )"
+rootProject.name = "UMN_LAUNCHER ( com.umntv.launcher )"
 include ":app"
-
-/**
- * https://docs.gradle.org/current/userguide/build_cache.html
- */
-buildCache {
-    local {
-        directory = new File("${rootDir}/.gradle", "build-cache")
-    }
-}

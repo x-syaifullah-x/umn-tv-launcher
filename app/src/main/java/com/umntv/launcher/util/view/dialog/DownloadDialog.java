@@ -125,17 +125,15 @@ public abstract class DownloadDialog extends AbstractDownload {
         checkNullFileOutputStream(fileOutputStream);
         fileOutputStream.write(currentData, 0, count);
         handler.post(() -> {
-            try {
-                int progressInPercent = Integer.parseInt(String.valueOf((currentSize * 100) / length));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    progressBar.setProgress(progressInPercent, true);
-                } else {
-                    progressBar.setProgress(progressInPercent);
-                }
-            } catch (Throwable t) {
-                t.printStackTrace();
+            int progressInPercent = Integer.parseInt(String.valueOf((currentSize * 100) / length));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                progressBar.setProgress(progressInPercent, true);
+            } else {
+                progressBar.setProgress(progressInPercent);
             }
+        });
 
+        handler.post(() -> {
             String progressInMegaByte = Convert.toMegaByteString(currentSize);
             tvProgressDownload.setText(progressInMegaByte);
         });

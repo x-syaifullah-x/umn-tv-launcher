@@ -120,7 +120,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_adjust_screen" />
 
-        <ImageButton
+<ImageButton
             android:id="@+id/account_profile"
             android:layout_width="@dimen/settings_item_width"
             android:layout_height="@dimen/settings_item_width"
@@ -132,6 +132,7 @@
             android:padding="@dimen/settings_item_padding"
             android:scaleType="centerCrop"
             android:src="@drawable/title_account_profile" />
+
     </LinearLayout>
 
     <LinearLayout

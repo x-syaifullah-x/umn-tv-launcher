@@ -25,7 +25,6 @@ import com.umntv.launcher.constant.AppBuild;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.DialogPassword;
-import com.umntv.launcher.main.row.games.umn_games.DataSource;
 
 import java.util.List;
 
@@ -107,19 +106,19 @@ public class BaseDetailFragment extends DetailsSupportFragment {
             ApkData apkData = overviewItem.apkData;
 
             /* SPECIAL ACTION */
-            if (apkData.url.contains(DataSource.ADB_REMOTE_COMMAND)) {
-                String[] a = apkData.url.split("=");
-                String command = a[0];
-                String url = a[1];
-                ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("command", command);
-                clipboard.setPrimaryClip(clip);
-                Toast.makeText(getContext(), "Successfully copy link", Toast.LENGTH_LONG).show();
-                openOrDownload(
-                        new ApkData(url, apkData.packageName, false)
-                );
-                return;
-            }
+//            if (apkData.url.contains(DataSource.ADB_REMOTE_COMMAND)) {
+//                String[] a = apkData.url.split("=");
+//                String command = a[0];
+//                String url = a[1];
+//                ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//                ClipData clip = ClipData.newPlainText("command", command);
+//                clipboard.setPrimaryClip(clip);
+//                Toast.makeText(getContext(), "Successfully copy link", Toast.LENGTH_LONG).show();
+//                openOrDownload(
+//                        new ApkData(url, apkData.packageName, false)
+//                );
+//                return;
+//            }
 
             if (apkData.isPrivate) {
                 new DialogPassword(requireContext(), AppBuild.PASSWORD_PRIVATE_CONTENT)

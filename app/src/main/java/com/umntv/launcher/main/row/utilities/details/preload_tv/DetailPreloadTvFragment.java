@@ -21,7 +21,6 @@ import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
 import media.umn.tv.R;
-
 import com.umntv.launcher.util.view.dialog.Download;
 
 public class DetailPreloadTvFragment extends DetailsSupportFragment {
@@ -68,17 +67,17 @@ public class DetailPreloadTvFragment extends DetailsSupportFragment {
     }
 
     private final String[][] data = new String[][]{
-//            {"Standard", "https://drive.google.com/uc?export=download&id=17AUtwlkvtz-c9W9BbA-mZaOVA6ZVu9Wm"},
-//            {"UNIVERSAL", "https://drive.google.com/uc?export=download&id=1ALtxZ1SIn5tIYLU4gpt4epQNHn0qDubA"},
-//            {"DOMESTIC", "https://drive.google.com/uc?export=download&id=1Teu5bZ8jpxZvHyOvet3uqWbtIrsNnBIH"},
-//            {"CUSTOMER 1", "https://drive.google.com/uc?export=download&id=1kUA69jkju6v8lbPw9IymyFUNQMhHAlqB"},
-//            {"CUSTOMER 2", "https://drive.google.com/uc?export=download&id=1OcZAtM3kT17qPiNad63PDB8s7h7yXW_b"},
+//            {"PRELOAD 1", "https://drive.google.com/uc?export=download&id=1dD2HL8J3t-iV75SfuG_cw79WDklZ11pZ"},
+//            {"PRELOAD 2", "https://drive.google.com/uc?export=download&id=1inWdqZIC7hRTkSFfP5aGoT7QabG2hPWA"},
+//            {"PRELOAD 3", "https://drive.google.com/uc?export=download&id=10hZdOjjUk3tnZN8fcGp9q3cb2wUX8w0i"},
+//            {"PRELOAD 4", "https://drive.google.com/uc?export=download&id=1TyPVgq2WmnnCt-4ObZAtsNBEomGUPEsP"},
+//            {"PRELOAD 5", "https://drive.google.com/uc?export=download&id=1ELtZMRFNZ3rHclJwHS_NvUT-Jrst5rP9"},
 
-            {"Standard", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Standard%20-%20Copy.txt"},
-            {"UNIVERSAL", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Universal%20-%20Copy.txt"},
-            {"DOMESTIC", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Domestic%20-%20Copy.txt"},
-            {"CUSTOMER 1", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Custom%201%20-%20Copy.txt"},
-            {"CUSTOMER 2", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Customer%202.txt"},
+            {"Standard", "https://drive.google.com/uc?export=download&id=17AUtwlkvtz-c9W9BbA-mZaOVA6ZVu9Wm"},
+            {"UNIVERSAL", "https://drive.google.com/uc?export=download&id=1ALtxZ1SIn5tIYLU4gpt4epQNHn0qDubA"},
+            {"DOMESTIC", "https://drive.google.com/uc?export=download&id=1Teu5bZ8jpxZvHyOvet3uqWbtIrsNnBIH"},
+            {"CUSTOMER 1", "https://drive.google.com/uc?export=download&id=1kUA69jkju6v8lbPw9IymyFUNQMhHAlqB"},
+            {"CUSTOMER 2", "https://drive.google.com/uc?export=download&id=1OcZAtM3kT17qPiNad63PDB8s7h7yXW_b"},
     };
 
     private void setupDetailsOverviewRowPresenter() {

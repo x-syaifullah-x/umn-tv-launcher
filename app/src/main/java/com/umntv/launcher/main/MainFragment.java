@@ -37,25 +37,8 @@ import com.bumptech.glide.request.transition.Transition;
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardPresenter;
 import com.umntv.launcher.base.CardVisitor;
-import com.umntv.launcher.main.row.ads.Ads;
-import com.umntv.launcher.main.row.ads.AdsCard;
-import com.umntv.launcher.main.row.apps.Apps;
-import com.umntv.launcher.main.row.asian_media.AsianMedia;
-import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
-import com.umntv.launcher.main.row.games.Games;
-import com.umntv.launcher.main.row.games.GamesCardApp;
-import com.umntv.launcher.main.row.kids.Kids;
-import com.umntv.launcher.main.row.kids.KidsCard;
-import com.umntv.launcher.main.row.movies_apps.MoviesApps;
-import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
-import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
-import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
-import com.umntv.launcher.main.row.radio.Radio;
-import com.umntv.launcher.main.row.radio.RadioCard;
 import com.umntv.launcher.main.row.umn_tv.UmnTv;
 import com.umntv.launcher.main.row.umn_tv.UmnTvCard;
-import com.umntv.launcher.main.row.utilities.Utilities;
-import com.umntv.launcher.main.row.utilities.UtilitiesCard;
 import com.umntv.launcher.service.AccessService;
 import com.umntv.launcher.util.Admob;
 import com.umntv.launcher.util.Preference;
@@ -88,7 +71,7 @@ public class MainFragment extends BrowseSupportFragment {
     private ImageButton mInfo;
     private ImageButton adjustScreen;
 
-    private ImageButton accountProfile;
+private ImageButton accountProfile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,7 +81,7 @@ public class MainFragment extends BrowseSupportFragment {
         setupUIElements();
         loadRows();
         setupEventListeners();
-        Admob.setup(requireActivity().findViewById(R.id.adView));
+        setupGoogleAdMob();
     }
 
     @Override
@@ -132,62 +115,17 @@ public class MainFragment extends BrowseSupportFragment {
     private void loadRows() {
         if (rowsAdapter.size() == 0) {
             addUmnTvRow();
-            addNewsRow();
-            addKidsRow();
-            addGamesRow();
-            addRadioRow();
-            addAsianMediaRow();
-            addAppsRow();
-            addUtilitiesRow();
-            addAdsRow();
-            addSupportRow();
+//            addNewsRow();
+//            addKidsRow();
+//            addGamesRow();
+//            addRadioRow();
+//            addAsianMediaRow();
+//            addAppsRow();
+//            addUtilitiesRow();
+//            addAdsRow();
+//            addSupportRow();
             setAdapter(rowsAdapter);
         }
-    }
-
-    private void addSupportRow() {
-        List<MoviesAppsCard> list = MoviesApps.setup(requireContext());
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.auto_payment));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAsianMediaRow() {
-        List<AsianMediaCard> list = AsianMedia.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.asian_series));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addRadioRow() {
-        List<RadioCard> list = Radio.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.radio));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addGamesRow() {
-        List<GamesCardApp> list = Games.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.games));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addKidsRow() {
-        List<KidsCard> list = Kids.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.kids));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
     }
 
     private void addUmnTvRow() {
@@ -196,42 +134,6 @@ public class MainFragment extends BrowseSupportFragment {
         listRowAdapter.addAll(0, list);
 
         HeaderItem header = new HeaderItem(getString(R.string.umn));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addNewsRow() {
-        List<NewsMediaModel> list = NewsOrMediaRepository.getItems();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-        HeaderItem header = new HeaderItem(0, getString(R.string.news));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addUtilitiesRow() {
-        List<UtilitiesCard> list = Utilities.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.utility));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAppsRow() {
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-
-        List<Card> list = Apps.setup();
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(2, getString(R.string.app));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAdsRow() {
-        List<AdsCard> list = Ads.setupAds();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(1, getString(R.string.image));
         rowsAdapter.add(new ListRow(header, listRowAdapter));
     }
 
@@ -264,6 +166,10 @@ public class MainFragment extends BrowseSupportFragment {
         setOnItemViewSelectedListener(new ItemViewSelectedListener());
     }
 
+    private void setupGoogleAdMob() {
+        Admob.setup(requireActivity().findViewById(R.id.adView));
+    }
+
     private void refreshRows() {
         for (int i = 0; i < getAdapter().size(); i++) {
             ListRow listRow = ((ListRow) getAdapter().get(i));
@@ -282,7 +188,7 @@ public class MainFragment extends BrowseSupportFragment {
         mInfo = requireActivity().findViewById(R.id.info);
         mNetPlusTv = requireActivity().findViewById(R.id.net_plus_tv);
         adjustScreen = requireActivity().findViewById(R.id.adjust_screen);
-        accountProfile = requireActivity().findViewById(R.id.account_profile);
+accountProfile = requireActivity().findViewById(R.id.account_profile);
     }
 
     private void linkEventListeners() {
@@ -310,7 +216,6 @@ public class MainFragment extends BrowseSupportFragment {
 //            Intent i = new Intent(Intent.ACTION_VIEW);
 //            i.setData(Uri.parse(link));
 //            startActivity(i);
-            @SuppressWarnings("SpellCheckingInspection")
             String packageName = "com.netflix.Speedtest";
             Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
             if (launchIntent != null) {
@@ -340,9 +245,20 @@ public class MainFragment extends BrowseSupportFragment {
             promptClean();
         });
 
-        accountProfile.setOnClickListener(v -> {
+accountProfile.setOnClickListener(v -> {
             promptAccountProfile();
         });
+    }
+
+private void promptAccountProfile() {
+        @SuppressWarnings("SpellCheckingInspection")
+        String packageName = "com.doc.paymentchecker";
+        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+        if (launchIntent != null) {
+            requireActivity().startActivity(launchIntent);
+        } else {
+            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntv.net/UMNTV/UMNXPD.apk");
+        }
     }
 
     private void workaroundFocus() {
@@ -440,7 +356,6 @@ public class MainFragment extends BrowseSupportFragment {
 //    }
 
     private void promptNetPlusTv() {
-        @SuppressWarnings("SpellCheckingInspection")
         String packageName = "com.teamviewer.quicksupport.market";
         Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
         if (launchIntent != null) {
@@ -451,7 +366,6 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void promptSounds() {
-        @SuppressWarnings("SpellCheckingInspection")
         String packageName = "mobi.omegacentauri.SpeakerBoost";
         Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
         if (launchIntent != null) {
@@ -497,17 +411,6 @@ public class MainFragment extends BrowseSupportFragment {
     private void promptClean() {
         Intent intent = new Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
         startActivity(intent);
-    }
-
-    private void promptAccountProfile() {
-        @SuppressWarnings("SpellCheckingInspection")
-        String packageName = "com.doc.paymentchecker";
-        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-        if (launchIntent != null) {
-            requireActivity().startActivity(launchIntent);
-        } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntv.net/UMNTV/UMNXPD.apk");
-        }
     }
 
     private boolean isAccessibilitySettingsOn(Context context) {

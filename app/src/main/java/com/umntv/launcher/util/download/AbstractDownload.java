@@ -173,7 +173,7 @@ abstract public class AbstractDownload {
             t.printStackTrace();
             ErrorResponse e = new ErrorResponse(t);
             InputStream errorInputStream = conn.getErrorStream();
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
             try {
                 byte[] data = new byte[1024];
@@ -181,16 +181,16 @@ abstract public class AbstractDownload {
                 int count;
                 while ((count = errorInputStream.read(data)) != -1) {
                     size += count;
-                    byteArrayOutputStream.write(data, 0, size);
+                    baos.write(data, 0, size);
                 }
             } catch (IOException ee) {
                 e.printStackTrace();
             } finally {
-                CloseableHelper.close(byteArrayOutputStream);
+                CloseableHelper.close(baos);
                 CloseableHelper.close(errorInputStream);
             }
             disconnect();
-            e.msg = byteArrayOutputStream.toString();
+            e.msg = baos.toString();
             onDownloadError(e);
         } finally {
             CloseableHelper.close(is);

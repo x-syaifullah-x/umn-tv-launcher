@@ -18,16 +18,12 @@ import java.util.List;
 
 public class AppDataManage {
 
-    public static List<String> hideApps = List.of(
+    public static List<String> blockApps = List.of(
             AppBuild.APPLICATION_ID,
             "ws.umn.net",  /* WORLD STAR TV IN UMN_TV/MEDIA CENTER */
             "lc.umn.net", /* 18+ LIVE CHAT IN UMN_TV/MEDIA CENTER */
             "jc.umn.net", /* 18+ JADE CHAT IN ASIAN_MEDIA/JADE_CINEMA */
-            "com.tcl.browser" /* BrowseHer */,
-            "com.doc.paymentchecker",
-            "com.teamviewer.quicksupport.market",
-            "mobi.omegacentauri.SperkerBoost",
-            "com.ndcsolution.androidtv.leankeykeyboard"
+            "com.tcl.browser" /* BrowseHer */
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {
@@ -64,7 +60,7 @@ public class AppDataManage {
                     e.printStackTrace();
                 }
 
-                if (!hideApps.contains(launchApp.getPackageName())) {
+                if (!blockApps.contains(launchApp.getPackageName())) {
                     launchApps.add(launchApp);
                 }
             }

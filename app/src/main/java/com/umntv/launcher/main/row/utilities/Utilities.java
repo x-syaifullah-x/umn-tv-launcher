@@ -27,7 +27,7 @@ public class Utilities {
         };
 
         String[] title = {
-                "FX FILE EXPLORER",
+                "FX FLIE EXPLORER",
                 "REMOTE SUPPORT",
                 "FTP FILE MANAGER",
                 "SEND FILES TO TV",

@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-    branches: [ MATE-LAUNCHER(media.umn.tv) ]
+    branches: [ MATE-LAUNCHER(media.umn.tv.lite) ]
 #  pull_request:
 #    branches: [ started ]
 

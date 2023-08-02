@@ -7,12 +7,10 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <!--    <uses-permission-->
-    <!--        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"-->
-    <!--        tools:ignore="ProtectedPermissions" />-->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <uses-feature
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    
+<uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
@@ -76,19 +74,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name="com.umntv.launcher.main.row.ads.detail.AdsDetailsActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
             android:name="com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name="com.umntv.launcher.main.row.radio.detail.RadioDetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity
@@ -97,17 +83,8 @@
             android:theme="@style/Theme.AppDrawer" />
 
         <activity
-            android:name="com.umntv.launcher.play.PlaybackActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
             android:name="com.umntv.launcher.main.row.apps.app_drawer.error.BrowseErrorActivity"
             android:screenOrientation="landscape" />
-
-        <activity
-            android:name="com.umntv.launcher.play.PlayActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.FullScreen" />
 
         <service
             android:name="com.umntv.launcher.service.AccessService"
@@ -134,7 +111,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/google_sdk_key" />
+            android:value="ca-app-pub-6893234291134320~2749684827" />
 
         <meta-data
             android:name="applovin.sdk.key"

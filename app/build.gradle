@@ -92,9 +92,9 @@ dependencies {
 
     testImplementation "junit:junit:$vJunit"
     testImplementation "org.mockito:mockito-core:$vMockito"
-    testImplementation "org.mockito:mockito-inline:$vMockitoInline"
+    testImplementation "org.mockito:mockito-inline:$vMockito"
 
-    androidTestImplementation "androidx.test:rules:$vAndroidxTestRules"
-    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxTestExtJunit"
+    androidTestImplementation "androidx.test:rules:$vAndroidxTest"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxEspresso"
 }
