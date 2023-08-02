@@ -2,7 +2,7 @@
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our newsMediaModel](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the newsMediaModel in a new tab to avoid leaving Bitbucket.*
+*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our newsCard](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the newsCard in a new tab to avoid leaving Bitbucket.*
 
 ---
 

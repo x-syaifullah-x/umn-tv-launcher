@@ -10,18 +10,15 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
+        applicationId build_versions.application_id
         minSdk build_versions.min_sdk
         targetSdk build_versions.target_sdk
-        versionCode build_versions.code
-        versionName build_versions.name
+        versionCode build_versions.version_code
+        versionName build_versions.version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         resConfigs "en"
-    }
-
-    buildFeatures {
-        buildConfig true
     }
 
     signingConfigs {
@@ -69,8 +66,8 @@ android {
         exclude "kotlin-tooling-metadata.json"
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
     }
 }
 
@@ -92,9 +89,9 @@ dependencies {
 
     testImplementation "junit:junit:$vJunit"
     testImplementation "org.mockito:mockito-core:$vMockito"
-    testImplementation "org.mockito:mockito-inline:$vMockitoInline"
+    testImplementation "org.mockito:mockito-inline:$vMockito"
 
-    androidTestImplementation "androidx.test:rules:$vAndroidxTestRules"
-    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxTestExtJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxEspresso"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxJunit"
+    androidTestImplementation "androidx.test:rules:$vAndroidxTest"
 }

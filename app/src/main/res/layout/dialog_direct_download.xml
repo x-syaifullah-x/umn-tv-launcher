@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_umn_tv_download_center_new"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:gravity="bottom"
+    android:nextFocusLeft="@id/btn_cancel"
+    android:nextFocusRight="@id/btn_cancel"
+    android:nextFocusUp="@id/btn_cancel"
+    android:nextFocusDown="@id/btn_cancel"
     android:orientation="vertical"
     android:padding="30dp"
     android:theme="@style/Theme.AppCompat.DayNight">
@@ -65,14 +72,18 @@
         android:progressTint="#ffff"
         tools:progress="50" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:elevation="2dp"
         android:background="@drawable/selector_download"
+        android:elevation="2dp"
+        android:nextFocusLeft="@id/root"
+        android:nextFocusRight="@id/root"
+        android:nextFocusUp="@id/root"
+        android:nextFocusDown="@id/root"
         android:text="Cancel"
         android:textColor="#ffff" />
 </LinearLayout>

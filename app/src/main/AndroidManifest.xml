@@ -3,14 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-    <!--    <uses-permission-->
-    <!--        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"-->
-    <!--        tools:ignore="ProtectedPermissions" />-->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -44,24 +36,24 @@
         android:required="true" />
 
     <application
-        android:name="com.umntv.launcher.App"
+        android:name="x96.mate.launcher.App"
         android:allowBackup="true"
         android:banner="@drawable/banner"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:logo="@mipmap/ic_launcher"
+        android:logo="@drawable/banner"
         android:supportsRtl="true"
         android:theme="@style/Theme.Launcher"
         tools:targetApi="s">
 
         <activity
-            android:name="com.umntv.launcher.main.MainActivity"
+            android:name="x96.mate.launcher.main.MainActivity"
             android:configChanges="orientation"
             android:exported="true"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.Browse">
+            android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,55 +64,42 @@
         </activity>
 
         <activity
-            android:name="com.umntv.launcher.main.DetailsActivity"
+            android:name="x96.mate.launcher.main.DetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity"
+            android:name="x96.mate.launcher.main.row.news.detail.NewsDetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.ads.detail.AdsDetailsActivity"
+            android:name="x96.mate.launcher.main.row.apps.movies_apps.MoviesActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity"
+            android:name="x96.mate.launcher.main.row.utilities.details.UtilitiesDetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.radio.detail.RadioDetailsActivity"
+            android:name="x96.mate.launcher.main.row.radio.detail.RadioDetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.apps.AppsActivity"
+            android:name="x96.mate.launcher.main.row.apps.app_drawer.AppDrawerActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppDrawer" />
 
         <activity
-            android:name="com.umntv.launcher.play.PlaybackActivity"
+            android:name="x96.mate.launcher.play.PlaybackActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.apps.app_drawer.error.BrowseErrorActivity"
+            android:name="x96.mate.launcher.main.row.apps.app_drawer.error.BrowseErrorActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.play.PlayActivity"
+            android:name="x96.mate.launcher.play.PlayActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.FullScreen" />
-
-        <service
-            android:name="com.umntv.launcher.service.AccessService"
-            android:exported="true"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/accessibilityservice" />
-        </service>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -134,10 +113,6 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/google_sdk_key" />
-
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="@string/applovin_sdk_key" />
+            android:value="ca-app-pub-6893234291134320~2749684827" />
     </application>
 </manifest>

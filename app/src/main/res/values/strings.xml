@@ -1,23 +1,31 @@
 <resources>
-    <string name="app_name">MATE LAUNCHER</string>
+    <string name="app_name">TI MATE LAUNCHER</string>
     <string name="related_radio">Related Radio</string>
     <string name="related_news">Related News</string>
-    <string name="related_ads">Related ADS</string>
     <string name="error_fragment">Error Fragment</string>
     <string name="play_video">Play</string>
-    <string name="umn">UMN</string>
+    <string name="play_video_trap_beats_1">Beats Era</string>
+    <string name="play_video_trap_beats_2">KMBeats</string>
+    <string name="play_video_trap_beats_3">ANTHONY LIMIT BEATS</string>
+    <string name="play_video_trap_beats_4">Chuki Beats</string>
+    <string name="play_video_hmong_song_1">Sia Her</string>
+    <string name="play_video_hmong_song_2">Pasoua Vue</string>
+    <string name="play_video_hmong_song_3">Mai Xai Her</string>
+    <string name="play_video_hmong_song_4">Blong Xiong</string>
+    <string name="play_video_thai_lao_karaoke_1">by Tony Sansuk</string>
+    <string name="play_video_thai_lao_karaoke_2">Grammy Gold Official</string>
+    <string name="play_video_thai_lao_karaoke_3">Danko Karaoke</string>
+    <string name="play_video_thai_lao_karaoke_4">LuckyGreenForest</string>
+    <string name="umntv">IPTV</string>
     <string name="kids">KIDS</string>
     <string name="games">GAMES</string>
     <string name="radio">RADIO</string>
     <string name="asian_series">ASIAN MEDIA</string>
-    <string name="auto_payment">MOVIES APPS</string>
     <string name="news">NEWS / MEDIA</string>
     <string name="utility">UTILITIES</string>
-    <string name="image">ADS</string>
     <string name="app">APPS</string>
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>
     <string name="power_off">power off</string>
     <string name="background">https://umntvdealers.net/wordpress/launcher pix/UMNTV/65678854.jpg</string>
-    <string name="info">info</string>
 </resources>

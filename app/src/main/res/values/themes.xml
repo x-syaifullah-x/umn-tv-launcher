@@ -5,6 +5,14 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="Theme.Splash" parent="Theme.Leanback">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@drawable/banner</item>
+    </style>
+
     <style name="Theme.Browse" parent="@style/Theme.Leanback.Browse">
         <item name="rowHeaderStyle">@style/Widget.Leanback.Row.CustomHeader</item>
         <item name="imageCardViewStyle">@style/Widget.Leanback.RectImageCardViewStyle</item>
