@@ -26,7 +26,7 @@ public class AppDataManage {
             "com.tcl.browser" /* BrowseHer */,
             "com.doc.paymentchecker",
             "com.teamviewer.quicksupport.market",
-            "mobi.omegacentauri.SperkerBoost",
+            "mobi.omegacentauri.SpeakerBoost",
             "com.ndcsolution.androidtv.leankeykeyboard"
     );
 
