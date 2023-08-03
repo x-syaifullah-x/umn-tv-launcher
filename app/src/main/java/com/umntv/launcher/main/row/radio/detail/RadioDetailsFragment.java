@@ -354,9 +354,17 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                 }
                 case Radio.THAI_LAO_KARAOKE: {
                     UmnPlayList umnPlayList = TAI_LAO_KARAOKE_PLAY_LIST[index];
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(umnPlayList.link));
-                    startActivity(i);
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    try {
+                        intent.setData(Uri.parse(umnPlayList.link));
+                        intent.setPackage("com.tcl.browser");
+                        startActivity(intent);
+                    } catch (Throwable t) {
+                        Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                        String uriString = umnPlayList.link;
+                        intent.setData(Uri.parse(uriString));
+                        startActivity(intent);
+                    }
                     break;
                 }
             }
