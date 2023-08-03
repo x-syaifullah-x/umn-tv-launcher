@@ -111,33 +111,20 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                 return;
             }
 
-            List<String> a = List.of(
-                    com.umntv.launcher.main.row.news_or_media.data.repository.DataSource.AFRICAN_NEWS.url
-//                    RadioDetailsFragment.SOUL_MUSIC_URL,
-//                    RadioDetailsFragment.LATINO_MUSIC_URL,
-//                    RadioDetailsFragment.AFRICAN_MUSIC_URL,
-//                    RadioDetailsFragment.K_POP_MUSIC_URL
-            );
-
-            if (a.contains(overviewItem.url)) {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(overviewItem.url));
-                    intent.setPackage("com.google.android.youtube");
-                    startActivity(intent);
-                } catch (Throwable t) {
-                    Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            for (OverviewItem item : com.umntv.launcher.main.row.news_or_media.data.repository.DataSource.items) {
+                if (item.url.contains(overviewItem.url)) {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(overviewItem.url));
+                        intent.setPackage("com.tcl.browser");
+                        startActivity(intent);
+                    } catch (Throwable t) {
+                        Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    }
+                    return;
                 }
-                return;
             }
 
-//            if (overviewItem.url.equals(RadioDetailsFragment.CHILL_MUSIC_LAB_URL)) {
-//                String uriString = overviewItem.url;
-//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
-//                i.setPackage("com.tcl.browser");
-//                startActivity(i);
-//                return;
-//            }
             if (overviewItem.url.contains("https://")) {
                 String uriString = overviewItem.url;
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
