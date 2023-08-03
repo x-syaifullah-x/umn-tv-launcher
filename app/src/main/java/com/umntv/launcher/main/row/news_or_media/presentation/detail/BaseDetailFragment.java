@@ -19,12 +19,16 @@ import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
 import com.umntv.launcher.main.base.ApkData;
+import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.youtube_shorts.DataSource;
+import com.umntv.launcher.main.row.radio.detail.RadioDetailsFragment;
 import com.umntv.launcher.play.PlayActivity;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import media.umn.tv.R;
 
@@ -107,15 +111,42 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                 return;
             }
 
-            if (!overviewItem.url.contains("https://")) {
-                startActivity(PlayActivity.createIntent(requireActivity(), overviewItem.url));
-            } else {
+            List<String> a = List.of(
+                    com.umntv.launcher.main.row.news_or_media.data.repository.DataSource.AFRICAN_NEWS.url
+//                    RadioDetailsFragment.SOUL_MUSIC_URL,
+//                    RadioDetailsFragment.LATINO_MUSIC_URL,
+//                    RadioDetailsFragment.AFRICAN_MUSIC_URL,
+//                    RadioDetailsFragment.K_POP_MUSIC_URL
+            );
+
+            if (a.contains(overviewItem.url)) {
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(overviewItem.url));
+                    intent.setPackage("com.google.android.youtube");
+                    startActivity(intent);
+                } catch (Throwable t) {
+                    Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+//            if (overviewItem.url.equals(RadioDetailsFragment.CHILL_MUSIC_LAB_URL)) {
+//                String uriString = overviewItem.url;
+//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
+//                i.setPackage("com.tcl.browser");
+//                startActivity(i);
+//                return;
+//            }
+            if (overviewItem.url.contains("https://")) {
                 String uriString = overviewItem.url;
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
                 if (DataSource.com_tcl_browser.contains(overviewItem.titleAction)) {
                     i.setPackage("com.tcl.browser");
                 }
                 startActivity(i);
+            } else {
+                startActivity(PlayActivity.createIntent(requireActivity(), overviewItem.url));
             }
         });
         mPresenterSelector.addClassPresenter(DetailsOverviewRow.class, detailsPresenter);

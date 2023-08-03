@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DataSource {
 
-    private static final OverviewItem AFRICAN_NEWS = new OverviewItem(
+    public static final OverviewItem AFRICAN_NEWS = new OverviewItem(
             R.drawable.news_or_media_ic_int_news,
             R.drawable.news_or_media_int_news_bg_int_news,
             "NIGERIA",

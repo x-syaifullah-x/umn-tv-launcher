@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
@@ -79,21 +80,29 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
 
     private final String umnPlayListDescription = "This content is provided by these sources via YouTube.\nTo watch with No commercials select view with the browser.";
 
-    private final UmnPlayList[] STUDY_MUSIC_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_chill_music_lab, "CHILL MUSIC LAB", "Iron Man Workshop Radio", "https://www.youtube.com/embed/W2ff_TIgZGg", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_radio_studio_music_detail, "LOFI HIP HOP", "Lofi Girl", "https://www.youtube.com/watch_popup?autoplay=1&v=jfKfPfyJRdk", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_epidemic_trap_beats, "TRAP BEATS", "Trap Beats Playlist", "https://www.youtube.com/results?search_query=trap+instrumental+playlist", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_chillhop, "CHILLHOP", "CHILLHOP", "https://www.youtube.com/watch_popup?autoplay=1&v=5yx6BWlEVcY", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_channels4_profile, "LIVE WORK MUSIC", "Live Work Music", "https://www.youtube.com/results?search_query=LIVE+STUDY+MUSIC", umnPlayListDescription),};
+    public static String CHILL_MUSIC_LAB_URL = "https://www.youtube.com/embed/W2ff_TIgZGg";
+    public static String LIVE_WORK_MUSIC_URL = "https://www.youtube.com/results?search_query=LIVE+STUDY+MUSIC";
+
+    private final UmnPlayList[] STUDY_MUSIC_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_chill_music_lab, "CHILL MUSIC LAB", "Iron Man Workshop Radio", CHILL_MUSIC_LAB_URL, umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_radio_studio_music_detail, "LOFI HIP HOP", "Lofi Girl", "https://www.youtube.com/watch_popup?autoplay=1&v=jfKfPfyJRdk", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_epidemic_trap_beats, "TRAP BEATS", "Trap Beats Playlist", "https://www.youtube.com/results?search_query=trap+instrumental+playlist", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_chillhop, "CHILLHOP", "CHILLHOP", "https://www.youtube.com/watch_popup?autoplay=1&v=5yx6BWlEVcY", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_channels4_profile, "LIVE WORK MUSIC", "Live Work Music", LIVE_WORK_MUSIC_URL, umnPlayListDescription)};
 
     private final UmnPlayList[] TAI_LAO_KARAOKE_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_iconv_thanavorakit_ounthawatphinyo, "LAO POP", "Thanavorakit Kounthawatphinyo", "https://www.youtube.com/watch_popup?v=gz7RtAxOiQg&list=PL4283C063EB547564", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_lovi, "Thai Songs 2022", Radio.THAI_LAO_KARAOKE, "https://www.youtube.com/watch_popup?v=XqQMisU5En8&list=PL5D7fjEEs5yfIBCACamjy0KpfKESoudtn", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_taispop, "Thai Pop 2022", "Illslick thelegandary", "https://www.youtube.com/watch_popup?v=jthza-s_NEg&list=PLFlUhB2ijJJMzGsf-N7LBEIsLltBAdfYb", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_genie_records_logo, "Thai songs 2019", "Genierock", "https://www.youtube.com/embed/wqJsZYibWcI?list=PLeQlgf5H84mfXRDGtaFiGOOef-szLM7Ov", umnPlayListDescription),};
 
     private final UmnPlayList[] HMONG_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_maiv_thoj_nkmvl, "HMONG 2021", "Maiv Thoj NKMVL", "https://www.youtube.com/embed/jvtv6rAZWMk?list=PLvoKM51-PIMXnUNXu4n1KzJGDqa_MXMo9", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_cheenou, "HMONG 2022", "Cheenou", "https://www.youtube.com/watch_popup?v=bKxGY5iLDRo&list=PLFmyqQIM32VjlsMYKWSWzlRfEv8enID4a", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_hmong_rapper_productions, "hmong rap", "Hmong rapper productions", "https://www.youtube.com/embed/qCuCgfRI65g?list=PLAOXhd6xBn72Fh23AOSDOw6GofGp__UDU", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_itsnikkithao, "Xav Kom Yog Koj", "ITSNIKKITHAO", "https://www.youtube.com/embed/__d8qhCYEl4?list=PLedROBSbMY4EISB8azcZ-r9otZX9vJ0QC", umnPlayListDescription),};
 
+    public static String SOUL_MUSIC_URL = "https://www.youtube.com/results?search_query=live+soul";
+    public static String LATINO_MUSIC_URL = "https://www.youtube.com/results?search_query=live+latin+music";
+    public static String AFRICAN_MUSIC_URL = "https://www.youtube.com/channel/UCX8JKqM-aCwDQOIRs70mcJQ";
+    public static String K_POP_MUSIC_URL = "https://www.youtube.com/results?search_query=LIVE+KPOP";
+
     private final UmnPlayList[] UMN_PLAY_LIST = {
 //            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_soul_deep_collection, "SOUL MATE", "Welcome to Soul Mate Channel", "https://www.youtube.com/watch_popup?v=cVrSZdPfq8U", "where promote the greatest and most famous Soul artist.\n\n" + umnPlayListDescription),
-            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_soul_deep_collection, "SOUL MUSIC", "SOUL MUSIC", "https://www.youtube.com/results?search_query=live+soul", "where promote the greatest and most famous Soul artist.\n\n" + umnPlayListDescription),
+            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_soul_deep_collection, "SOUL MUSIC", "SOUL MUSIC", SOUL_MUSIC_URL, "where promote the greatest and most famous Soul artist.\n\n" + umnPlayListDescription),
 //            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_black_magic, "Electro & House", "BLACKMAGIC", "https://www.youtube.com/watch_popup?v=9JF5sIMxJ_U", umnPlayListDescription),
             new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_black_magic, "Electro & House", "BLACKMAGIC", "https://www.youtube.com/embed/0tTO-JiGKw0?autoplay=1", umnPlayListDescription),
 //            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_radio_hits_music, "POP Music", "Radio Hits Music", "https://www.youtube.com/watch_popup?v=uNd5kvrGHjk", umnPlayListDescription),
             new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_radio_hits_music, "POP Music", "Radio Hits Music", "https://www.youtube.com/embed/uNd5kvrGHjk?autoplay=1", umnPlayListDescription),
 //            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_musica_bachata, "Latino Music", "Musica Bachata", "https://www.youtube.com/watch_popup?v=NZrpuGqvmHU", umnPlayListDescription),
-            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_musica_bachata, "Latino Music", "Musica Bachata", "https://www.youtube.com/results?search_query=live+latin+music", umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_af_music_box, "African Music", "Af Music Box", "https://www.youtube.com/channel/UCX8JKqM-aCwDQOIRs70mcJQ", umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_the_k_pop, "K-POP", "K-POP", "https://www.youtube.com/results?search_query=LIVE+KPOP", umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_chiraq_drill, "Chiraq Drill", "Chiraq Drill", "https://www.youtube.com/embed/0uSn98gkT1Y?index=5&list=PLbKsqaJ1iyOG7g8dFaSiDl-j_bJ_TF3Uz", umnPlayListDescription),
+            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_musica_bachata, "Latino Music", "Musica Bachata", LATINO_MUSIC_URL, umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_af_music_box, "African Music", "Af Music Box", AFRICAN_MUSIC_URL, umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_the_k_pop, "K-POP", "K-POP", K_POP_MUSIC_URL, umnPlayListDescription), new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_chiraq_drill, "Chiraq Drill", "Chiraq Drill", "https://www.youtube.com/embed/0uSn98gkT1Y?index=5&list=PLbKsqaJ1iyOG7g8dFaSiDl-j_bJ_TF3Uz", umnPlayListDescription),
 //            new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_rapm, "Gangsta Rap", "Rap Mafia", "https://www.youtube.com/watch_popup?v=0MOkLkTP-Jk", umnPlayListDescription),
             new UmnPlayList(R.drawable.bg_umn_play_list_detail, R.drawable.ic_rapm, "Gangsta Rap", "Rap Mafia", "https://www.youtube.com/embed/0MOkLkTP-Jk?autoplay=1", umnPlayListDescription),};
 
@@ -299,18 +308,42 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                 }
                 case Radio.UMN_PLAYLIST: {
                     UmnPlayList umnPlayList = UMN_PLAY_LIST[index];
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    String uriString = umnPlayList.link;
-                    i.setData(Uri.parse(uriString));
-                    startActivity(i);
+                    List<String> specialOpen = List.of(RadioDetailsFragment.SOUL_MUSIC_URL, RadioDetailsFragment.LATINO_MUSIC_URL, RadioDetailsFragment.AFRICAN_MUSIC_URL, RadioDetailsFragment.K_POP_MUSIC_URL);
+
+                    if (specialOpen.contains(umnPlayList.link)) {
+                        try {
+                            Intent intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setData(Uri.parse(umnPlayList.link));
+                            intent.setPackage("com.google.android.youtube");
+                            startActivity(intent);
+                        } catch (Throwable t) {
+                            Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        String uriString = umnPlayList.link;
+                        i.setData(Uri.parse(uriString));
+                        startActivity(i);
+                    }
                     break;
                 }
                 case Radio.STUDY_MUSIC: {
                     UmnPlayList umnPlayList = STUDY_MUSIC_PLAY_LIST[index];
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(umnPlayList.link));
-                    startActivity(i);
-//                    startActivity(PlayActivity.createIntent(requireActivity(), umnPlayList.link));
+                    if (umnPlayList.link.equals(RadioDetailsFragment.CHILL_MUSIC_LAB_URL)) {
+                        String uriString = umnPlayList.link;
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
+                        i.setPackage("com.tcl.browser");
+                        startActivity(i);
+                    } else if (umnPlayList.link.equals(LIVE_WORK_MUSIC_URL)) {
+                        String uriString = umnPlayList.link;
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
+                        i.setPackage("com.google.android.youtube");
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(umnPlayList.link));
+                        startActivity(i);
+                    }
                     break;
                 }
                 case Radio.THAI_LAO_KARAOKE: {
