@@ -323,20 +323,16 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                 }
                 case Radio.STUDY_MUSIC: {
                     UmnPlayList umnPlayList = STUDY_MUSIC_PLAY_LIST[index];
-                    if (umnPlayList.link.equals(RadioDetailsFragment.CHILL_MUSIC_LAB_URL)) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    try {
+                        intent.setData(Uri.parse(umnPlayList.link));
+                        intent.setPackage("com.tcl.browser");
+                        startActivity(intent);
+                    } catch (Throwable t) {
+                        Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
                         String uriString = umnPlayList.link;
-                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
-                        i.setPackage("com.tcl.browser");
-                        startActivity(i);
-                    } else if (umnPlayList.link.equals(LIVE_WORK_MUSIC_URL)) {
-                        String uriString = umnPlayList.link;
-                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
-                        i.setPackage("com.google.android.youtube");
-                        startActivity(i);
-                    } else {
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(umnPlayList.link));
-                        startActivity(i);
+                        intent.setData(Uri.parse(uriString));
+                        startActivity(intent);
                     }
                     break;
                 }
