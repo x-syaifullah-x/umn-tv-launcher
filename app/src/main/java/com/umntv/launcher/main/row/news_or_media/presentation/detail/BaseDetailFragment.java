@@ -125,6 +125,20 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                 }
             }
 
+            for (OverviewItem item : DataSource.items) {
+                if (item.url.contains(overviewItem.url)) {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(overviewItem.url));
+                        intent.setPackage("com.tcl.browser");
+                        startActivity(intent);
+                    } catch (Throwable t) {
+                        Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    }
+                    return;
+                }
+            }
+
             if (overviewItem.url.contains("https://")) {
                 String uriString = overviewItem.url;
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
