@@ -27,7 +27,8 @@ public class AppDataManage {
             "com.doc.paymentchecker",
             "com.teamviewer.quicksupport.market",
             "mobi.omegacentauri.SpeakerBoost",
-            "com.ndcsolution.androidtv.leankeykeyboard"
+            "com.ndcsolution.androidtv.leankeykeyboard",
+            "com.furnaghan.android.photoscreensaver"
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {
