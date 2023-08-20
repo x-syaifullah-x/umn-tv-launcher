@@ -1,8 +1,13 @@
 package com.umntv.launcher.main;
 
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
+
+import com.umntv.launcher.util.Tools;
 
 import media.umn.tv.R;
 
@@ -19,6 +24,10 @@ public class MainActivity extends FragmentActivity {
                     .replace(R.id.main_browse_fragment, new MainFragment())
                     .commitNow();
         }
+
+//        BluetoothManager b = (BluetoothManager) getBaseContext().getSystemService(Context.BLUETOOTH_SERVICE);
+//        BluetoothDevice bluetoothDevice = b.getAdapter().getRemoteDevice("");
+//        Tools.removeBond(BluetoothDevice.class, bluetoothDevice);
 
 //        JSONObject consentObject = new JSONObject();
 //        try {

@@ -1,8 +1,13 @@
 package com.umntv.launcher.util;
 
+import android.bluetooth.BluetoothDevice;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class Tools {
 
-//    private final static String[] hexDigits = {
+    //    private final static String[] hexDigits = {
 //            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"
 //    };
 //
@@ -231,9 +236,13 @@ public class Tools {
 //        return apps != null ? apps : new ArrayList<ResolveInfo>();
 //    }
 //
-//    static public boolean removeBond(Class btClass, BluetoothDevice btDevice) throws Exception {
-//        Method removeBondMethod = btClass.getMethod("removeBond");
-//        Boolean returnValue = (Boolean) removeBondMethod.invoke(btDevice);
-//        return returnValue.booleanValue();
-//    }
+    static public boolean removeBond(Class btClass, BluetoothDevice btDevice) {
+        try {
+            Method removeBondMethod = btClass.getMethod("removeBond");
+            Boolean returnValue = (Boolean) removeBondMethod.invoke(btDevice);
+            return returnValue.booleanValue();
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            return false;
+        }
+    }
 }
