@@ -22,6 +22,21 @@ public class DataSource {
             )
     );
 
+    
+private static final OverviewItem ITEM_EXOTIC_MOVIES = new OverviewItem(
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            "18+ JADE CHAT",
+            "WELCOME TO 18+ JADE CHAT",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.",
+            new ApkData(
+                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/JADE_CHAT_UMNTV_1.apk",
+                    "jc.umn.net",
+                    true
+            )
+    );
+    
     private static final OverviewItem ITEM_JADE_ANIME = new OverviewItem(
             R.drawable.ic_asian_media_jade_anime_detail_bg,
             R.drawable.ic_asian_media_jade_anime_detail_bg,
