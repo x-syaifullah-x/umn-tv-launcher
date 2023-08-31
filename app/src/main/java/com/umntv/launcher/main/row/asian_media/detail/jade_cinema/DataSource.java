@@ -54,8 +54,8 @@ public class DataSource {
     private static final OverviewItem ITEM_EXOTIC_MOVIES = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "18+ JADE CHAT",
-            "WELCOME TO 18+ JADE CHAT",
+            "EXOTIC MOVIES",
+            "WELCOME TO EXOTIC MOVIES",
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.",
             new ApkData(
