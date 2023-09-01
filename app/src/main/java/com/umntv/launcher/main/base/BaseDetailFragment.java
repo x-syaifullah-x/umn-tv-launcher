@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
 import media.umn.tv.R;
+
 import com.umntv.launcher.constant.AppBuild;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
@@ -135,7 +137,35 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 
     public void openOrDownload(ApkData apkData) {
         if (apkData.url.isEmpty() || apkData.packageName.isEmpty()) {
-            Toast.makeText(requireContext(), "Coming soon", Toast.LENGTH_SHORT).show();
+            if (apkData.url.equals("https://eroticmv.com")) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                try {
+                    intent.setData(Uri.parse(apkData.url));
+                    intent.setPackage("com.tcl.browser");
+                    startActivity(intent);
+                } catch (Throwable t) {
+                    Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    String uriString = apkData.url;
+                    intent.setData(Uri.parse(uriString));
+                    startActivity(intent);
+                }
+                return;
+            }
+
+            if (apkData.url.equals("https://fullxcinema.com/tag/korean-erotic-movies")) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                try {
+                    intent.setData(Uri.parse(apkData.url));
+                    intent.setPackage("com.android.chrome");
+                    startActivity(intent);
+                } catch (Throwable t) {
+                    Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    String uriString = apkData.url;
+                    intent.setData(Uri.parse(uriString));
+                    startActivity(intent);
+                }
+                return;
+            }
         } else {
             Intent launchIntent = requireContext()
                     .getPackageManager()
