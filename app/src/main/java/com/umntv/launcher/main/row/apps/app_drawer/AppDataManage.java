@@ -23,7 +23,7 @@ public class AppDataManage {
             "ws.umn.net",  /* WORLD STAR TV IN UMN_TV/MEDIA CENTER */
             "lc.umn.net", /* 18+ LIVE CHAT IN UMN_TV/MEDIA CENTER */
             "jc.umn.net", /* 18+ JADE CHAT IN ASIAN_MEDIA/JADE_CINEMA */
-            "com.tcl.browser" /* BrowseHer */,
+            "com.logicui.tvbrowser2" /* BrowseHer */,
             "com.doc.paymentchecker",
             "com.teamviewer.quicksupport.market",
             "mobi.omegacentauri.SpeakerBoost",
