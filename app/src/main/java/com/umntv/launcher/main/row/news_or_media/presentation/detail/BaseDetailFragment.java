@@ -116,7 +116,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(overviewItem.url));
-                        intent.setPackage("com.logicui.tvbrowser2");
+                        intent.setPackage("com.tcl.browser");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -130,7 +130,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(overviewItem.url));
-                        intent.setPackage("com.logicui.tvbrowser2");
+                        intent.setPackage("com.tcl.browser");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -143,7 +143,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                 String uriString = overviewItem.url;
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
                 if (DataSource.com_tcl_browser.contains(overviewItem.titleAction)) {
-                    i.setPackage("com.logicui.tvbrowser2");
+                    i.setPackage("com.tcl.browser");
                 }
                 startActivity(i);
             } else {
