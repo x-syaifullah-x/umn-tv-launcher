@@ -297,7 +297,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
                         intent.setData(Uri.parse(umnPlayList.link));
-                        intent.setPackage("com.tcl.browser");
+                        intent.setPackage("com.jio.web.androidtv");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -312,7 +312,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
                         intent.setData(Uri.parse(umnPlayList.link));
-                        intent.setPackage("com.tcl.browser");
+                        intent.setPackage("com.jio.web.androidtv");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -327,7 +327,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
                         intent.setData(Uri.parse(umnPlayList.link));
-                        intent.setPackage("com.tcl.browser");
+                        intent.setPackage("com.jio.web.androidtv");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -342,7 +342,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
                         intent.setData(Uri.parse(umnPlayList.link));
-                        intent.setPackage("com.tcl.browser");
+                        intent.setPackage("com.jio.web.androidtv");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
@@ -357,7 +357,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
                         intent.setData(Uri.parse(umnPlayList.link));
-                        intent.setPackage("com.tcl.browser");
+                        intent.setPackage("com.jio.web.androidtv");
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
