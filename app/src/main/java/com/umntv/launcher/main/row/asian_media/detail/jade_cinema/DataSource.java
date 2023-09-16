@@ -57,7 +57,7 @@ public class DataSource {
             "EXOTIC MOVIES",
             "WELCOME TO EXOTIC MOVIES",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.",
+            "Exotic Movies allow users to enjoy the latest exotic movies from multiple different countries and languages.",
             new ApkData(
                     "https://eroticmv.com",
                     "",
@@ -71,7 +71,7 @@ public class DataSource {
             "EROTIC KOREAN",
             "WELCOME TO EROTIC KOREAN",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.",
+            "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
             new ApkData(
                     "https://fullxcinema.com/tag/korean-erotic-movies",
                     "",

@@ -130,7 +130,11 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(overviewItem.url));
-                        intent.setPackage("com.jio.web.androidtv");
+                        if (overviewItem.url.equals("https://www.youtube.com/shorts")) {
+//                            intent.setPackage("com.jio.web.androidtv");
+                        } else {
+                            intent.setPackage("com.jio.web.androidtv");
+                        }
                         startActivity(intent);
                     } catch (Throwable t) {
                         Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
