@@ -1,6 +1,7 @@
 package com.umntv.launcher.main.row.asian_media.detail.jade_cinema;
 
 import media.umn.tv.R;
+
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
 
@@ -21,7 +22,7 @@ public class DataSource {
                     false
             )
     );
-    
+
     private static final OverviewItem ITEM_JADE_ANIME = new OverviewItem(
             R.drawable.ic_asian_media_jade_anime_detail_bg,
             R.drawable.ic_asian_media_jade_anime_detail_bg,
@@ -50,7 +51,7 @@ public class DataSource {
             )
     );
 
-    
+
     private static final OverviewItem ITEM_EXOTIC_MOVIES = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
@@ -65,20 +66,37 @@ public class DataSource {
             )
     );
 
+    public static String URL_EROTIC_KOREAN_SUB = "https://krx18.com";
+
     private static final OverviewItem ITEM_HAME_EROTIC_KOREAN = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "EROTIC KOREAN",
+            "EROTIC KOREAN SUB",
             "WELCOME TO EROTIC KOREAN",
             OverviewItem.SUBTITLE_DEFAULT,
             "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
             new ApkData(
-                    "https://fullxcinema.com/tag/korean-erotic-movies",
+                    URL_EROTIC_KOREAN_SUB,
+//                    "https://fullxcinema.com/tag/korean-erotic-movies",
                     "",
                     true
             )
     );
-    
+
+//    private static final OverviewItem ITEM_EXOTIC_KOREAN_SUB = new OverviewItem(
+//            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+//            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+//            "EROTIC KOREAN SUB",
+//            "WELCOME TO EROTIC KOREAN",
+//            OverviewItem.SUBTITLE_DEFAULT,
+//            "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
+//            new ApkData(
+//                    "https://krx18.com",
+//                    "",
+//                    true
+//            )
+//    );
+
     public static final List<OverviewItem> items = List.of(
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,

@@ -152,7 +152,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                 return;
             }
 
-            if (apkData.url.equals("https://fullxcinema.com/tag/korean-erotic-movies")) {
+            if (apkData.url.equals(com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.URL_EROTIC_KOREAN_SUB)) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 try {
                     intent.setData(Uri.parse(apkData.url));
