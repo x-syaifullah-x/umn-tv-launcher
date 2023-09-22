@@ -52,32 +52,37 @@ public class DataSource {
     );
 
 
-    private static final OverviewItem ITEM_EXOTIC_MOVIES = new OverviewItem(
+    public static String URL_EXOTIC_KOREAN = "https://koreanpornmovie.com";
+
+    public static String TITLE_EXOTIC_KOREAN = "EXOTIC KOREAN";
+
+    private static final OverviewItem ITEM_EXOTIC_KOREAN = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "EXOTIC MOVIES",
-            "WELCOME TO EXOTIC MOVIES",
+            TITLE_EXOTIC_KOREAN,
+            "WELCOME TO " + TITLE_EXOTIC_KOREAN,
             OverviewItem.SUBTITLE_DEFAULT,
             "Exotic Movies allow users to enjoy the latest exotic movies from multiple different countries and languages.",
             new ApkData(
-                    "https://eroticmv.com",
+                    URL_EXOTIC_KOREAN,
                     "",
                     true
             )
     );
 
-    public static String URL_EROTIC_KOREAN_SUB = "https://krx18.com";
+    public static String URL_KOREAN_SOFT_CORE = "https://fullxcinema.com/tag/korean-erotic-movies";
 
-    private static final OverviewItem ITEM_HAME_EROTIC_KOREAN = new OverviewItem(
+    public static String TITLE_KOREAN_SOFT_CORE = "KOREAN SOFTCORE";
+
+    private static final OverviewItem ITEM_KOREAN_SOFT_CORE = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "EROTIC KOREAN SUB",
-            "WELCOME TO EROTIC KOREAN",
+            TITLE_KOREAN_SOFT_CORE,
+            "WELCOME TO " + TITLE_KOREAN_SOFT_CORE,
             OverviewItem.SUBTITLE_DEFAULT,
             "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
             new ApkData(
-                    URL_EROTIC_KOREAN_SUB,
-//                    "https://fullxcinema.com/tag/korean-erotic-movies",
+                    URL_KOREAN_SOFT_CORE,
                     "",
                     true
             )
@@ -86,12 +91,12 @@ public class DataSource {
 //    private static final OverviewItem ITEM_EXOTIC_KOREAN_SUB = new OverviewItem(
 //            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
 //            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-//            "EROTIC KOREAN SUB",
+//            "EXOTIC KOREAN SUB",
 //            "WELCOME TO EROTIC KOREAN",
 //            OverviewItem.SUBTITLE_DEFAULT,
 //            "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
 //            new ApkData(
-//                    "https://krx18.com",
+//                    URL_EROTIC_KOREAN_SUB,
 //                    "",
 //                    true
 //            )
@@ -101,7 +106,7 @@ public class DataSource {
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
-            ITEM_EXOTIC_MOVIES,
-            ITEM_HAME_EROTIC_KOREAN
+            ITEM_EXOTIC_KOREAN,
+            ITEM_KOREAN_SOFT_CORE
     );
 }
