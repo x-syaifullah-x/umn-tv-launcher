@@ -88,25 +88,26 @@ public class DataSource {
             )
     );
 
-//    private static final OverviewItem ITEM_EXOTIC_KOREAN_SUB = new OverviewItem(
-//            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-//            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-//            "EXOTIC KOREAN SUB",
-//            "WELCOME TO EROTIC KOREAN",
-//            OverviewItem.SUBTITLE_DEFAULT,
-//            "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
-//            new ApkData(
-//                    URL_EROTIC_KOREAN_SUB,
-//                    "",
-//                    true
-//            )
-//    );
+    private static final OverviewItem ITEM_KOREAN_SUB = new OverviewItem(
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            "KOREAN SUB",
+            "WELCOME TO KOREAN SUB",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "Korean sub allows users to enjoy the latest exotic movies from Korea.",
+            new ApkData(
+                    "https://krx18.com/genre/eng-sub",
+                    "",
+                    true
+            )
+    );
 
     public static final List<OverviewItem> items = List.of(
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
             ITEM_EXOTIC_KOREAN,
-            ITEM_KOREAN_SOFT_CORE
+            ITEM_KOREAN_SOFT_CORE,
+            ITEM_KOREAN_SUB
     );
 }
