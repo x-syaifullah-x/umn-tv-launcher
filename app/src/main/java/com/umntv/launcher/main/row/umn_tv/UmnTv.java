@@ -14,6 +14,8 @@ public class UmnTv {
     public static final String TITLE_DOWNLOAD_CENTER = "DOWNLOAD CENTER";
     public static final String TITLE_APP_DRAWER = "APP DRAWER";
 
+    public static final String TITLE_NETWORK = "NETWORK";
+
     private static final List<UmnTvCard> umnTvCards = new ArrayList<>();
 
     public static List<UmnTvCard> setupUmnTv() {
@@ -21,7 +23,7 @@ public class UmnTv {
             String[] title = {
                     "UNIVERSAL MEDIA",
                     TITLE_MEDIA_CENTER,
-                    "NETWORK",
+                    TITLE_NETWORK,
                     TITLE_DOWNLOAD_CENTER,
                     TITLE_FAQ,
                     TITLE_APP_DRAWER
@@ -37,7 +39,8 @@ public class UmnTv {
             String[] link = {
                     null,
                     null,
-                    "https://umntvdealers.net/?page_id=34",
+//                    "https://umntvdealers.net/?page_id=34",
+                    null,
                     null,
                     null,
                     null

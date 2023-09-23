@@ -31,6 +31,7 @@ import com.umntv.launcher.main.row.umn_tv.UmnTvCard;
 import com.umntv.launcher.main.row.umn_tv.detail.download_center.DownloadCenterDetailFragment;
 import com.umntv.launcher.main.row.umn_tv.faq.FaqDetailFragment;
 import com.umntv.launcher.main.row.umn_tv.media_center.MediaCenterDetailFragment;
+import com.umntv.launcher.main.row.umn_tv.network.NetworkDetailFragment;
 import com.umntv.launcher.main.row.utilities.UtilitiesCard;
 import com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity;
 import com.umntv.launcher.util.AndroidStore;
@@ -193,6 +194,10 @@ public class CardVisitor {
                 String title = umnTvCard.getTitle();
                 Intent intent = new Intent(mContext, DetailsActivity.class);
                 switch (title) {
+                    case UmnTv.TITLE_NETWORK:
+                        intent.setAction(NetworkDetailFragment.class.getName());
+                        System.out.println("masuk");
+                        break;
                     case UmnTv.TITLE_DOWNLOAD_CENTER:
                         intent.setAction(DownloadCenterDetailFragment.class.getName());
                         break;
