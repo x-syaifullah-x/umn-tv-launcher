@@ -91,7 +91,7 @@ public class DataSource {
     private static final OverviewItem ITEM_KOREAN_SUB = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "KOREAN SUB",
+            "KOREAN SUB (AD BLOCKER DISABLE NEEDED)",
             "WELCOME TO KOREAN SUB",
             OverviewItem.SUBTITLE_DEFAULT,
             "Korean sub allows users to enjoy the latest exotic movies from Korea.",
