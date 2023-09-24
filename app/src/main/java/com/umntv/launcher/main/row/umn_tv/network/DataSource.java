@@ -17,7 +17,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Check out the latest devices and accessories! Stay in touch with the latest movies and TV show reviews and more.",
             new ApkData(
-                    "https://umntvdealers.net/wp-admin/post.php?post=34&action=edit",
+                    "https://umntvdealers.net/?page_id=34",
                     null,
                     false
             )
