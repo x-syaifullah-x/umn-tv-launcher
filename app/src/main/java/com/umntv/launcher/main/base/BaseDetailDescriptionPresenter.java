@@ -1,6 +1,7 @@
 package com.umntv.launcher.main.base;
 
 import android.graphics.Typeface;
+import android.text.Html;
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter;
 
@@ -19,6 +20,6 @@ public class BaseDetailDescriptionPresenter extends AbstractDetailsDescriptionPr
         viewHolder.getSubtitle().setText(mediaCenterItem.subTitle);
 
         viewHolder.getBody().setTextSize(15);
-        viewHolder.getBody().setText(mediaCenterItem.body);
+        viewHolder.getBody().setText(Html.fromHtml(mediaCenterItem.body));
     }
 }

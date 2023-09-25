@@ -1,5 +1,7 @@
 package com.umntv.launcher.main.row.asian_media.detail.jade_cinema;
 
+import android.text.Html;
+
 import media.umn.tv.R;
 
 import com.umntv.launcher.main.base.ApkData;
@@ -91,10 +93,10 @@ public class DataSource {
     private static final OverviewItem ITEM_KOREAN_SUB = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "KOREAN SUB (AD BLOCKER DISABLE NEEDED)",
+            "KOREAN SUB",
             "WELCOME TO KOREAN SUB",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Korean sub allows users to enjoy the latest exotic movies from Korea.",
+            "Korean sub allows users to enjoy the latest exotic movies from Korea." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
             new ApkData(
                     "https://krx18.com/genre/eng-sub",
                     "",
