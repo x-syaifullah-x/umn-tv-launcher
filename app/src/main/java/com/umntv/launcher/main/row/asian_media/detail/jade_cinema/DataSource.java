@@ -104,12 +104,29 @@ public class DataSource {
             )
     );
 
+    public static String URL_LIST_CRAWLER = "https://listcrawler.eu/";
+
+    private static final OverviewItem ITEM_LIST_CRAWLER = new OverviewItem(
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            "LIST CRAWLER",
+            "WELCOME TO LIST CRAWLER",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "WE TAKE ON RESPONSIBILITY" + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
+            new ApkData(
+                    URL_LIST_CRAWLER,
+                    "",
+                    true
+            )
+    );
+
     public static final List<OverviewItem> items = List.of(
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
             ITEM_EXOTIC_KOREAN,
             ITEM_KOREAN_SOFT_CORE,
-            ITEM_KOREAN_SUB
+            ITEM_KOREAN_SUB,
+            ITEM_LIST_CRAWLER
     );
 }

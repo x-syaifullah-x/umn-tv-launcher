@@ -23,10 +23,10 @@ import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 import media.umn.tv.R;
 
 import com.umntv.launcher.constant.AppBuild;
+import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.DialogPassword;
-import com.umntv.launcher.main.row.games.umn_games.DataSource;
 
 import java.util.List;
 
@@ -112,10 +112,17 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 
     protected void onActionClickListener(OverviewItem overviewItem) {
         if (overviewItem.apkData.isPrivate) {
-            new DialogPassword(requireContext(), AppBuild.PASSWORD_PRIVATE_CONTENT)
-                    .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                    .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                    .show();
+            if (DataSource.URL_LIST_CRAWLER.equals(overviewItem.apkData.url)) {
+                new DialogPassword(requireContext(), "2023")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+            } else {
+                new DialogPassword(requireContext(), AppBuild.PASSWORD_PRIVATE_CONTENT)
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+            }
         } else {
             openOrDownload(overviewItem.apkData);
         }
