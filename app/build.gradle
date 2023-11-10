@@ -80,7 +80,7 @@ dependencies {
     implementation "androidx.leanback:leanback:$vLeanback"
     implementation "androidx.appcompat:appcompat:$vAndroidxAppCompat"
     implementation "com.google.android.material:material:$vMaterial"
-    implementation "androidx.test.espresso:espresso-idling-resource:$vAndroidxEspresso"
+    implementation "androidx.test.espresso:espresso-idling-resource:$vAndroidxTestEspresso"
 
     implementation "com.google.android.gms:play-services-ads:$vPlayServicesAds"
 
@@ -96,5 +96,5 @@ dependencies {
 
     androidTestImplementation "androidx.test:rules:$vAndroidxTestRules"
     androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxTestExtJunit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxEspresso"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxTestEspresso"
 }
