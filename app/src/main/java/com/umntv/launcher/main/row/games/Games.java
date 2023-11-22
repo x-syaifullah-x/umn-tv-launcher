@@ -13,6 +13,7 @@ public class Games {
     public static List<GamesCardApp> setup() {
         if (games.isEmpty()) {
             String[] title = {
+                    "UMN RETRO",
                     "UMN GAMES",
                     "MINECRAFT",
                     "UNKILLED",
@@ -20,7 +21,8 @@ public class Games {
                     "CHESS",
             };
             int[] resourceId = {
-                    R.drawable.games_umn_games_ic,
+                    R.drawable.ic_games_umn_retro_new,
+                    R.drawable.ic_games_umn_games_new,
                     R.drawable.ic_games_minecraft,
                     R.drawable.ic_games_unkilled,
                     R.drawable.ic_games_pacman_256,
@@ -28,6 +30,7 @@ public class Games {
             };
             String[] packageName = {
 //                    "tv.umn.retro",
+                    null,
                     null,
                     "com.mojang.minecraftpe",
                     "com.madfingergames.unkilled",
@@ -37,6 +40,7 @@ public class Games {
 
             String[] apkLinkDownload = {
 //                    "https://umntv.net/UMNTV/umntv_RETRO_5.apk",
+                    null,
                     null,
                     "https://umntv.net/UMNTV/MINECTt.apk",
                     null,
