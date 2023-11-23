@@ -3,13 +3,18 @@ package com.umntv.launcher.main.row.games.umn_games;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
 import com.umntv.launcher.main.base.OverviewItem;
+import com.umntv.launcher.main.row.games.umn_games.DataSource;
 import com.umntv.launcher.util.Admob;
+import com.umntv.launcher.util.AndroidStore;
+import com.umntv.launcher.util.view.dialog.ApkUtil;
 
 import media.umn.tv.R;
 
@@ -28,19 +33,23 @@ public class UmnGamesDetailFragment extends BaseDetailFragment {
     @Override
     protected void onActionClickListener(OverviewItem overviewItem) {
         ApkData apkData = overviewItem.apkData;
-        if (apkData.url.contains(DataSource.ADB_REMOTE_COMMAND)) {
-            String[] a = apkData.url.split("=");
-            String command = a[0];
-            String url = a[1];
-            ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clip = ClipData.newPlainText("command", command);
-            clipboard.setPrimaryClip(clip);
-            Toast.makeText(getContext(), "Successfully copy link", Toast.LENGTH_LONG).show();
-            openOrDownload(
-                    new ApkData(url, apkData.packageName, apkData.isPrivate)
-            );
-        } else {
-            super.onActionClickListener(overviewItem);
+        Intent launchIntent = requireContext()
+                .getPackageManager()
+                .getLaunchIntentForPackage(apkData.packageName);
+        try {
+            if (launchIntent == null) {
+                launchIntent = new Intent();
+                launchIntent.setPackage(apkData.packageName);
+                launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            }
+            launchIntent.setData(Uri.parse(apkData.url));
+//                launchIntent.addCategory("android.intent.category.LEANBACK_LAUNCHER");
+            requireContext().startActivity(launchIntent);
+        } catch (Throwable e) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setPackage("com.jio.web.androidtv");
+            i.setData(Uri.parse(apkData.url));
+            startActivity(i);
         }
     }
 }

@@ -10,23 +10,27 @@ import media.umn.tv.R;
 
 public class NewsOrMediaRepository {
 
+    public static String YOUTUBE_ENJOYABLES = "YOUTUBE ENJOYABLES";
+
+    public static String INT_NEWS = "INT NEWS";
+
     private static final List<NewsMediaModel> v = new ArrayList<>();
 
     public static List<NewsMediaModel> getItems() {
         if (v.isEmpty()) {
             String[] title = {
-                    "INT NEWS",
                     "YOUTUBE",
                     "YOUTUBE TV",
-                    "YOUTUBE SHORTS",
+                    YOUTUBE_ENJOYABLES,
+                    INT_NEWS,
                     "TIKTOK",
                     "FACEBOOK",
             };
             String[] description = {
+                    null,
+                    null,
+                    null,
                     "",
-                    null,
-                    null,
-                    null,
                     null,
                     null,
 //                    "Channels Television is a leading 24-hour news channel broadcasting live from Lagos, Nigeria - West Africa. Our mission" +
@@ -38,9 +42,9 @@ public class NewsOrMediaRepository {
             };
 
             String[] packageName = {
-                    null,
                     "com.google.android.youtube.tv",
                     "com.google.android.youtube.tvunplugged",
+                    null,
                     null,
                     "com.tiktok.tv",
                     "com.facebook.katana",
@@ -61,10 +65,10 @@ public class NewsOrMediaRepository {
 //                    null,
             };
             String[] bannerImage = {
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_int_news),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_shorts),
+                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
+                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_titok),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_haystack_news),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news_banner),
@@ -72,10 +76,10 @@ public class NewsOrMediaRepository {
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_bloomberg),
             };
             String[] cardImage = {
-                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_ic_yotube_shorts),
+                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
+                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_titok),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_haystack_news),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news),
@@ -83,10 +87,10 @@ public class NewsOrMediaRepository {
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_bloomberg),
             };
             String[] iconDetailImage = {
+                    null,
+                    null,
+                    null,
                     ResourceHelpers.toStringUri(R.drawable.bg_int_news),
-                    null,
-                    null,
-                    null,
                     null,
                     null,
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news_detail_icon),

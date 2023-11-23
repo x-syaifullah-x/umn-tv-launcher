@@ -1,5 +1,7 @@
 package com.umntv.launcher.main.row.news_or_media.presentation.detail;
 
+import static com.umntv.launcher.main.row.news_or_media.presentation.detail.youtube_shorts.DataSource.YOUTUBE_SHORTS;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -130,8 +132,9 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(overviewItem.url));
-                        if (overviewItem.url.equals("https://www.youtube.com/shorts")) {
-//                            intent.setPackage("com.jio.web.androidtv");
+                        if (overviewItem.url.equals(YOUTUBE_SHORTS.url)) {
+//                            error jio browser can't handle url youtube shorts
+                            intent.setPackage("com.android.chrome");
                         } else {
                             intent.setPackage("com.jio.web.androidtv");
                         }

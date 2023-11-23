@@ -17,9 +17,10 @@ import com.umntv.launcher.main.row.apps.app_drawer.LaunchApp;
 import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DetailFragment;
 import com.umntv.launcher.main.row.games.GamesCardApp;
-import com.umntv.launcher.main.row.games.umn_games.UmnGamesDetailFragment;
+import com.umntv.launcher.main.row.games.umn_retro.UmnRetroDetailFragment;
 import com.umntv.launcher.main.row.kids.KidsCard;
 import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
+import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
 import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.IntNewsFragment;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity;
@@ -95,11 +96,11 @@ public class CardVisitor {
                 }
             }
         } else {
-            if (newsMediaModel.getTitle().equals("INT NEWS")) {
+            if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.INT_NEWS)) {
                 Intent intent = new Intent(mContext, DetailsActivity.class);
                 intent.setAction(IntNewsFragment.class.getName());
                 mContext.startActivity(intent);
-            } else if (newsMediaModel.getTitle().equals("YOUTUBE SHORTS")) {
+            } else if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.YOUTUBE_ENJOYABLES)) {
                 Intent intent = new Intent(mContext, DetailsActivity.class);
                 intent.setAction(YoutubeShortsFragment.class.getName());
                 mContext.startActivity(intent);
@@ -218,20 +219,21 @@ public class CardVisitor {
     }
 
     public void click(GamesCardApp gamesCardApp) {
-        if (gamesCardApp.getPackageName() == null) {
+        if (gamesCardApp.getDetail() != null) {
             Intent intent = new Intent(mContext, DetailsActivity.class);
-            intent.setAction(UmnGamesDetailFragment.class.getName());
+            intent.setAction(gamesCardApp.getDetail().getName());
             mContext.startActivity(intent);
+            return;
+        }
+
+        Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(gamesCardApp.getPackageName());
+        if (launchIntent != null) {
+            mContext.startActivity(launchIntent);
         } else {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(gamesCardApp.getPackageName());
-            if (launchIntent != null) {
-                mContext.startActivity(launchIntent);
+            if (gamesCardApp.getLinkApkDownload() != null) {
+                ApkUtil.downloadToCacheDirAndInstall(mContext, gamesCardApp.getLinkApkDownload());
             } else {
-                if (gamesCardApp.getLinkApkDownload() != null) {
-                    ApkUtil.downloadToCacheDirAndInstall(mContext, gamesCardApp.getLinkApkDownload());
-                } else {
-                    AndroidStore.open(mContext, gamesCardApp.getPackageName());
-                }
+                AndroidStore.open(mContext, gamesCardApp.getPackageName());
             }
         }
     }
