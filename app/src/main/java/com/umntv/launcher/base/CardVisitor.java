@@ -198,14 +198,14 @@ public class CardVisitor {
                     case UmnTv.TITLE_NETWORK ->
                             intent.setAction(NetworkDetailFragment.class.getName());
                     case UmnTv.TITLE_DOWNLOAD_CENTER -> {
-                        Intent launchIntentForPackage = mContext.getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
-                        if (launchIntentForPackage != null) {
-                            intent = launchIntentForPackage;
-                        } else {
-                            intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setData(Uri.parse("https://n0render.com/dc"));
-                        }
-//                        intent.setAction(DownloadCenterDetailFragment.class.getName());
+//                        Intent launchIntentForPackage = mContext.getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
+//                        if (launchIntentForPackage != null) {
+//                            intent = launchIntentForPackage;
+//                        } else {
+//                            intent = new Intent(Intent.ACTION_VIEW);
+//                            intent.setData(Uri.parse("https://n0render.com/dc"));
+//                        }
+                        intent.setAction(DownloadCenterDetailFragment.class.getName());
                     }
                     case UmnTv.TITLE_MEDIA_CENTER ->
                             intent.setAction(MediaCenterDetailFragment.class.getName());

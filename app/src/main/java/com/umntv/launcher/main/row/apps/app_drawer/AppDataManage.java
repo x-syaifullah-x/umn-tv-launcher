@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.constant.AppBuild;
+import com.umntv.launcher.main.row.umn_tv.detail.download_center.DataSource;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,7 +29,9 @@ public class AppDataManage {
             "com.teamviewer.quicksupport.market",
             "mobi.omegacentauri.SpeakerBoost",
             "com.ndcsolution.androidtv.leankeykeyboard",
-            "com.furnaghan.android.photoscreensaver"
+            "com.furnaghan.android.photoscreensaver",
+            DataSource.PACKAGE_NAME_N0_BROWSER,
+            DataSource.PACKAGE_NAME_N0_RENDER
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {
