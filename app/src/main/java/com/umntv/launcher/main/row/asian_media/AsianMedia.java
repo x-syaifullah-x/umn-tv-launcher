@@ -53,7 +53,7 @@ public class AsianMedia {
                 AsianMediaCard a = new AsianMediaCard();
                 a.setTitle(title[index]);
                 a.setPackageName(packageName[index]);
-                a.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.ic_asian_media_jade_cinema_bg));
+                a.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.ic_asian_media_jade_cinema_bg));
                 a.setIconStringUri(ResourceHelpers.toStringUri(resourceId[index]));
                 a.setLinkApkDownload(apkLinkDownload[index]);
                 asianMediaCards.add(a);

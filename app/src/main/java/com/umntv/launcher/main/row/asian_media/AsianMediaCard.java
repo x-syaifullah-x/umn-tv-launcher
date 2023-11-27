@@ -18,6 +18,16 @@ public class AsianMediaCard extends CardApp {
         this.linkApkDownload = linkApkDownload;
     }
 
+    private String detailDescription;
+
+    public String getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String detailDescription) {
+        this.detailDescription = detailDescription;
+    }
+
     @Override
     public void onClicked(CardVisitor visitor) {
         visitor.click(this);

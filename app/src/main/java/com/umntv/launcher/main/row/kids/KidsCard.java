@@ -1,21 +1,29 @@
 package com.umntv.launcher.main.row.kids;
 
-import androidx.annotation.Nullable;
-
-import com.umntv.launcher.base.CardApp;
+import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardVisitor;
 
-public class KidsCard extends CardApp {
+import java.io.Serializable;
 
-    private String linkApkDownload;
+public class KidsCard extends Card {
 
-    @Nullable
-    public String getLinkApkDownload() {
-        return linkApkDownload;
+    private String packageName;
+    private String downloadUrl;
+
+    public String getDownloadUrl() {
+        return downloadUrl;
     }
 
-    public void setLinkApkDownload(String linkApkDownload) {
-        this.linkApkDownload = linkApkDownload;
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
     }
 
     @Override

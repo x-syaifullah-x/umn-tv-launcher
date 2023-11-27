@@ -48,8 +48,8 @@ import com.umntv.launcher.main.row.kids.Kids;
 import com.umntv.launcher.main.row.kids.KidsCard;
 import com.umntv.launcher.main.row.movies_apps.MoviesApps;
 import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
-import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
+import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.radio.Radio;
 import com.umntv.launcher.main.row.radio.RadioCard;
 import com.umntv.launcher.main.row.umn_tv.UmnTv;
@@ -401,7 +401,7 @@ public class MainFragment extends BrowseSupportFragment {
         public void onItemSelected(Presenter.ViewHolder itemViewHolder, Object item, RowPresenter.ViewHolder rowViewHolder, Row row) {
             if (item != null) {
                 Card card = (Card) item;
-                mBackgroundUri = card.getBackgroundImageStringUri();
+                mBackgroundUri = card.getBackgroundStringUri();
                 startBackgroundTimer();
             }
         }

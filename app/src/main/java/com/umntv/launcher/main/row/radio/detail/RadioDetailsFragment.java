@@ -37,6 +37,7 @@ import com.umntv.launcher.main.MainActivity;
 import com.umntv.launcher.main.row.radio.Radio;
 import com.umntv.launcher.main.row.radio.RadioCard;
 import com.umntv.launcher.util.Convert;
+import com.umntv.launcher.util.ResourceHelpers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,8 +48,8 @@ import media.umn.tv.R;
 public class RadioDetailsFragment extends DetailsSupportFragment {
     private static final String TAG = "RadioDetailsFragment";
 
-    private static final int DETAIL_THUMB_WIDTH = 274;
-    private static final int DETAIL_THUMB_HEIGHT = 274;
+//    private static final int DETAIL_THUMB_WIDTH = 274;
+//    private static final int DETAIL_THUMB_HEIGHT = 274;
 
     private RadioCard mSelectedRadio;
 
@@ -132,7 +133,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
 
     private void initializeBackground(RadioCard data) {
         mDetailsBackground.enableParallax();
-        Glide.with(requireActivity()).asBitmap().centerCrop().error(R.drawable.default_background).load(data.getBackgroundImageStringUri()).into(new CustomTarget<Bitmap>() {
+        Glide.with(requireActivity()).asBitmap().centerCrop().error(R.drawable.default_background).load(data.getBackgroundStringUri()).into(new CustomTarget<Bitmap>() {
             @Override
             public void onResourceReady(@NonNull Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
                 mDetailsBackground.setCoverBitmap(bitmap);
@@ -149,50 +150,50 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
     private void setupDetailsOverviewRow() {
         DetailsOverviewRow row = new DetailsOverviewRow(mSelectedRadio);
         row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
-        int width = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_WIDTH);
-        int height = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_HEIGHT);
-        Glide.with(requireActivity()).load(mSelectedRadio.getDetailImageStringUri()).centerCrop().error(R.drawable.default_background).into(new CustomTarget<Drawable>(width, height) {
-            @Override
-            public void onResourceReady(@NonNull Drawable drawable, @Nullable Transition<? super Drawable> transition) {
-                Log.d(TAG, "details overview card image url ready: " + drawable);
-                row.setImageDrawable(drawable);
-                mAdapter.notifyArrayItemRangeChanged(0, mAdapter.size());
-            }
-
-            @Override
-            public void onLoadCleared(@Nullable Drawable placeholder) {
-
-            }
-        });
+//        int width = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_WIDTH);
+//        int height = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_HEIGHT);
+//        Glide.with(requireActivity()).load(mSelectedRadio.getDetailImageStringUri()).centerCrop().error(R.drawable.default_background).into(new CustomTarget<Drawable>(width, height) {
+//            @Override
+//            public void onResourceReady(@NonNull Drawable drawable, @Nullable Transition<? super Drawable> transition) {
+//                Log.d(TAG, "details overview card image url ready: " + drawable);
+//                row.setImageDrawable(drawable);
+//                mAdapter.notifyArrayItemRangeChanged(0, mAdapter.size());
+//            }
+//
+//            @Override
+//            public void onLoadCleared(@Nullable Drawable placeholder) {
+//
+//            }
+//        });
 
         ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
 
         switch (mSelectedRadio.getTitle()) {
-            case Radio.TRAP_BEATS_NAME:
+            case Radio.TRAP_BEATS_NAME -> {
                 for (int i = 0; i < TRAP_BEATS_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, TRAP_BEATS_PLAY_LIST[i].titleTab));
                 }
-                break;
-            case Radio.HMONG_SONGS:
+            }
+            case Radio.HMONG_SONGS -> {
                 for (int i = 0; i < HMONG_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, HMONG_PLAY_LIST[i].titleTab));
                 }
-                break;
-            case Radio.UMN_PLAYLIST:
+            }
+            case Radio.UMN_PLAYLIST -> {
                 for (int i = 0; i < UMN_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, UMN_PLAY_LIST[i].titleTab));
                 }
-                break;
-            case Radio.STUDY_MUSIC:
+            }
+            case Radio.STUDY_MUSIC -> {
                 for (int i = 0; i < STUDY_MUSIC_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, STUDY_MUSIC_PLAY_LIST[i].titleTab));
                 }
-                break;
-            case Radio.THAI_LAO_KARAOKE:
+            }
+            case Radio.THAI_LAO_KARAOKE -> {
                 for (int i = 0; i < TAI_LAO_KARAOKE_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, TAI_LAO_KARAOKE_PLAY_LIST[i].titleTab));
                 }
-                break;
+            }
         }
         row.setActionsAdapter(actionAdapter);
 
@@ -219,7 +220,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                 if (action != null) {
                     int index = ((int) action.getId());
                     switch (mSelectedRadio.getTitle()) {
-                        case Radio.UMN_PLAYLIST: {
+                        case Radio.UMN_PLAYLIST -> {
                             UmnPlayList umnPlayList = UMN_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -228,9 +229,8 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             changeBackground(umnPlayList.bg);
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
-                            break;
                         }
-                        case Radio.HMONG_SONGS: {
+                        case Radio.HMONG_SONGS -> {
                             UmnPlayList umnPlayList = HMONG_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -241,9 +241,8 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             }
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
-                            break;
                         }
-                        case Radio.STUDY_MUSIC: {
+                        case Radio.STUDY_MUSIC -> {
                             UmnPlayList umnPlayList = STUDY_MUSIC_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -254,9 +253,8 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             }
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
-                            break;
                         }
-                        case Radio.TRAP_BEATS_NAME: {
+                        case Radio.TRAP_BEATS_NAME -> {
                             UmnPlayList umnPlayList = TRAP_BEATS_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -267,9 +265,8 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             }
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
-                            break;
                         }
-                        case Radio.THAI_LAO_KARAOKE: {
+                        case Radio.THAI_LAO_KARAOKE -> {
                             UmnPlayList umnPlayList = TAI_LAO_KARAOKE_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -280,7 +277,6 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             }
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
-                            break;
                         }
                     }
                 }

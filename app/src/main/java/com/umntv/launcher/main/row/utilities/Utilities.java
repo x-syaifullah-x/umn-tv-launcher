@@ -73,7 +73,7 @@ public class Utilities {
             card.setTitle(title[index]);
             card.setLinkApkDownload(linkApkDownload[index]);
             card.setPackageName(packageName[index]);
-            card.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.ic_utilities_bg));
+            card.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.ic_utilities_bg));
             card.setIconStringUri(ResourceHelpers.toStringUri(resourceId[index]));
             card.setDataExtra(extras[index]);
             data.add(card);

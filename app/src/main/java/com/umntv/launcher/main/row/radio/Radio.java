@@ -76,14 +76,6 @@ public final class Radio {
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_hmong_songs),
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_thai),
             };
-            String[] detailImageUrl = {
-                    null,
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_karaoke),
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_studio_music_detail),
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_trap_beats_detail),
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_hmong_songs_detail),
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_thai),
-            };
 
             for (int index = 0; index < title.length; ++index) {
                 radio.add(
@@ -94,8 +86,8 @@ public final class Radio {
                                 title[index],
                                 description[index],
                                 link[index],
-                                cardImageUrl[index],
-                                detailImageUrl[index]
+                                cardImageUrl[index]
+//                                detailImageUrl[index]
                         )
                 );
             }
@@ -110,8 +102,8 @@ public final class Radio {
             String title,
             String description,
             String link,
-            String cardImageUrl,
-            String detailImageUrl) {
+            String cardImageUrl
+    ) {
         RadioCard r = new RadioCard();
         r.setYoutubeId(youtubeId);
         r.setPackageName(packageName);
@@ -119,8 +111,7 @@ public final class Radio {
         r.setTitle(title);
         r.setDetailDescription(description);
         r.setIconStringUri(cardImageUrl);
-        r.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.radio_bg_umn_radio));
-        r.setDetailImageStringUri(detailImageUrl);
+        r.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.radio_bg_umn_radio));
         r.setLink(link);
         return r;
     }

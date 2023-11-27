@@ -15,7 +15,7 @@ public class DataSource {
             "PRESCHOOL",
             "WELCOME TO E-LEARNING PRESCHOOL",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+preschool",
                     null,
@@ -29,7 +29,7 @@ public class DataSource {
             "MATHEMATICS",
             "WELCOME TO E-LEARNING MATHEMATICS",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+mathematics+for+kids",
                     null,
@@ -43,7 +43,7 @@ public class DataSource {
             "CODING",
             "WELCOME TO E-LEARNING CODING",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+coding+for+kids",
                     null,
@@ -57,7 +57,7 @@ public class DataSource {
             "ENGLISH",
             "WELCOME TO E-LEARNING ENGLISH",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+english+for+kids",
                     null,
@@ -71,7 +71,7 @@ public class DataSource {
             "GRAMMAR",
             "WELCOME TO E-LEARNING GRAMMAR",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+english+grammar+for+kids",
                     null,
@@ -85,7 +85,7 @@ public class DataSource {
             "MANDARIN",
             "WELCOME TO E-LEARNING MANDARIN",
             OverviewItem.SUBTITLE_DEFAULT,
-            "",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
                     "https://www.youtube.com/results?search_query=e+learning+chinese+for+kids",
                     null,

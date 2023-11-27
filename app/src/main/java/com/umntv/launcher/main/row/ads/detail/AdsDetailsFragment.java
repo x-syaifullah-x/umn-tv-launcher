@@ -82,7 +82,7 @@ public class AdsDetailsFragment extends DetailsSupportFragment {
         mDetailsBackground.enableParallax();
 
         try {
-            Uri uri = Uri.parse(data.getBackgroundImageStringUri());
+            Uri uri = Uri.parse(data.getBackgroundStringUri());
             InputStream stream = requireContext().getContentResolver().openInputStream(uri);
             mDetailsBackground.setCoverBitmap(BitmapFactory.decodeStream(stream));
             mAdapter.notifyArrayItemRangeChanged(0, mAdapter.size());

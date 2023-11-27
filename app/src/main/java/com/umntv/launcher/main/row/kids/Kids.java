@@ -15,7 +15,7 @@ public class Kids {
 
     public static List<KidsCard> setup() {
         if (kids.isEmpty()) {
-            String[] apkLinkDownload = {
+            String[] downloadUrl = {
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/UMN_Kids_UMNTV_1.apk",
                     null,
                     "https://umntv.net/UMNTV/IXL_7.0.0_Apkpure.apk",
@@ -29,7 +29,7 @@ public class Kids {
                     TITLE_E_LEARNING,
                     "KIDS NURSERY SONGS"
             };
-            int[] resourceId = {
+            int[] icon = {
                     R.drawable.kids_ic_umn_kids,
                     R.drawable.kids_ic_youtube_kids,
                     R.drawable.kids_ic_umn_ixl,
@@ -47,10 +47,10 @@ public class Kids {
             for (int index = 0; index < title.length; ++index) {
                 KidsCard k = new KidsCard();
                 k.setTitle(title[index]);
-                k.setLinkApkDownload(apkLinkDownload[index]);
+                k.setDownloadUrl(downloadUrl[index]);
                 k.setPackageName(packageName[index]);
-                k.setIconStringUri(ResourceHelpers.toStringUri(resourceId[index]));
-                k.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.kids_bg_umn_kids));
+                k.setIconStringUri(ResourceHelpers.toStringUri(icon[index]));
+                k.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.kids_bg_umn_kids));
                 kids.add(k);
             }
         }

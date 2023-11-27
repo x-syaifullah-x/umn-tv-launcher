@@ -86,17 +86,17 @@ public class NewsOrMediaRepository {
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_asian_news),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_bloomberg),
             };
-            String[] iconDetailImage = {
-                    null,
-                    null,
-                    null,
-                    ResourceHelpers.toStringUri(R.drawable.bg_int_news),
-                    null,
-                    null,
-//                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news_detail_icon),
-//                    ResourceHelpers.toStringUri(R.drawable.ic_news_asian_news_detail_icon),
+//            String[] iconDetailImage = {
 //                    null,
-            };
+//                    null,
+//                    null,
+//                    ResourceHelpers.toStringUri(R.drawable.bg_int_news),
+//                    null,
+//                    null,
+////                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news_detail_icon),
+////                    ResourceHelpers.toStringUri(R.drawable.ic_news_asian_news_detail_icon),
+////                    null,
+//            };
 
             String[] apkUrl = {
                     null,
@@ -115,7 +115,6 @@ public class NewsOrMediaRepository {
                                 youtubeId[index],
                                 cardImage[index],
                                 bannerImage[index],
-                                iconDetailImage[index],
                                 packageName[index],
                                 apkUrl[index]
                         )
@@ -131,7 +130,6 @@ public class NewsOrMediaRepository {
             String youtubeId,
             String cardImageUrl,
             String backgroundImageUrl,
-            String detailImageUrl,
             String packageName,
             String apkUrl) {
         NewsMediaModel newsMediaModel = new NewsMediaModel();
@@ -139,8 +137,7 @@ public class NewsOrMediaRepository {
         newsMediaModel.setTitle(title);
         newsMediaModel.setDetailDescription(description);
         newsMediaModel.setIconStringUri(cardImageUrl);
-        newsMediaModel.setBackgroundImageStringUri(backgroundImageUrl);
-        newsMediaModel.setDetailImageStringUri(detailImageUrl);
+        newsMediaModel.setBackgroundStringUri(backgroundImageUrl);
         newsMediaModel.setYoutubeId(youtubeId);
         newsMediaModel.setApkUrl(apkUrl);
         return newsMediaModel;

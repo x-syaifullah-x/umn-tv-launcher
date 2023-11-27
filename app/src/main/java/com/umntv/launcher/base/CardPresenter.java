@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import androidx.leanback.widget.Presenter;
 
 import com.bumptech.glide.Glide;
+
 import media.umn.tv.R;
 
 public class CardPresenter extends Presenter {

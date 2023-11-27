@@ -91,7 +91,7 @@ public class UmnTv {
         u.setTitle(title);
         u.setLink(link);
         u.setPackageName(packageName);
-        u.setBackgroundImageStringUri(backgroundImageUrl);
+        u.setBackgroundStringUri(backgroundImageUrl);
         u.setIconStringUri(ResourceHelpers.toStringUri(resourceId));
         u.setLinkApkDownload(linkApkDownload);
         return u;

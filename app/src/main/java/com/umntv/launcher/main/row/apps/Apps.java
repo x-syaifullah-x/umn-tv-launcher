@@ -60,7 +60,7 @@ public class Apps {
             a.setClassNameActivityDetail(detailClass[index]);
             a.setTitle(title[index]);
             a.setPackageName(packageName[index]);
-            a.setBackgroundImageStringUri(backgroundImageUrl);
+            a.setBackgroundStringUri(backgroundImageUrl);
             a.setIconStringUri(ResourceHelpers.toStringUri(resourceId[index]));
             list.add(a);
         }

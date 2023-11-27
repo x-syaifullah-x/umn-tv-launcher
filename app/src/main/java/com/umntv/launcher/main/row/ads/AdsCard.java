@@ -49,4 +49,14 @@ public class AdsCard extends Card {
     public void onClicked(CardVisitor visitor) {
         visitor.click(this);
     }
+
+    private String detailDescription;
+
+    public String getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String detailDescription) {
+        this.detailDescription = detailDescription;
+    }
 }

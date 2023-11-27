@@ -9,9 +9,7 @@ public abstract class Card implements Serializable {
     private String title;
     private Drawable iconDrawable;
     private String iconStringUri;
-    private String detailImageStringUri;
-    private String backgroundImageStringUri;
-    private String detailDescription;
+    private String backgroundStringUri;
 
     public String getTitle() {
         return title;
@@ -22,43 +20,27 @@ public abstract class Card implements Serializable {
     }
 
     public Drawable getIconDrawable() {
-        return this.iconDrawable;
+        return iconDrawable;
     }
 
-    public void setIconDrawable(Drawable paramDrawable) {
-        this.iconDrawable = paramDrawable;
-    }
-
-    public String getBackgroundImageStringUri() {
-        return backgroundImageStringUri;
-    }
-
-    public void setBackgroundImageStringUri(String bgImageUrl) {
-        this.backgroundImageStringUri = bgImageUrl;
+    public void setIconDrawable(Drawable iconDrawable) {
+        this.iconDrawable = iconDrawable;
     }
 
     public String getIconStringUri() {
         return iconStringUri;
     }
 
-    public void setIconStringUri(String uriString) {
-        this.iconStringUri = uriString;
+    public void setIconStringUri(String iconStringUri) {
+        this.iconStringUri = iconStringUri;
     }
 
-    public String getDetailImageStringUri() {
-        return detailImageStringUri;
+    public String getBackgroundStringUri() {
+        return backgroundStringUri;
     }
 
-    public void setDetailImageStringUri(String detailImageStringUri) {
-        this.detailImageStringUri = detailImageStringUri;
-    }
-
-    public String getDetailDescription() {
-        return detailDescription;
-    }
-
-    public void setDetailDescription(String detailDescription) {
-        this.detailDescription = detailDescription;
+    public void setBackgroundStringUri(String backgroundStringUri) {
+        this.backgroundStringUri = backgroundStringUri;
     }
 
     public abstract void onClicked(CardVisitor visitor);

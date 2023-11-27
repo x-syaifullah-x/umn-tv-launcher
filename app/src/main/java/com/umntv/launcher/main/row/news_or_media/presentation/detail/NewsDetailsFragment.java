@@ -81,7 +81,7 @@ public class NewsDetailsFragment extends DetailsSupportFragment {
                 .asBitmap()
                 .centerCrop()
                 .error(R.drawable.default_background)
-                .load(data.getBackgroundImageStringUri())
+                .load(data.getBackgroundStringUri())
                 .into(new CustomTarget<Bitmap>() {
                     @Override
                     public void onResourceReady(@NonNull Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
@@ -101,25 +101,25 @@ public class NewsDetailsFragment extends DetailsSupportFragment {
         final DetailsOverviewRow row = new DetailsOverviewRow(mSelectedNewsMediaModel);
         row.setImageDrawable(
                 ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
-        int width = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_WIDTH);
-        int height = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_HEIGHT);
-        Glide.with(requireActivity())
-                .load(mSelectedNewsMediaModel.getDetailImageStringUri())
-                .centerCrop()
-                .error(R.drawable.default_background)
-                .into(new CustomTarget<Drawable>(width, height) {
-                    @Override
-                    public void onResourceReady(@NonNull Drawable drawable, @Nullable Transition<? super Drawable> transition) {
-                        Log.d(TAG, "details overview card image url ready: " + drawable);
-                        row.setImageDrawable(drawable);
-                        mAdapter.notifyArrayItemRangeChanged(0, mAdapter.size());
-                    }
-
-                    @Override
-                    public void onLoadCleared(@Nullable Drawable placeholder) {
-
-                    }
-                });
+//        int width = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_WIDTH);
+//        int height = Convert.dpToPixel(requireActivity().getApplicationContext(), DETAIL_THUMB_HEIGHT);
+//        Glide.with(requireActivity())
+//                .load(mSelectedNewsMediaModel.getDetailImageStringUri())
+//                .centerCrop()
+//                .error(R.drawable.default_background)
+//                .into(new CustomTarget<Drawable>(width, height) {
+//                    @Override
+//                    public void onResourceReady(@NonNull Drawable drawable, @Nullable Transition<? super Drawable> transition) {
+//                        Log.d(TAG, "details overview card image url ready: " + drawable);
+//                        row.setImageDrawable(drawable);
+//                        mAdapter.notifyArrayItemRangeChanged(0, mAdapter.size());
+//                    }
+//
+//                    @Override
+//                    public void onLoadCleared(@Nullable Drawable placeholder) {
+//
+//                    }
+//                });
 
         ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
 

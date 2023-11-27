@@ -64,7 +64,7 @@ public class MoviesApps {
             MoviesAppsCard s = new MoviesAppsCard();
             s.setTitle(title[index]);
             s.setIconDrawable(ContextCompat.getDrawable(c, resourceId[index]));
-            s.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.bg_row_support));
+            s.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.bg_row_support));
             s.setPackageName(packageName[index]);
             s.setApkUrl(apkUrl[index]);
             list.add(s);

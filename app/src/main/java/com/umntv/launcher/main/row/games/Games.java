@@ -77,7 +77,7 @@ public class Games {
         umn.setDetail(a);
         umn.setTitle(title);
         umn.setPackageName(packageName);
-        umn.setBackgroundImageStringUri(ResourceHelpers.toStringUri(R.drawable.games_bg_umn_games));
+        umn.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.games_bg_umn_games));
         umn.setIconStringUri(ResourceHelpers.toStringUri(resourceId));
         umn.setLinkApkDownload(linkApkDownload);
         return umn;

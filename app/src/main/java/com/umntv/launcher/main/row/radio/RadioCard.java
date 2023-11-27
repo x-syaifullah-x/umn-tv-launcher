@@ -15,6 +15,16 @@ public class RadioCard extends CardAppAndLink {
         return youtubeId;
     }
 
+    private String detailDescription;
+
+    public String getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String detailDescription) {
+        this.detailDescription = detailDescription;
+    }
+
     public void setYoutubeId(String youtubeId) {
         this.youtubeId = youtubeId;
     }

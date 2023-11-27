@@ -17,7 +17,6 @@ import com.umntv.launcher.main.row.apps.app_drawer.LaunchApp;
 import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DetailFragment;
 import com.umntv.launcher.main.row.games.GamesCardApp;
-import com.umntv.launcher.main.row.games.umn_retro.UmnRetroDetailFragment;
 import com.umntv.launcher.main.row.kids.Kids;
 import com.umntv.launcher.main.row.kids.KidsCard;
 import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
@@ -39,76 +38,74 @@ import com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
-public class CardVisitor {
-
-    private final Context mContext;
+public class CardVisitor extends CardVisitorKt {
 
     public CardVisitor(Context context) {
-        mContext = context;
+        super(context);
     }
 
     public void click(MoviesAppsCard card) {
         String packageName = card.getPackageName();
         if (packageName != null) {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(packageName);
             if (launchIntent != null) {
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
                 String apkUrl = card.getApkUrl();
                 if (apkUrl != null) {
-                    ApkUtil.downloadToCacheDirAndInstall(mContext, apkUrl);
+                    ApkUtil.downloadToCacheDirAndInstall(getContext(), apkUrl);
                 } else {
-                    AndroidStore.open(mContext, packageName);
+                    AndroidStore.open(getContext(), packageName);
                 }
             }
         }
     }
 
     public void click(LaunchApp launchApp) {
-        Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(launchApp.getPackageName());
+        Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(launchApp.getPackageName());
         if (launchIntent != null) {
-            mContext.startActivity(launchIntent);
+            getContext().startActivity(launchIntent);
         }
     }
 
     public void click(AppDrawerCard appDrawerCard) {
-        Intent intent = new Intent(mContext, AppsActivity.class);
-        mContext.startActivity(intent);
+        Intent intent = new Intent(getContext(), AppsActivity.class);
+        getContext().startActivity(intent);
     }
 
     public void click(AdsCard adsCard) {
-        Intent intent = new Intent(mContext, AdsDetailsActivity.class);
+        Intent intent = new Intent(getContext(), AdsDetailsActivity.class);
         intent.putExtra(AdsDetailsActivity.ITEM, adsCard);
-        mContext.startActivity(intent);
+        getContext().startActivity(intent);
     }
 
     public void click(NewsMediaModel newsMediaModel) {
         String packageName = newsMediaModel.getPackageName();
         if (packageName != null) {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(packageName);
             if (launchIntent != null) {
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
                 String apkUrl = newsMediaModel.getApkUrl();
                 if (apkUrl != null) {
-                    ApkUtil.downloadToCacheDirAndInstall(mContext, apkUrl);
+                    ApkUtil.downloadToCacheDirAndInstall(getContext(), apkUrl);
                 } else {
-                    AndroidStore.open(mContext, packageName);
+                    AndroidStore.open(getContext(), packageName);
                 }
             }
         } else {
             if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.INT_NEWS)) {
-                Intent intent = new Intent(mContext, DetailsActivity.class);
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
                 intent.setAction(IntNewsFragment.class.getName());
-                mContext.startActivity(intent);
+                getContext().startActivity(intent);
             } else if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.YOUTUBE_ENJOYABLES)) {
-                Intent intent = new Intent(mContext, DetailsActivity.class);
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
                 intent.setAction(YoutubeShortsFragment.class.getName());
-                mContext.startActivity(intent);
+                getContext().startActivity(intent);
             } else {
-                Intent intent = new Intent(mContext, NewsDetailsActivity.class);
+                Intent intent = new Intent(getContext(), NewsDetailsActivity.class);
                 intent.putExtra(NewsDetailsActivity.ITEM, newsMediaModel);
-                mContext.startActivity(intent);
+                getContext().startActivity(intent);
             }
         }
     }
@@ -116,75 +113,75 @@ public class CardVisitor {
 
     public void click(RadioCard radioCard) {
         if (radioCard.getPackageName() != null) {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(radioCard.getPackageName());
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(radioCard.getPackageName());
             if (launchIntent != null) {
                 /* open application */
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
                 if (radioCard.getLinkApkDownload() != null) {
                     /* download apk */
-                    ApkUtil.downloadToCacheDirAndInstall(mContext, radioCard.getLinkApkDownload());
+                    ApkUtil.downloadToCacheDirAndInstall(getContext(), radioCard.getLinkApkDownload());
                 } else {
                     /* open play store */
-                    AndroidStore.open(mContext, radioCard.getPackageName());
+                    AndroidStore.open(getContext(), radioCard.getPackageName());
                 }
             }
         } else {
-            Intent intent = new Intent(mContext, RadioDetailsActivity.class);
+            Intent intent = new Intent(getContext(), RadioDetailsActivity.class);
             intent.putExtra(RadioDetailsActivity.ITEM, radioCard);
-            mContext.startActivity(intent);
+            getContext().startActivity(intent);
         }
     }
 
     public void click(UtilitiesCard utilitiesCard) {
         if (utilitiesCard.getDataExtra() != null) {
-            Intent i = new Intent(mContext, UtilitiesDetailsActivity.class);
+            Intent i = new Intent(getContext(), UtilitiesDetailsActivity.class);
             i.putExtra(utilitiesCard.getDataExtra(), true);
-            mContext.startActivity(i);
+            getContext().startActivity(i);
         } else if (utilitiesCard.getPackageName() != null) {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(utilitiesCard.getPackageName());
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(utilitiesCard.getPackageName());
             if (launchIntent != null) {
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
                 if (utilitiesCard.getLinkApkDownload() != null) {
-                    ApkUtil.downloadToCacheDirAndInstall(mContext, utilitiesCard.getLinkApkDownload());
+                    ApkUtil.downloadToCacheDirAndInstall(getContext(), utilitiesCard.getLinkApkDownload());
                 } else {
                     /* open play store */
-                    AndroidStore.open(mContext, utilitiesCard.getPackageName());
+                    AndroidStore.open(getContext(), utilitiesCard.getPackageName());
                 }
             }
         }
     }
 
-    public void click(KidsCard kidsCard) {
-        if (Kids.TITLE_E_LEARNING.equalsIgnoreCase(kidsCard.getTitle())) {
-            Intent intent = new Intent(mContext, DetailsActivity.class);
-            intent.setAction(com.umntv.launcher.main.row.kids.details.e_lerning.DetailFragment.class.getName());
-            mContext.startActivity(intent);
-            return;
-        }
 
-        Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(kidsCard.getPackageName());
-        if (launchIntent != null) {
-            mContext.startActivity(launchIntent);
-        } else {
-            if (kidsCard.getLinkApkDownload() != null) {
-                ApkUtil.downloadToCacheDirAndInstall(mContext, kidsCard.getLinkApkDownload());
-                return;
+    public void click(KidsCard kidsCard) {
+        if (kidsCard.getPackageName() != null) {
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(kidsCard.getPackageName());
+            if (launchIntent != null) {
+                getContext().startActivity(launchIntent);
+            } else {
+                if (kidsCard.getDownloadUrl() != null) {
+                    ApkUtil.downloadToCacheDirAndInstall(getContext(), kidsCard.getDownloadUrl());
+                    return;
+                }
+                AndroidStore.open(getContext(), kidsCard.getPackageName());
             }
-            AndroidStore.open(mContext, kidsCard.getPackageName());
+        } else {
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
+            intent.setAction(com.umntv.launcher.main.row.kids.details.e_lerning.DetailFragment.class.getName());
+            getContext().startActivity(intent);
         }
     }
 
     public void click(UmnTvCard umnTvCard) {
         if (umnTvCard.getPackageName() != null) {
             /* open application or download apk */
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(umnTvCard.getPackageName());
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(umnTvCard.getPackageName());
             if (launchIntent != null) {
                 /* open application */
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
-                ApkUtil.downloadToCacheDirAndInstall(mContext, umnTvCard.getLinkApkDownload());
+                ApkUtil.downloadToCacheDirAndInstall(getContext(), umnTvCard.getLinkApkDownload());
             }
         } else {
             /* open browser or open detail */
@@ -193,14 +190,14 @@ public class CardVisitor {
                 try {
                     Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(umnTvCard.getLink()));
                     myIntent.setPackage("com.android.chrome");
-                    mContext.startActivity(myIntent);
+                    getContext().startActivity(myIntent);
                 } catch (ActivityNotFoundException e) {
-                    Toast.makeText(mContext, "No application can handle this request." + " Please install a web browser", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "No application can handle this request." + " Please install a web browser", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
             } else {
                 String title = umnTvCard.getTitle();
-                Intent intent = new Intent(mContext, DetailsActivity.class);
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
                 switch (title) {
                     case UmnTv.TITLE_NETWORK ->
                             intent.setAction(NetworkDetailFragment.class.getName());
@@ -218,67 +215,67 @@ public class CardVisitor {
                             intent.setAction(MediaCenterDetailFragment.class.getName());
                     case UmnTv.TITLE_FAQ -> intent.setAction(FaqDetailFragment.class.getName());
                     case UmnTv.TITLE_APP_DRAWER -> {
-                        intent = new Intent(mContext, AppsActivity.class);
+                        intent = new Intent(getContext(), AppsActivity.class);
                         intent.setAction(AppDrawerFragment.class.getName());
                     }
                 }
-                mContext.startActivity(intent);
+                getContext().startActivity(intent);
             }
         }
     }
 
     public void click(GamesCardApp gamesCardApp) {
         if (gamesCardApp.getDetail() != null) {
-            Intent intent = new Intent(mContext, DetailsActivity.class);
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
             intent.setAction(gamesCardApp.getDetail().getName());
-            mContext.startActivity(intent);
+            getContext().startActivity(intent);
             return;
         }
 
-        Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(gamesCardApp.getPackageName());
+        Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(gamesCardApp.getPackageName());
         if (launchIntent != null) {
-            mContext.startActivity(launchIntent);
+            getContext().startActivity(launchIntent);
         } else {
             if (gamesCardApp.getLinkApkDownload() != null) {
-                ApkUtil.downloadToCacheDirAndInstall(mContext, gamesCardApp.getLinkApkDownload());
+                ApkUtil.downloadToCacheDirAndInstall(getContext(), gamesCardApp.getLinkApkDownload());
             } else {
-                AndroidStore.open(mContext, gamesCardApp.getPackageName());
+                AndroidStore.open(getContext(), gamesCardApp.getPackageName());
             }
         }
     }
 
     public void click(AsianMediaCard asianMediaCard) {
         if (asianMediaCard.getPackageName() == null) {
-            Intent intent = new Intent(mContext, DetailsActivity.class);
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
             intent.setAction(DetailFragment.class.getName());
-            mContext.startActivity(intent);
+            getContext().startActivity(intent);
             return;
         }
 
-        Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(asianMediaCard.getPackageName());
+        Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(asianMediaCard.getPackageName());
         if (launchIntent != null) {
-            mContext.startActivity(launchIntent);
+            getContext().startActivity(launchIntent);
         } else {
             if (asianMediaCard.getLinkApkDownload() != null) {
-                ApkUtil.downloadToCacheDirAndInstall(mContext, asianMediaCard.getLinkApkDownload());
+                ApkUtil.downloadToCacheDirAndInstall(getContext(), asianMediaCard.getLinkApkDownload());
             } else {
-                AndroidStore.open(mContext, asianMediaCard.getPackageName());
+                AndroidStore.open(getContext(), asianMediaCard.getPackageName());
             }
         }
     }
 
     public void click(AppsCard appsCard) {
         if (appsCard.getPackageName() != null) {
-            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(appsCard.getPackageName());
+            Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(appsCard.getPackageName());
             if (launchIntent != null) {
-                mContext.startActivity(launchIntent);
+                getContext().startActivity(launchIntent);
             } else {
-                AndroidStore.open(mContext, appsCard.getPackageName());
+                AndroidStore.open(getContext(), appsCard.getPackageName());
             }
         } else {
-            Intent intent = new Intent(mContext, AppsActivity.class);
+            Intent intent = new Intent(getContext(), AppsActivity.class);
             intent.setAction(appsCard.getClassNameActivityDetail());
-            mContext.startActivity(intent);
+            getContext().startActivity(intent);
         }
     }
 }

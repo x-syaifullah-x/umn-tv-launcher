@@ -31,7 +31,7 @@ public final class Ads {
                     TITLE_LEEWAY_ENDEAVORS
             };
             String[] description = {
-                    "",
+                    "Advertise your business for as little as $5 per month",
                     "Grow your business by placing your ads on our platform for as little as $5 a month.\nUsers will have a direct link to your information or content.\nContact us support@umntv.com",
                     "Create your own brands from your ideas, or assemble your brands from already created products.\nMobile phone application. Electronic device, software development, global Marketing\nconsulting and tools. Global girls inc is for businesses that`s ready to create their brands\nand or launch their products and services globally.\nglobalgirlsinc.net",
                     "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters\nthat are specialists in their respective fields. We staff manufacturing machining. IT, medical,\nexecutive level, engineering, administration and more.\n\nPhone: 1(763) 560-8430 中国人 EXT. 300'",
@@ -73,8 +73,7 @@ public final class Ads {
                 ads.setTitle(title[index]);
                 ads.setDetailDescription(description[index]);
                 ads.setIconStringUri(cardImageUrl[index]);
-                ads.setBackgroundImageStringUri(detailImageUrl[index]);
-                ads.setDetailImageStringUri(detailImageUrl[index]);
+                ads.setBackgroundStringUri(detailImageUrl[index]);
                 ads.setSubtitle(subTitle[index]);
                 ads.setIcDetailsStringUri(ic[index]);
                 list.add(ads);
