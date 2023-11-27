@@ -1,7 +1,10 @@
 package com.umntv.launcher.main.row.umn_tv.detail.download_center;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
 import com.umntv.launcher.util.Admob;
 
@@ -19,7 +22,18 @@ public class DownloadCenterDetailFragment extends BaseDetailFragment {
         Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
-//    @Override
+    @Override
+    protected void openOrDownload(ApkData apkData) {
+        if (apkData.url.contains("https://n0render.com/dc")) {
+            Uri uri = Uri.parse(apkData.url);
+            Intent i = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(i);
+        } else {
+            super.openOrDownload(apkData);
+        }
+    }
+
+    //    @Override
 //    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 //        super.onViewCreated(view, savedInstanceState);
 //

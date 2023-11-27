@@ -12,6 +12,20 @@ public class DataSource {
     public static final String PACKAGE_NAME_N0_RENDER = "com.umn.n0.render";
     public static final String PACKAGE_NAME_N0_BROWSER = "com.umn.n0.browser";
 
+    private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
+            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.ic_umn_tv_download_center_new,
+            "DOWNLOAD CENTER",
+            "WELCOME TO UMN DOWNLOAD CENTER",
+            "",
+            "Expand your way of thinking by exploring the UMN Download Center.",
+            new ApkData(
+                    "https://n0render.com/dc",
+                    null,
+                    false
+            )
+    );
+
     private static final OverviewItem N0_BROWSER = new OverviewItem(
             R.drawable.ic_umn_tv_download_center_new,
             R.drawable.ic_umn_tv_download_center_new,
@@ -40,7 +54,39 @@ public class DataSource {
             )
     );
 
+    private static final OverviewItem UPDATE_LAUNCHER = new OverviewItem(
+            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.ic_umn_tv_download_center_new,
+            "UPDATE LAUNCHER",
+            "WELCOME TO UMN DOWNLOAD CENTER",
+            "",
+            "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
+            new ApkData(
+                    "https://umntvdealers.net/UMNTV/Apks/LAUNCHERPRO9-1.apk",
+//                    "com.umntv.launcher",
+                    "-",
+                    false
+            )
+    );
+
+    private static final OverviewItem UMN_LITE = new OverviewItem(
+            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.ic_umn_tv_download_center_new,
+            "UMN LITE",
+            "WELCOME TO UMN DOWNLOAD CENTER",
+            "",
+            "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
+            new ApkData(
+                    "https://umntvdealers.net/UMNTV/Apks/UMNLTIE.apk",
+                    "com.umntv.launcher.lite",
+                    false
+            )
+    );
+
     public static final List<OverviewItem> items = List.of(
+            DOWNLOAD_CENTER,
+            UPDATE_LAUNCHER,
+            UMN_LITE,
             N0_BROWSER,
             N0_RENDER
     );
