@@ -1,12 +1,15 @@
 package com.umntv.launcher.main.row.kids;
 
 import media.umn.tv.R;
+
 import com.umntv.launcher.util.ResourceHelpers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Kids {
+
+    public static final String TITLE_E_LEARNING = "E-LEARNING";
 
     private static final List<KidsCard> kids = new ArrayList<>();
 
@@ -15,30 +18,30 @@ public class Kids {
             String[] apkLinkDownload = {
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/UMN_Kids_UMNTV_1.apk",
                     null,
-                    null,
+                    "https://umntv.net/UMNTV/IXL_7.0.0_Apkpure.apk",
                     null,
                     null
             };
             String[] title = {
                     "UMN KIDS TV",
                     "YOUTUBE KIDS",
-                    "HAPPY KIDS",
-                    "KIDOODLE TV",
-                    "KIDDO-LEARNING"
+                    "UMN_IXL",
+                    TITLE_E_LEARNING,
+                    "KIDS NURSERY SONGS"
             };
             int[] resourceId = {
                     R.drawable.kids_ic_umn_kids,
                     R.drawable.kids_ic_youtube_kids,
-                    R.drawable.kids_ic_happy_kids,
-                    R.drawable.kids_ic_kidoodle_tv,
-                    R.drawable.kids_ic_kiddo_learning
+                    R.drawable.kids_ic_umn_ixl,
+                    R.drawable.kids_ic_e_learning,
+                    R.drawable.kids_ic_kids_nursery
             };
             String[] packageName = {
                     "kids.umn.net",
                     "com.google.android.youtube.tvkids",
-                    "com.future.HappyKids",
-                    "tv.kidoodle.android",
-                    "com.vixi.kiddo",
+                    "com.ixl.ixlmath",
+                    null,
+                    "net.colorcity.kids",
             };
 
             for (int index = 0; index < title.length; ++index) {

@@ -20,8 +20,8 @@ public class DataSource {
             "",
             "Expand your way of thinking by exploring the UMN Download Center.",
             new ApkData(
-                    "https://n0render.com/dc",
-                    null,
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    PACKAGE_NAME_N0_BROWSER,
                     false
             )
     );

@@ -18,6 +18,7 @@ import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DetailFragment;
 import com.umntv.launcher.main.row.games.GamesCardApp;
 import com.umntv.launcher.main.row.games.umn_retro.UmnRetroDetailFragment;
+import com.umntv.launcher.main.row.kids.Kids;
 import com.umntv.launcher.main.row.kids.KidsCard;
 import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
 import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
@@ -156,16 +157,22 @@ public class CardVisitor {
     }
 
     public void click(KidsCard kidsCard) {
+        if (Kids.TITLE_E_LEARNING.equalsIgnoreCase(kidsCard.getTitle())) {
+            Intent intent = new Intent(mContext, DetailsActivity.class);
+            intent.setAction(com.umntv.launcher.main.row.kids.details.e_lerning.DetailFragment.class.getName());
+            mContext.startActivity(intent);
+            return;
+        }
+
         Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(kidsCard.getPackageName());
         if (launchIntent != null) {
             mContext.startActivity(launchIntent);
         } else {
             if (kidsCard.getLinkApkDownload() != null) {
                 ApkUtil.downloadToCacheDirAndInstall(mContext, kidsCard.getLinkApkDownload());
-            } else {
-                /* open play store */
-                AndroidStore.open(mContext, kidsCard.getPackageName());
+                return;
             }
+            AndroidStore.open(mContext, kidsCard.getPackageName());
         }
     }
 
