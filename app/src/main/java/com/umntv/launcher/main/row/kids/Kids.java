@@ -41,7 +41,7 @@ public class Kids {
                     "com.google.android.youtube.tvkids",
                     "com.ixl.ixlmath",
                     null,
-                    "net.colorcity.kids",
+                    "net.colorcity.kidsy",
             };
 
             for (int index = 0; index < title.length; ++index) {
