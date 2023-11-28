@@ -43,13 +43,19 @@ public class UmnGamesDetailFragment extends BaseDetailFragment {
                 launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
             launchIntent.setData(Uri.parse(apkData.url));
-//                launchIntent.addCategory("android.intent.category.LEANBACK_LAUNCHER");
+//            launchIntent.addCategory("android.intent.category.LEANBACK_LAUNCHER");
             requireContext().startActivity(launchIntent);
         } catch (Throwable e) {
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setPackage("com.jio.web.androidtv");
-            i.setData(Uri.parse(apkData.url));
-            startActivity(i);
+            ApkData a = new ApkData(
+                    com.umntv.launcher.main.row.umn_tv.detail.download_center.DataSource.URL_GAME_BROWSER,
+                    apkData.packageName,
+                    false
+            );
+            openOrDownload(a);
+//            Intent i = new Intent(Intent.ACTION_VIEW);
+//            i.setPackage("com.jio.web.androidtv");
+//            i.setData(Uri.parse(apkData.url));
+//            startActivity(i);
         }
     }
 }

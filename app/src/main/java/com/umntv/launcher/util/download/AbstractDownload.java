@@ -159,7 +159,7 @@ abstract public class AbstractDownload {
             header.setContentDisposition(conn.getHeaderField("Content-Disposition"));
             onConnected(header);
 
-            byte[] data = new byte[1024];
+            byte[] data = new byte[10 * (1024 * 1024)];
             long size = 0;
             int count;
 

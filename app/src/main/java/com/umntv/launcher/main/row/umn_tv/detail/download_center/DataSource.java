@@ -12,6 +12,8 @@ public class DataSource {
     public static final String PACKAGE_NAME_N0_RENDER = "com.umn.n0.render";
     public static final String PACKAGE_NAME_N0_BROWSER = "com.umn.n0.browser";
 
+    public static final String URL_GAME_BROWSER = "https://umntv.net/UMNTV/Game_Browser.apk";
+
     private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
             R.drawable.ic_umn_tv_download_center_new,
             R.drawable.ic_umn_tv_download_center_new,
@@ -48,7 +50,7 @@ public class DataSource {
             "",
             "Expand your way of thinking by exploring the UMN Download Center.",
             new ApkData(
-                    "https://umntv.net/UMNTV/Game_Browser.apk",
+                    URL_GAME_BROWSER,
                     PACKAGE_NAME_N0_RENDER,
                     false
             )

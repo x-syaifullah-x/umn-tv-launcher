@@ -78,7 +78,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "",
             new ApkData(
-                    "https://n0render.com/instructions",
+                    "https://n0render.com/inst/",
                     "com.umn.n0.render",
                     false
             )

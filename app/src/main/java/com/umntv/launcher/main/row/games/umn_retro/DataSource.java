@@ -23,63 +23,124 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem UMN_PS_1 = new OverviewItem(
-            R.drawable.ic_umn_retro_umn_games_ps1_new,
-            R.drawable.ic_umn_retro_umn_games_ps1_new,
-            "UMN_PS1",
-            "WELCOME TO UMN_PS1",
+//    private static final OverviewItem UMN_PS_1 = new OverviewItem(
+//            R.drawable.ic_umn_retro_umn_games_ps1_new,
+//            R.drawable.ic_umn_retro_umn_games_ps1_new,
+//            "UMN_PS1",
+//            "WELCOME TO UMN_PS1",
+//            OverviewItem.SUBTITLE_DEFAULT,
+//            "UMN_PS1 offers unlimited online game-playing of the original Sony PlayStation. \n" +
+//                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+//            new ApkData(
+//                    "https://umntv.net/UMNTV_Builds/Images/UMN_PS1.apk",
+//                    "com.epsxe.ePSXe",
+//                    false
+//            )
+//    );
+
+//    private static final OverviewItem UMN_PSP = new OverviewItem(
+//            R.drawable.ic_retro_umn_games_umn_psp_bg,
+//            R.drawable.ic_retro_umn_games_umn_psp_bg,
+//            "UMN_PSP",
+//            "WELCOME TO UMN_PSP",
+//            OverviewItem.SUBTITLE_DEFAULT,
+//            "UMN_PSP offers unlimited online game-playing of the original Sony PlayStation Portable.\n" +
+//                    "SD cards or memory sticks are recommended for game storage. \n" +
+//                    "Some games users may need to adjust the frame skipping.\nSee Instructors for more information.",
+//            new ApkData(
+//                    "https://umntv.net/UMNTV_Builds/Images/UMN_PSP.apk",
+//                    "org.ppsspp.ppsspp",
+//                    false
+//            )
+//    );
+
+//    private static final OverviewItem UMN_ARCADE = new OverviewItem(
+//            R.drawable.ic_retro_umn_games_umn_arcade_bg,
+//            R.drawable.ic_retro_umn_games_umn_arcade_bg,
+//            "UMN_ARCADE",
+//            "WELCOME TO UMN_ARCADE",
+//            OverviewItem.SUBTITLE_DEFAULT,
+//            "UMN_ARCADE offers unlimited online game-playing of the original Retro Arcade Games.\n" +
+//                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+//            new ApkData(
+//                    "https://umntv.net/UMNTV_Builds/Images/UMN_Arcade.apk",
+//                    "com.seleuco.mame4droid",
+//                    false
+//            )
+//    );
+
+//    private static final OverviewItem UMN_N64 = new OverviewItem(
+//            R.drawable.ic_retro_umn_games_umn_n64,
+//            R.drawable.ic_retro_umn_games_umn_n64,
+//            "UMN_N64",
+//            "WELCOME TO UMN_N64",
+//            OverviewItem.SUBTITLE_DEFAULT,
+//            "UMN_N64 offers game-playing on the Nintendo 64.\n" +
+//                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+//            new ApkData(
+//                    "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk",
+//                    "org.mupen64plusae.v3.fzurita",
+//                    false
+//            )
+//    );
+
+    private static final OverviewItem MINECRAFT = new OverviewItem(
+            R.drawable.ic_games_minecraft,
+            R.drawable.ic_games_minecraft_bg,
+            "MINECRAFT",
+            "WELCOME TO MINECRAFT",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_PS1 offers unlimited online game-playing of the original Sony PlayStation. \n" +
-                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+            "Minecraft is a game made from blocks that you can transform into whatever you can imagine. Play in Creative mode with unlimited resources, or hunt for tools to fend off danger in Survival mode",
             new ApkData(
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_PS1.apk",
-                    "com.epsxe.ePSXe",
+                    "https://umntv.net/UMNTV/MINECTt.apk",
+                    "com.mojang.minecraftpe",
                     false
             )
     );
 
-    private static final OverviewItem UMN_PSP = new OverviewItem(
-            R.drawable.ic_retro_umn_games_umn_psp_bg,
-            R.drawable.ic_retro_umn_games_umn_psp_bg,
-            "UMN_PSP",
-            "WELCOME TO UMN_PSP",
+    private static final OverviewItem UNKILLED = new OverviewItem(
+            R.drawable.ic_games_unkilled,
+            R.drawable.ic_games_unkilled_bg,
+            "UNKILLED",
+            "UNKILLED - FPS Zombie Games",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_PSP offers unlimited online game-playing of the original Sony PlayStation Portable.\n" +
-                    "SD cards or memory sticks are recommended for game storage. \n" +
-                    "Some games users may need to adjust the frame skipping.\nSee Instructors for more information.",
+            "Get ready for the best zombie game. From the authors of Dead Trigger and Dead Trigger 2, successful Zombie games downloaded by more than 160 million times around the world.",
             new ApkData(
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_PSP.apk",
-                    "org.ppsspp.ppsspp",
+                    "https://play.google.com/",
+                    "com.madfingergames.unkilled",
                     false
             )
     );
 
-    private static final OverviewItem UMN_ARCADE = new OverviewItem(
-            R.drawable.ic_retro_umn_games_umn_arcade_bg,
-            R.drawable.ic_retro_umn_games_umn_arcade_bg,
-            "UMN_ARCADE",
-            "WELCOME TO UMN_ARCADE",
+    private static final OverviewItem PAC_MAN256 = new OverviewItem(
+            R.drawable.ic_games_pacman_256,
+            R.drawable.ic_games_pacman_256_bg,
+            "PAC-MAN256",
+            "PAC-MAN 256 - Endless Maze",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_ARCADE offers unlimited online game-playing of the original Retro Arcade Games.\n" +
-                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+            "About this game\n" +
+                    "** Google Best Games of 2015 **\n" +
+                    "** Facebook The 10 Most Talked About Games of 2015 **\n" +
+                    "** The Game Awards 2015 Nominated Best Mobile/Handheld Game **",
             new ApkData(
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_Arcade.apk",
-                    "com.seleuco.mame4droid",
+                    "https://play.google.com/",
+                    "eu.bandainamcoent.pacman256",
                     false
             )
     );
 
-    private static final OverviewItem UMN_N64 = new OverviewItem(
-            R.drawable.ic_retro_umn_games_umn_n64,
-            R.drawable.ic_retro_umn_games_umn_n64,
-            "UMN_N64",
-            "WELCOME TO UMN_N64",
+    private static final OverviewItem CHESS = new OverviewItem(
+            R.drawable.ic_games_chess,
+            R.drawable.ic_games_chess_bg,
+            "CHESS",
+            "WELCOME TO CHESS",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_N64 offers game-playing on the Nintendo 64.\n" +
-                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+            "Chess is one of the oldest strategy games in the world.\n" +
+                    "Chess is an excellent board logic game that develops such skills as tactics, strategy and visual memory.\n" +
+                    "I'm trying to create an application that allows a player of any level to enjoy the game.",
             new ApkData(
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk",
-                    "org.mupen64plusae.v3.fzurita",
+                    "https://play.google.com/",
+                    "com.pirinel.chess",
                     false
             )
     );
@@ -117,10 +178,10 @@ public class DataSource {
 
     public static final List<OverviewItem> items = List.of(
             UMN_RETRO,
-            UMN_PS_1,
-            UMN_PSP,
-            UMN_ARCADE,
-            UMN_N64,
+            MINECRAFT,
+            UNKILLED,
+            PAC_MAN256,
+            CHESS,
             GAME_PAD,
             REMOTE_ADB
     );
