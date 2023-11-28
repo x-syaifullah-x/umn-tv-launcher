@@ -17,6 +17,7 @@ public class AsianMedia {
 //                    "UMN ASIAN MEDIA",
                     "JADE CINEMA",
                     "VIKI",
+                    "ASIANCRUSH",
                     "CRUNCHYROLL",
                     "FUNIMATION",
                     "IQIYI",
@@ -25,6 +26,7 @@ public class AsianMedia {
             int[] resourceId = {
                     R.drawable.asian_media_jade_cinema_ic,
                     R.drawable.ic_asian_media_viki,
+                    R.drawable.ic_asian_media_asianchash,
                     R.drawable.ic_asian_media_crunchyroll,
                     R.drawable.ic_asian_media_funimation,
                     R.drawable.ic_asian_media_iqiyi,
@@ -33,6 +35,7 @@ public class AsianMedia {
             String[] packageName = {
                     null,
                     "com.viki.android",
+                    "com.dmr.asiancrush.tv",
                     "com.crunchyroll.crunchyroid",
                     "com.Funimation.FunimationNow.androidtv",
                     "com.iqiyi.i18n.tv",
@@ -42,6 +45,7 @@ public class AsianMedia {
             String[] apkLinkDownload = {
                     null,
                     "https://umntvdealers.net/UMNTV/Apks/VIKI.apk",
+                    null,
                     null,
 //                    "https://umntvdealers.net/UMNTV/Apks/Funimation_.com.apk",
                     null,
