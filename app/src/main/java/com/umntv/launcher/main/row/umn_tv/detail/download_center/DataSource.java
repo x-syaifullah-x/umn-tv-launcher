@@ -56,6 +56,20 @@ public class DataSource {
             )
     );
 
+    private static final OverviewItem JIO_BROWSER = new OverviewItem(
+            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.ic_umn_tv_download_center_new,
+            "JIO BROWSER",
+            "WELCOME TO UMN DOWNLOAD CENTER",
+            "",
+            "Expand your way of thinking by exploring the UMN Download Center.",
+            new ApkData(
+                    "https://umntv.net/UMNTV/Browser.apk",
+                    "com.jio.web.androidtv",
+                    false
+            )
+    );
+
     private static final OverviewItem UPDATE_LAUNCHER = new OverviewItem(
             R.drawable.ic_umn_tv_download_center_new,
             R.drawable.ic_umn_tv_download_center_new,
@@ -90,6 +104,7 @@ public class DataSource {
             UPDATE_LAUNCHER,
             UMN_LITE,
             N0_BROWSER,
-            N0_RENDER
+            N0_RENDER,
+            JIO_BROWSER
     );
 }

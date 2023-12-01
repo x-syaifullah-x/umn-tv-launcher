@@ -37,10 +37,13 @@ public class DataSource {
             "LOL NETWORK!",
             "Kevin Heart's lol Network",
 //            "Enjoy Kevin Heart's lol Network live stand-up comedy 24/7 commercial-free",
-            "Enjoy Kevin Hart's LOL Network live.\n" +
-                    "To watch commercial-free enter the code '_popup after 'watch' in the URL\n" +
-                    "Example: youtube.com/watch_popup?v=pndBneDdz6I",
+//            "Enjoy Kevin Hart's LOL Network live.\n" +
+//                    "To watch commercial-free enter the code '<font color='black'>_popup</font> after 'watch' in the URL\n" +
+//                    "Example: youtube.com/watch_popup?v=pndBneDdz6I",
 //            "https://www.youtube.com/embed/slQ3XKhB_IY",
+            "</p>Enjoy Kevin Hart's LOL Network live.<br/>" +
+                    "To watch commercial-free enter the code '_popup' after watch' in the URL<br/>" +
+                    "Example: youtube.com/watch<font color='black'>_popup</font>?v=pndBneDdz6I</p>",
             "https://www.youtube.com/@LOLNetwork/streams",
             null
     );
