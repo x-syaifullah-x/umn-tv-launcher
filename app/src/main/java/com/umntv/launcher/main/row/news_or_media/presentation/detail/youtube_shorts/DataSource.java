@@ -36,19 +36,35 @@ public class DataSource {
             "LOL NETWORK!",
             "LOL NETWORK!",
             "Kevin Heart's lol Network",
-            "Enjoy Kevin Heart's lol Network live stand-up comedy 24/7 commercial-free",
-            "https://www.youtube.com/embed/slQ3XKhB_IY",
+//            "Enjoy Kevin Heart's lol Network live stand-up comedy 24/7 commercial-free",
+            "Enjoy Kevin Hart's LOL Network live.\n" +
+                    "To watch commercial-free enter the code '_popup after 'watch' in the URL\n" +
+                    "Example: youtube.com/watch_popup?v=pndBneDdz6I",
+//            "https://www.youtube.com/embed/slQ3XKhB_IY",
+            "https://www.youtube.com/@LOLNetwork/streams",
             null
     );
 
-    private static final OverviewItem LOL_Network2 = new OverviewItem(
-            R.drawable.ic_lollolo2,
-            R.drawable.ic_lollolo2,
-            "LOL NETWORK 24/7",
-            "LOL Network 24/7",
-            "Enjoy Kevin Heart's lol Network",
-            "Enjoy Kevin Heart's lol Network live Free TV commercial-free",
-            "https://www.youtube.com/embed/gssRk8PpiX8",
+//    private static final OverviewItem LOL_Network2 = new OverviewItem(
+//            R.drawable.ic_lollolo2,
+//            R.drawable.ic_lollolo2,
+//            "LOL NETWORK 24/7",
+//            "LOL Network 24/7",
+//            "Enjoy Kevin Heart's lol Network",
+//            "Enjoy Kevin Heart's lol Network live Free TV commercial-free",
+//            "https://www.youtube.com/embed/gssRk8PpiX8",
+//            null
+//    );
+
+    private static final OverviewItem QVC_LIVE = new OverviewItem(
+            R.drawable.ic_qvc_live,
+            R.drawable.ic_qvc_live,
+            "QVC LIVE",
+            "QVC LIVE",
+            "About",
+            "Welcome to QVCtv—your go-to destination for product\n" +
+                    "information and for watching QVC on YouTube!",
+            "https://www.youtube.com/@QVCtv/streams",
             null
     );
     public static List<String> com_tcl_browser = List.of(
@@ -59,6 +75,6 @@ public class DataSource {
             YOUTUBE_SHORTS,
             RELAXING_MUSIC,
             KEVIN_HARTS_LOL,
-            LOL_Network2
+            QVC_LIVE
     );
 }
