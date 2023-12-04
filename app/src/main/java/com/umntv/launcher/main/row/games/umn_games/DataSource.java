@@ -15,8 +15,8 @@ public class DataSource {
             "UMN_PS1",
             "WELCOME TO UMN_PS1",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_PS1 offers unlimited online game-playing of the original Sony PlayStation. \n" +
-                    "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
+            "UMN_PS1 offers unlimited online game-playing of the original Sony PlayStation.<br/>" +
+                    "SD cards or memory sticks are recommended for game storage.<br/>See Instructors for more information.<br/><br/><font color='black'>NOTE: YOU WILL NEED TO DOWNLOAD THE PS1 BIOS FILE BEFORE PLAYING</font>",
             new ApkData(
                     "https://n0render.com/ps1/",
                     "com.umn.n0.render",
@@ -30,9 +30,9 @@ public class DataSource {
             "UMN_PSP",
             "WELCOME TO UMN_PSP",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN_PSP offers unlimited online game-playing of the original Sony PlayStation Portable.\n" +
-                    "SD cards or memory sticks are recommended for game storage. \n" +
-                    "Some games users may need to adjust the frame skipping.\nSee Instructors for more information.",
+            "UMN_PSP offers unlimited online game-playing of the original Sony PlayStation Portable.<br/>" +
+                    "SD cards or memory sticks are recommended for game storage.<br/>" +
+                    "See Instructors for more information.<br/><br/><font color='black'>NOTE: SOME GAMES USERS WILL NEED TO ADJUST FAME SKIPPING</font>",
             new ApkData(
                     "https://n0render.com/psp/",
                     "com.umn.n0.render",
