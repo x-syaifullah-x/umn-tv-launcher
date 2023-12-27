@@ -252,7 +252,12 @@ public class CardVisitor extends CardVisitorKt {
             return;
         }
 
-        Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(asianMediaCard.getPackageName());
+        Intent launchIntent = getContext().getPackageManager()
+                .getLaunchIntentForPackage(asianMediaCard.getPackageName());
+        if (launchIntent == null) {
+            launchIntent = getContext().getPackageManager()
+                    .getLeanbackLaunchIntentForPackage(asianMediaCard.getPackageName());
+        }
         if (launchIntent != null) {
             getContext().startActivity(launchIntent);
         } else {

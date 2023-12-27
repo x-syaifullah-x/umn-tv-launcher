@@ -132,6 +132,8 @@ buildscript {
     }
 }
 
+addRepos(repositories)
+
 allprojects {
     addRepos(repositories)
 
@@ -144,6 +146,14 @@ allprojects {
             buildDir = "${userCacheDir}/android/studio/project/${rootProject.name}/${project.name}/build"
         }
     }
+
+    // handle warning This class can only be used with the compiler argument "-opt-in=kotlin.RequiresOptIn"
+//    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile)
+//            .configureEach {
+//                kotlinOptions {
+//                    freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+//                }
+//            }
 }
 
 tasks.register("clean", Delete) {
