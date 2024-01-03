@@ -64,7 +64,7 @@ ext {
     vAndroidYoutubePlayer = "10.0.5"
     vGlide = "4.16.0"
     vLeanback = "1.0.0"
-    vPlayServicesAds = "22.0.0"
+    vPlayServicesAds = "22.6.0"
 }
 
 def addRepos(RepositoryHandler handler) {
