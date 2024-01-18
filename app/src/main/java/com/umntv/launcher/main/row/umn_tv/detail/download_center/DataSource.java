@@ -78,7 +78,7 @@ public class DataSource {
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/LAUNCHERPRO9-1.apk",
+                    "https://umntvdealers.net/UMNTV/Apks/T95%20Launcher.apk",
 //                    "com.umntv.launcher",
                     "-",
                     false
@@ -93,7 +93,7 @@ public class DataSource {
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/UMNLTIE.apk",
+                    "https://umntv.net/UMNTV/T95%20Launcher%20LT.apk",
                     "com.umntv.launcher.lite",
                     false
             )
