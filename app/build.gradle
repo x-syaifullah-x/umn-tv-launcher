@@ -1,5 +1,6 @@
 plugins {
     id "com.android.application"
+    id "kotlin-android"
 }
 
 android {
@@ -68,19 +69,25 @@ android {
         exclude "**.bin"
         exclude "kotlin-tooling-metadata.json"
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'com.applovin:applovin-sdk:12.1.0'
 
     implementation "androidx.leanback:leanback:$vLeanback"
     implementation "androidx.appcompat:appcompat:$vAndroidxAppCompat"
     implementation "com.google.android.material:material:$vMaterial"
-    implementation "androidx.test.espresso:espresso-idling-resource:$vAndroidxEspresso"
+    implementation "androidx.test.espresso:espresso-idling-resource:$vAndroidxTestEspresso"
 
     implementation "com.google.android.gms:play-services-ads:$vPlayServicesAds"
 
@@ -88,13 +95,11 @@ dependencies {
 
     implementation "com.pierfrancescosoffritti.androidyoutubeplayer:core:$vAndroidYoutubePlayer"
 
-    implementation "com.google.code.gson:gson:$vGson"
-
     testImplementation "junit:junit:$vJunit"
     testImplementation "org.mockito:mockito-core:$vMockito"
-    testImplementation "org.mockito:mockito-inline:$vMockito"
+    testImplementation "org.mockito:mockito-inline:$vMockitoInline"
 
-    androidTestImplementation "androidx.test:rules:$vAndroidxTest"
-    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxJunit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxEspresso"
+    androidTestImplementation "androidx.test:rules:$vAndroidxTestRules"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$vAndroidxTestExtJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$vAndroidxTestEspresso"
 }

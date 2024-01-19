@@ -21,7 +21,7 @@ public class DataSource {
                     "UPDATE LAUNCHER INTEL. Please Clear Launcher data after installation\n" +
                     "Setting < Apps < UMN_LAUNCHER < Clear data",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/LAUNCHERPRO9-1.apk",
+                    "https://umntvdealers.net/UMNTV/Apks/T95%20Launcher.apk",
 //                    "com.umntv.launcher",
                     PACKAGE_NAME_DOWNLOAD_ONLY,
                     false
@@ -38,7 +38,7 @@ public class DataSource {
                     "UPDATE LAUNCHER INTEL. Please Clear Launcher data after installation\n" +
                     "Setting < Apps < UMN_LAUNCHER < Clear data",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/UMNLTIE.apk",
+                    "https://umntv.net/UMNTV/T95%20Launcher%20LT.apk",
                     "com.umntv.launcher.lite",
                     false
             )

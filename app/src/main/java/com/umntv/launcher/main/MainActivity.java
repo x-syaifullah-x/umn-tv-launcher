@@ -1,5 +1,6 @@
 package com.umntv.launcher.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
@@ -21,6 +22,7 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
         /**/

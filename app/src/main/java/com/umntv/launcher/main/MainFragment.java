@@ -41,6 +41,7 @@ import com.umntv.launcher.main.row.umn_tv.UmnTv;
 import com.umntv.launcher.main.row.umn_tv.UmnTvCard;
 import com.umntv.launcher.service.AccessService;
 import com.umntv.launcher.util.Admob;
+import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.Preference;
 import com.umntv.launcher.util.ToastHelpers;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
@@ -71,7 +72,7 @@ public class MainFragment extends BrowseSupportFragment {
     private ImageButton mInfo;
     private ImageButton adjustScreen;
 
-private ImageButton accountProfile;
+    private ImageButton accountProfile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -188,24 +189,22 @@ private ImageButton accountProfile;
         mInfo = requireActivity().findViewById(R.id.info);
         mNetPlusTv = requireActivity().findViewById(R.id.net_plus_tv);
         adjustScreen = requireActivity().findViewById(R.id.adjust_screen);
-accountProfile = requireActivity().findViewById(R.id.account_profile);
+        accountProfile = requireActivity().findViewById(R.id.account_profile);
     }
 
     private void linkEventListeners() {
         adjustScreen.setOnClickListener(v -> {
             try {
-                ComponentName name = new ComponentName(
-                        "com.android.tv.settings",
-                        "com.android.tv.settings.device.display.DisplayActivity"
-                );
-                Intent i = new Intent(Intent.ACTION_MAIN);
-
-                i.addCategory(Intent.CATEGORY_LAUNCHER);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-                i.setComponent(name);
-
-                startActivity(i);
-
+                String packageName = "nextapp.fx";
+                Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+                if (launchIntent == null) {
+                    launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
+                }
+                if (launchIntent != null) {
+                    requireActivity().startActivity(launchIntent);
+                } else {
+                    ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
+                }
             } catch (Exception e) {
                 ToastHelpers.showLong(v.getContext(), "not supported");
                 e.printStackTrace();
@@ -245,12 +244,12 @@ accountProfile = requireActivity().findViewById(R.id.account_profile);
             promptClean();
         });
 
-accountProfile.setOnClickListener(v -> {
+        accountProfile.setOnClickListener(v -> {
             promptAccountProfile();
         });
     }
 
-private void promptAccountProfile() {
+    private void promptAccountProfile() {
         @SuppressWarnings("SpellCheckingInspection")
         String packageName = "com.doc.paymentchecker";
         Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
@@ -409,8 +408,16 @@ private void promptAccountProfile() {
     }
 
     private void promptClean() {
-        Intent intent = new Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
-        startActivity(intent);
+        String packageName = "com.charon.rocketfly";
+        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+        if (launchIntent == null) {
+            launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
+        }
+        if (launchIntent != null) {
+            requireActivity().startActivity(launchIntent);
+        } else {
+            AndroidStore.open(requireContext(), packageName);
+        }
     }
 
     private boolean isAccessibilitySettingsOn(Context context) {
