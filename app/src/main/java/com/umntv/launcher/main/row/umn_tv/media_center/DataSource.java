@@ -1,6 +1,7 @@
 package com.umntv.launcher.main.row.umn_tv.media_center;
 
 import media.umn.tv.R;
+
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
 
@@ -39,14 +40,15 @@ public class DataSource {
     private static final OverviewItem WORLD_START_TV = new OverviewItem(
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
-            "WORLD STAR TV",
-            "WELCOME TO WORLD STAR TV",
+            "UMN SPORTS",
+            "WELCOME TO UMN SPORTS",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Worldstar TV is an 18 + application that allows users to browse for the latest funniest, violent, and toxic videos trending on social media.",
+            "You can find live sports events. Live pay-per-view events and replays",
+//            "UMN SPORTS is an 18 + application that allows users to browse for the latest funniest, violent, and toxic videos trending on social media.",
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/World_Star_UMNTV_1.apk",
                     "ws.umn.net",
-                    true
+                    false
             )
     );
 
