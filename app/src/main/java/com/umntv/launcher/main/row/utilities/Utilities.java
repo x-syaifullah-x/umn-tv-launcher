@@ -60,7 +60,7 @@ public class Utilities {
         String[] linkApkDownload = {
                 "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk",
                 null,
-                null,
+                "https://umntv.net/UMNTV/wireless.apk",
                 null,
                 null,
                 null,
