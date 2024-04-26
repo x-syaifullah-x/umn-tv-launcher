@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -508,19 +509,24 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void promptClean() {
-//        Intent intent = new Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
-//        startActivity(intent);
-        String packageName = "com.charon.rocketfly";
-        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-        if (launchIntent == null) {
-            launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
+        try {
+            Intent intent = new Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
+            startActivity(intent);
+        } catch (Throwable t) {
+            Toast.makeText(requireContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
         }
-        if (launchIntent != null) {
-            requireActivity().startActivity(launchIntent);
-        } else {
-            AndroidStore.open(requireContext(), packageName);
-//            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
-        }
+
+//        String packageName = "com.charon.rocketfly";
+//        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+//        if (launchIntent == null) {
+//            launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
+//        }
+//        if (launchIntent != null) {
+//            requireActivity().startActivity(launchIntent);
+//        } else {
+//            AndroidStore.open(requireContext(), packageName);
+////            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
+//        }
     }
 
     private void promptAccountProfile() {
