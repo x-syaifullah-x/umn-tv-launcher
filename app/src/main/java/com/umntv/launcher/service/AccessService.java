@@ -1,12 +1,9 @@
 package com.umntv.launcher.service;
 
 import android.accessibilityservice.AccessibilityService;
-import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.accessibility.AccessibilityEvent;
-
-import com.umntv.launcher.util.Preference;
 
 public class AccessService extends AccessibilityService {
     @Override

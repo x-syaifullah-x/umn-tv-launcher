@@ -1,13 +1,9 @@
 package com.umntv.launcher.main;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
@@ -62,13 +58,8 @@ import com.umntv.launcher.main.row.utilities.Utilities;
 import com.umntv.launcher.main.row.utilities.UtilitiesCard;
 import com.umntv.launcher.service.AccessService;
 import com.umntv.launcher.util.Admob;
-import com.umntv.launcher.util.AndroidStore;
-import com.umntv.launcher.util.Preference;
-import com.umntv.launcher.util.ToastHelpers;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -338,29 +329,17 @@ public class MainFragment extends BrowseSupportFragment {
             }
         });
 
-        mNetPlusTv.setOnClickListener(view -> {
-            promptNetPlusTv();
-        });
+        mNetPlusTv.setOnClickListener(view -> promptNetPlusTv());
 
-        mSound.setOnClickListener(view -> {
-            promptSounds();
-        });
+        mSound.setOnClickListener(view -> promptSounds());
 
-        mPowerOff.setOnClickListener(view -> {
-            promptPowerOff();
-        });
+        mPowerOff.setOnClickListener(view -> promptPowerOff());
 
-        mSettings.setOnClickListener(view -> {
-            promptSettings();
-        });
+        mSettings.setOnClickListener(view -> promptSettings());
 
-        mClean.setOnClickListener(view -> {
-            promptClean();
-        });
+        mClean.setOnClickListener(view -> promptClean());
 
-        accountProfile.setOnClickListener(v -> {
-            promptAccountProfile();
-        });
+        accountProfile.setOnClickListener(v -> promptAccountProfile());
     }
 
     private void workaroundFocus() {
