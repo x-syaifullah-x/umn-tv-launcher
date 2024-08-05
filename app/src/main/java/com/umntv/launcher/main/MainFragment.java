@@ -4,6 +4,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -65,6 +67,8 @@ import com.umntv.launcher.util.Preference;
 import com.umntv.launcher.util.ToastHelpers;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -476,31 +480,34 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void promptPowerOff() {
-        if (isAccessibilitySettingsOn(requireContext())) {
-            Preference.exec_flag = false;
+        if (!isAccessibilitySettingsOn(requireContext())) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(requireContext(), androidx.appcompat.R.style.Theme_AppCompat_Dialog_Alert);
+            alertDialogBuilder.setTitle("Permission");
+            String appName = getString(R.string.app_name);
+            String a = "Permission: Device Preferences > Accessibility > Services > " + appName;
+            alertDialogBuilder.setMessage("\nThe accessibility setting permission of the \"" + getString(R.string.app_name) + "\" is required!\n\n" + a);
+            alertDialogBuilder.setIcon(R.drawable.show_down_icon);
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", (dialog, which) -> {
+                try {
+                    Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_RECEIVER_REGISTERED_ONLY);
+                    requireContext().startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                    requireContext().startActivity(intent);
+                }
+                dialog.dismiss();
+            });
+            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", (dialog, which) -> dialog.dismiss());
+            alertDialog.setOnDismissListener(DialogInterface::dismiss);
+            alertDialog.show();
+        } else {
             Intent intent = new Intent(requireContext(), AccessService.class);
             intent.putExtra("REQ_event", "access_event_power_dialog");
             requireContext().startService(intent);
-            return;
         }
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(requireContext(), androidx.appcompat.R.style.Theme_AppCompat_Dialog_Alert);
-        alertDialogBuilder.setTitle("Permission");
-        alertDialogBuilder.setMessage("\nThe accessibility setting permission of the \"" + getString(R.string.app_name) + "\" is required!\n");
-        alertDialogBuilder.setIcon(R.drawable.show_down_icon);
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", (dialog, which) -> {
-            try {
-                Intent intent = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_RECEIVER_REGISTERED_ONLY);
-                requireContext().startActivity(intent);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            dialog.dismiss();
-        });
-        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", (dialog, which) -> dialog.dismiss());
-        alertDialog.setOnDismissListener(DialogInterface::dismiss);
-        alertDialog.show();
     }
 
     private void promptSettings() {
@@ -543,17 +550,24 @@ public class MainFragment extends BrowseSupportFragment {
     private boolean isAccessibilitySettingsOn(Context context) {
         int i;
         try {
-            i = Settings.Secure.getInt(context.getContentResolver(), "accessibility_enabled");
+            i = Settings.Secure.getInt(
+                    context.getContentResolver(),
+                    Settings.Secure.ACCESSIBILITY_ENABLED
+            );
         } catch (Settings.SettingNotFoundException unused) {
             i = 0;
         }
         if (i == 1) {
             try {
-                String string = Settings.Secure.getString(context.getContentResolver(), "enabled_accessibility_services");
+                String string = Settings.Secure.getString(
+                        context.getContentResolver(),
+                        Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
+                );
                 if (string != null) {
                     return string.toLowerCase().contains(context.getPackageName().toLowerCase());
                 }
-            } catch (Exception ignored) {
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
         return false;

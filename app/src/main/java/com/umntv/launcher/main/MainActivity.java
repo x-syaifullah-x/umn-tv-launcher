@@ -1,9 +1,14 @@
 package com.umntv.launcher.main;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.fragment.app.FragmentActivity;
+
+import com.umntv.launcher.service.AccessService;
+import com.umntv.launcher.util.Preference;
 
 import media.umn.tv.R;
 

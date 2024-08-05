@@ -1,7 +1,9 @@
 package com.umntv.launcher.service;
 
 import android.accessibilityservice.AccessibilityService;
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.accessibility.AccessibilityEvent;
 
 import com.umntv.launcher.util.Preference;
@@ -19,11 +21,11 @@ public class AccessService extends AccessibilityService {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        String reqEvent;
         if (intent != null) {
             try {
-                if (intent.getExtras() != null) {
-                    reqEvent = intent.getExtras().getString("REQ_event");
+                Bundle extras = intent.getExtras();
+                if (extras != null) {
+                    String reqEvent = extras.getString("REQ_event");
                     if (reqEvent.indexOf("access_event_back") == 0) {
                         performGlobalAction(GLOBAL_ACTION_BACK);
                     } else if (reqEvent.indexOf("access_event_home") == 0) {
@@ -35,15 +37,14 @@ public class AccessService extends AccessibilityService {
                     } else if (reqEvent.indexOf("access_event_notifications") == 0) {
                         performGlobalAction(GLOBAL_ACTION_NOTIFICATIONS);
                     } else if (reqEvent.indexOf("access_event_power_dialog") == 0) {
-                        Preference.exec_flag = performGlobalAction(GLOBAL_ACTION_POWER_DIALOG);
+                        performGlobalAction(GLOBAL_ACTION_POWER_DIALOG);
                     }
-                    return super.onStartCommand(intent, flags, startId);
+                    stopSelf();
                 }
-            } catch (Exception ignored) {
-
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-
         return super.onStartCommand(intent, flags, startId);
     }
 }
