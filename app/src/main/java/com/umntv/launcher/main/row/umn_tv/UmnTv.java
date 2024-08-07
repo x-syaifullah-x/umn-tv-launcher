@@ -65,7 +65,7 @@ public class UmnTv {
                     ResourceHelpers.toStringUri(R.drawable.ic_umn_tv_live_tv_banner),
                     ResourceHelpers.toStringUri(R.drawable.ic_umn_tv_media_center_bg_dark),
                     ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_network),
-                    ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_download_center),
+                    ResourceHelpers.toStringUri(R.drawable.umn_tv_ic_download_center_bg),
                     ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_movies_and_series),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_app_drawer_bg)
             };
