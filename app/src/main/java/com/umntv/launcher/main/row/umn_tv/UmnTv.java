@@ -21,7 +21,7 @@ public class UmnTv {
     public static List<UmnTvCard> setupUmnTv() {
         if (umnTvCards.isEmpty()) {
             String[] title = {
-                    "UNIVERSAL MEDIA",
+                    "IP PLAYER",
                     TITLE_MEDIA_CENTER,
                     TITLE_NETWORK,
                     TITLE_DOWNLOAD_CENTER,
