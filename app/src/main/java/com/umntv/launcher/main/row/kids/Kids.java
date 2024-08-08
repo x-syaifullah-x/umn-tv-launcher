@@ -19,28 +19,24 @@ public class Kids {
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/UMN_Kids_UMNTV_1.apk",
                     null,
                     "https://umntv.net/UMNTV/IXL_7.0.0_Apkpure.apk",
-                    null,
                     null
             };
             String[] title = {
-                    "UMN KIDS TV",
-                    "YOUTUBE KIDS",
-                    "UMN_IXL",
+                    "E-KIDS MEDIA",
                     TITLE_E_LEARNING,
+                    "IXL",
                     "KIDS NURSERY SONGS"
             };
             int[] icon = {
                     R.drawable.kids_ic_umn_kids,
-                    R.drawable.kids_ic_youtube_kids,
-                    R.drawable.kids_ic_umn_ixl,
                     R.drawable.kids_ic_e_learning,
+                    R.drawable.kids_ic_umn_ixl,
                     R.drawable.kids_ic_kids_nursery
             };
             String[] packageName = {
                     "kids.umn.net",
-                    "com.google.android.youtube.tvkids",
-                    "com.ixl.ixlmath",
                     null,
+                    "com.ixl.ixlmath",
                     "net.colorcity.kidsy",
             };
 
@@ -50,7 +46,7 @@ public class Kids {
                 k.setDownloadUrl(downloadUrl[index]);
                 k.setPackageName(packageName[index]);
                 k.setIconStringUri(ResourceHelpers.toStringUri(icon[index]));
-                k.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.kids_bg_umn_kids));
+                k.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.kids_ic_umn_kids));
                 kids.add(k);
             }
         }

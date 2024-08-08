@@ -20,9 +20,10 @@ public class NewsOrMediaRepository {
         if (v.isEmpty()) {
             String[] title = {
                     "YOUTUBE",
+                    "YOUTUBE KIDS",
                     "YOUTUBE TV",
-                    YOUTUBE_ENJOYABLES,
-                    INT_NEWS,
+//                    YOUTUBE_ENJOYABLES,
+//                    INT_NEWS,
                     "TIKTOK",
                     "FACEBOOK",
             };
@@ -30,7 +31,8 @@ public class NewsOrMediaRepository {
                     null,
                     null,
                     null,
-                    "",
+//                    null,
+//                    "",
                     null,
                     null,
 //                    "Channels Television is a leading 24-hour news channel broadcasting live from Lagos, Nigeria - West Africa. Our mission" +
@@ -43,9 +45,10 @@ public class NewsOrMediaRepository {
 
             String[] packageName = {
                     "com.google.android.youtube.tv",
+                    "com.google.android.youtube.tvkids",
                     "com.google.android.youtube.tvunplugged",
-                    null,
-                    null,
+//                    null,
+//                    null,
                     "com.tiktok.tv",
                     "com.facebook.katana",
 //                    null,
@@ -57,7 +60,8 @@ public class NewsOrMediaRepository {
                     null,
                     null,
                     null,
-                    null,
+//                    null,
+//                    null,
                     null,
                     null,
 //                    "-c8LoR84Xjs",
@@ -66,20 +70,23 @@ public class NewsOrMediaRepository {
             };
             String[] bannerImage = {
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
-                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_int_news),
+                    ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
+                    ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
+//                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
+//                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
+//                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_titok),
-                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_haystack_news),
+                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_haystack_news_bg),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news_banner),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_asian_news_banner),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_bloomberg),
             };
             String[] cardImage = {
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube),
+                    ResourceHelpers.toStringUri(R.drawable.kids_ic_youtube_kids),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
-                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
-                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_int_news),
+//                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
+//                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_titok),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_haystack_news),
 //                    ResourceHelpers.toStringUri(R.drawable.ic_news_african_news),
@@ -102,7 +109,8 @@ public class NewsOrMediaRepository {
                     null,
                     null,
                     null,
-                    null,
+//                    null,
+//                    null,
                     null,
                     "https://umntvdealers.net/UMNTV/Apks/com.facebook.katana_.apk",
             };

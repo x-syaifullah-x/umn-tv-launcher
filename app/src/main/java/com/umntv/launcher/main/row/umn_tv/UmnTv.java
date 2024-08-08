@@ -14,7 +14,7 @@ public class UmnTv {
     public static final String TITLE_DOWNLOAD_CENTER = "DOWNLOAD CENTER";
     public static final String TITLE_APP_DRAWER = "APP DRAWER";
 
-    public static final String TITLE_NETWORK = "NETWORK";
+    public static final String TITLE_NETWORK = "NETWORK SPACE";
 
     private static final List<UmnTvCard> umnTvCards = new ArrayList<>();
 
