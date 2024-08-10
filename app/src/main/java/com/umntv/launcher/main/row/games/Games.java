@@ -17,7 +17,7 @@ public class Games {
         if (games.isEmpty()) {
             String[] title = {
                     "UMN RETRO",
-                    "UMN GAMES",
+                    "GAME DOWNLOAD",
                     "UMN_PS1",
                     "UMN_PSP",
                     "UMN_ARCADE",
@@ -29,7 +29,7 @@ public class Games {
                     R.drawable.ic_umn_retro_umn_games_ps1_new,
                     R.drawable.ic_retro_umn_games_umn_psp_bg,
                     R.drawable.ic_retro_umn_games_umn_arcade_bg,
-                    R.drawable.ic_retro_umn_games_umn_n64,
+                    R.drawable.ic_games_umn_games_n64_ic,
             };
             String[] packageName = {
                     null,
