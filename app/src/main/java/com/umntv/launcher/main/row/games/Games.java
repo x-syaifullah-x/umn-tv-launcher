@@ -16,12 +16,12 @@ public class Games {
     public static List<GamesCardApp> setup() {
         if (games.isEmpty()) {
             String[] title = {
-                    "UMN RETRO",
-                    "GAME DOWNLOAD",
-                    "UMN_PS1",
-                    "UMN_PSP",
-                    "UMN_ARCADE",
-                    "UMN_N64",
+                    "N0RENDER GAMES",
+                    "GAME DOWNLOADER",
+                    "PLAYSTATION",
+                    "SONY PSP",
+                    "ARCADE",
+                    "NINTENDO 64",
             };
             int[] resourceId = {
                     R.drawable.ic_umn_retro_umn_retro,
