@@ -11,8 +11,8 @@ public class DataSource {
 
     private static final OverviewItem UMN_RETRO = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
-            R.drawable.ic_umn_retro_umn_retro_bg,
-            "UMN RETRO",
+            R.drawable.ic_umn_retro_umn_retro,
+            "RETRO GAMES",
             "WELCOME TO UMN RETRO",
             OverviewItem.SUBTITLE_DEFAULT,
             "UMN Retro is a Kodi-based platform that allows users to play over 10,000+ vintage retro video games and original format.\nSee Instructors for more information.",
