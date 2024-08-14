@@ -40,13 +40,20 @@ public class Kids {
                     "net.colorcity.kidsy",
             };
 
+            int[] bg = {
+                    R.drawable.kids_ic_umn_kids,
+                    R.drawable.kids_ic_e_learning,
+                    R.drawable.kids_ic_umn_kids,
+                    R.drawable.kids_ic_umn_kids
+            };
+
             for (int index = 0; index < title.length; ++index) {
                 KidsCard k = new KidsCard();
                 k.setTitle(title[index]);
                 k.setDownloadUrl(downloadUrl[index]);
                 k.setPackageName(packageName[index]);
                 k.setIconStringUri(ResourceHelpers.toStringUri(icon[index]));
-                k.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.kids_ic_umn_kids));
+                k.setBackgroundStringUri(ResourceHelpers.toStringUri(bg[index]));
                 kids.add(k);
             }
         }

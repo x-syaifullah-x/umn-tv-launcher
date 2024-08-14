@@ -1,9 +1,12 @@
 package com.umntv.launcher.main;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
+
+import java.io.File;
 
 import media.umn.tv.R;
 
@@ -12,6 +15,8 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        deleteCache(this);
 
         setContentView(R.layout.activity_main);
 
@@ -68,5 +73,31 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
         /**/
+    }
+
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if (dir != null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
     }
 }

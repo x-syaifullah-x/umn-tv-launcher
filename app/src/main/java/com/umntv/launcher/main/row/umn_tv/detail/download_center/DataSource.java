@@ -15,8 +15,8 @@ public class DataSource {
     public static final String URL_GAME_BROWSER = "https://umntv.net/UMNTV/Game_Browser.apk";
 
     private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "DOWNLOAD CENTER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -29,8 +29,8 @@ public class DataSource {
     );
 
     private static final OverviewItem N0_BROWSER = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "N0BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -43,8 +43,8 @@ public class DataSource {
     );
 
     private static final OverviewItem N0_RENDER = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "GAME BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -57,8 +57,8 @@ public class DataSource {
     );
 
     private static final OverviewItem JIO_BROWSER = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "JIO BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -71,8 +71,8 @@ public class DataSource {
     );
 
     private static final OverviewItem UPDATE_LAUNCHER = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "UPDATE LAUNCHER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -86,8 +86,8 @@ public class DataSource {
     );
 
     private static final OverviewItem UMN_LITE = new OverviewItem(
-            R.drawable.ic_umn_tv_download_center_new,
-            R.drawable.ic_umn_tv_download_center_new,
+            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center,
             "UMN LITE",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
