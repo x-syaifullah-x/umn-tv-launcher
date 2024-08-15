@@ -16,8 +16,8 @@ public class Games {
     public static List<GamesCardApp> setup() {
         if (games.isEmpty()) {
             String[] title = {
-                    "N0RENDER GAMES",
-                    "GAME DOWNLOADER",
+                    "RETRO GAMES",
+                    "DOWNLOAD GAMES",
                     "PLAYSTATION",
                     "SONY PSP",
                     "ARCADE",

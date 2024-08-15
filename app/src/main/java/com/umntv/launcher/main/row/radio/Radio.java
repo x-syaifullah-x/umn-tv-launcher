@@ -42,7 +42,7 @@ public final class Radio {
             };
 
             String[] title = {
-                    "UMN RADIO",
+                    "TV-RADIO",
                     UMN_PLAYLIST,
                     STUDY_MUSIC,
                     TRAP_BEATS_NAME,
