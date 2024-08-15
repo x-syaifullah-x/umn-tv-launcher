@@ -20,7 +20,7 @@ public final class Radio {
     public static List<RadioCard> setup() {
         if (radio.isEmpty()) {
             String[] apkLinkDownloadApk = {
-                    "https://umntv.net/UMNTV_Builds/Builds19/UMN_Radio_UMNTV_1.apk",
+                    "https://umntv.net/UMNTV/TV-RADIO.apk",
                     null,
                     null,
                     null,
@@ -29,7 +29,7 @@ public final class Radio {
             };
 
             String[] packageName = {
-                    "radio.umn.net",
+                    "de.radio.android",
                     null,
                     null,
                     null,

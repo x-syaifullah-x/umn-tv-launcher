@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.umntv.launcher.main.DetailsActivity;
@@ -114,6 +115,10 @@ public class CardVisitor extends CardVisitorKt {
     public void click(RadioCard radioCard) {
         if (radioCard.getPackageName() != null) {
             Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(radioCard.getPackageName());
+            if (launchIntent == null){
+                launchIntent = getContext().getPackageManager().getLeanbackLaunchIntentForPackage(radioCard.getPackageName());
+            }
+//            Log.i("abc", launchIntent + "");
             if (launchIntent != null) {
                 /* open application */
                 getContext().startActivity(launchIntent);

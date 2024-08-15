@@ -41,10 +41,10 @@ public class Kids {
             };
 
             int[] bg = {
-                    R.drawable.kids_ic_umn_kids,
-                    R.drawable.kids_ic_e_learning,
-                    R.drawable.kids_ic_umn_kids,
-                    R.drawable.kids_ic_umn_kids
+                    R.drawable.kids_ic_umn_kids_bggg,
+                    R.drawable.kids_ic_umn_kids_bggg,
+                    R.drawable.kids_ic_umn_kids_bggg,
+                    R.drawable.kids_ic_umn_kids_bggg
             };
 
             for (int index = 0; index < title.length; ++index) {
