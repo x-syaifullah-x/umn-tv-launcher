@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.constant.AppBuild;
@@ -46,6 +47,7 @@ public class AppDataManage {
             while (resolveInfoIterator.hasNext()) {
                 ResolveInfo next = resolveInfoIterator.next();
                 LaunchApp launchApp = new LaunchApp();
+//                Log.i("abc", next.activityInfo.packageName);
                 Drawable banner = next.activityInfo.loadBanner(packageManager);
                 Drawable icon = next.activityInfo.loadIcon(packageManager);
                 if (banner != null) {

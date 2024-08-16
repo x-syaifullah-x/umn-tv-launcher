@@ -23,6 +23,20 @@ public class DataSource {
             )
     );
 
+    private static final OverviewItem INSTRUCTIONS = new OverviewItem(
+            R.drawable.ic_umn_retro_umn_retro,
+            R.drawable.ic_umn_retro_umn_retro,
+            "INSTRUCTION",
+            "WELCOME TO UMN INSTRUCTION",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "UMN Retro is a Kodi-based platform that allows users to play over 10,000+ vintage retro video games and original format.\nSee Instructors for more information.",
+            new ApkData(
+                    "https://n0render.com/retrot/",
+                    null,
+                    false
+            )
+    );
+
 //    private static final OverviewItem UMN_PS_1 = new OverviewItem(
 //            R.drawable.ic_umn_retro_umn_games_ps1_new,
 //            R.drawable.ic_umn_retro_umn_games_ps1_new,
@@ -178,10 +192,11 @@ public class DataSource {
 
     public static final List<OverviewItem> items = List.of(
             UMN_RETRO,
-            MINECRAFT,
-            UNKILLED,
-            PAC_MAN256,
-            CHESS,
+            INSTRUCTIONS,
+//            MINECRAFT,
+//            UNKILLED,
+//            PAC_MAN256,
+//            CHESS,
             GAME_PAD,
             REMOTE_ADB
     );

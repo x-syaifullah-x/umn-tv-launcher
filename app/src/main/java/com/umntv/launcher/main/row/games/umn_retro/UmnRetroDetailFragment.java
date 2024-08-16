@@ -3,6 +3,8 @@ package com.umntv.launcher.main.row.games.umn_retro;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -23,6 +25,25 @@ public class UmnRetroDetailFragment extends BaseDetailFragment {
         super.onCreate(savedInstanceState);
 
         Admob.setup(requireActivity().findViewById(R.id.adView));
+    }
+
+    @Override
+    protected void openOrDownload(ApkData apkData) {
+        if (apkData.packageName == null){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            try {
+                intent.setData(Uri.parse(apkData.url));
+                intent.setPackage("com.jio.web.androidtv");
+                startActivity(intent);
+            } catch (Throwable t) {
+                Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                String uriString = apkData.url;
+                intent.setData(Uri.parse(uriString));
+                startActivity(intent);
+            }
+        } else {
+            super.openOrDownload(apkData);
+        }
     }
 
     @Override

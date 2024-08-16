@@ -9,18 +9,19 @@ import media.umn.tv.R;
 
 public final class Radio {
 
-    public final static String TRAP_BEATS_NAME = "TRAP BEATS";
-    public final static String HMONG_SONGS = "HMONG PLAYLIST";
-    public final static String THAI_LAO_KARAOKE = "THAI/LAO PLAYLIST";
-    public final static String UMN_PLAYLIST = "UMN PLAYLIST";
-    public final static String STUDY_MUSIC = "STUDY MUSIC";
+    public final static String TRAP_BEATS_NAME = "FIT WORKOUT";
+    public final static String HMONG_SONGS = "TUNELN RADIO";
+    public final static String THAI_LAO_KARAOKE = "VLC";
+    public final static String UMN_PLAYLIST = "FITON";
+    public final static String STUDY_MUSIC = "PANDORA";
 
     private static final List<RadioCard> radio = new ArrayList<>();
 
     public static List<RadioCard> setup() {
         if (radio.isEmpty()) {
             String[] apkLinkDownloadApk = {
-                    "https://umntv.net/UMNTV/TV-RADIO.apk",
+//                    "https://umntv.net/UMNTV/TV-RADIO.apk",
+                    null,
                     null,
                     null,
                     null,
@@ -30,19 +31,24 @@ public final class Radio {
 
             String[] packageName = {
                     "de.radio.android",
+                    "com.fiton.android",
+                    "com.pandora.android.atv",
+                    "com.joyer.tv.fitness",
+                    "tunein.player",
+                    "org.videolan.vlc"
+            };
+
+            String[] youtubeId = {
                     null,
                     null,
+                    "jfKfPfyJRdk https://www.youtube.com/shorts 5yx6BWlEVcY",
                     null,
                     null,
                     null
             };
 
-            String[] youtubeId = {
-                    null, null, "jfKfPfyJRdk https://www.youtube.com/shorts 5yx6BWlEVcY", null, null, null
-            };
-
             String[] title = {
-                    "TV-RADIO",
+                    "RADIO.NET",
                     UMN_PLAYLIST,
                     STUDY_MUSIC,
                     TRAP_BEATS_NAME,
@@ -61,7 +67,7 @@ public final class Radio {
 
             String[] link = {
                     null,
-                    "https://www.youtube.com/watch_popup?v=05UsJyQC3n8 https://www.youtube.com/watch_popup?v=9JF5sIMxJ_U https://www.youtube.com/watch_popup?v=0cDlBvqrkDU  https://www.youtube.com/watch_popup?v=nCrKk-g8kXg  https://www.youtube.com/watch_popup?v=G-6fxr7alng https://www.youtube.com/watch_popup?v=F4aby5WN1Rw ",
+                    null,
                     null,
                     "https://www.youtube.com/embed/j3AhWUx7IqA?list=PLjk8Jdc9PVxuqIzqiST9h1bZQtLcJQFV3 https://www.youtube.com/embed/ehCBXmvSxhs?list=PLrteebjlQmI9eyxcVAVtiM3Ue43dUBpxt https://www.youtube.com/embed/bEKUOx_owFk?list=PLHKAN8O8G3sc8K9XdSTzh6QRISFgUvE8_ https://www.youtube.com/embed/VeRGx1lDWBI?list=PL3Gd7XKQifYdEiUvgmjLyeZZ1dzUyKqN8",
                     "https://www.youtube.com/embed/Zp2g1MFWqJk?app=desktop&feature=emb_imp_woyt&list=PLG-JAis-cw0IU_-GHrJ0Q7CPsU1oGNg3_ https://www.youtube.com/embed/ukdZ4DTALBo?app=desktop&feature=emb_imp_woyt&list=PL0651CF9C8154D178 https://www.youtube.com/embed/960HaJ4J0kk?app=desktop&feature=emb_imp_woyt&list=PLJ6dsbVCaLPhtQ3e3-OHl_sW20JLhkRL1 https://www.youtube.com/embed/b2s5FYpH_y4?app=desktop&feature=emb_imp_woyt&list=PLAGiZc-0D7Jm_9PwXU9bCtGLPWORNsQtL",

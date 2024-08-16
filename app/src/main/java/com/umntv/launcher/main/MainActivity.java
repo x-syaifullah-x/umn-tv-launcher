@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import java.io.File;
 
+import media.umn.tv.BuildConfig;
 import media.umn.tv.R;
 
 public class MainActivity extends FragmentActivity {
@@ -16,7 +17,9 @@ public class MainActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        deleteCache(this);
+        if (BuildConfig.DEBUG) {
+            deleteCache(this);
+        }
 
         setContentView(R.layout.activity_main);
 

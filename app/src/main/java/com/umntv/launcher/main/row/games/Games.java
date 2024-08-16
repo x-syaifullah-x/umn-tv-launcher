@@ -18,34 +18,38 @@ public class Games {
             String[] title = {
                     "RETRO GAMES",
                     "DOWNLOAD GAMES",
+                    "MINECRAFT",
                     "PLAYSTATION",
                     "SONY PSP",
-                    "ARCADE",
+//                    "ARCADE",
                     "NINTENDO 64",
             };
             int[] resourceId = {
                     R.drawable.ic_umn_retro_umn_retro,
                     R.drawable.ic_games_umn_games_new,
+                    R.drawable.ic_games_minecraft,
                     R.drawable.ic_umn_retro_umn_games_ps1_new,
                     R.drawable.ic_retro_umn_games_umn_psp_bg,
-                    R.drawable.ic_retro_umn_games_umn_arcade_bg,
+//                    R.drawable.ic_retro_umn_games_umn_arcade_bg,
                     R.drawable.ic_games_umn_games_n64_ic,
             };
             String[] packageName = {
                     null,
                     null,
+                    "com.mojang.minecraftpe",
                     "com.epsxe.ePSXe",
                     "org.ppsspp.ppsspp",
-                    "com.seleuco.mame4droid",
+//                    "com.seleuco.mame4droid",
                     "org.mupen64plusae.v3.fzurita",
             };
 
             String[] apkLinkDownload = {
                     null,
                     null,
+                    "https://umntv.net/UMNTV/MINECTt.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_PS1.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_PSP.apk",
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_Arcade.apk",
+//                    "https://umntv.net/UMNTV_Builds/Images/UMN_Arcade.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk"
             };
             Class[] a = {
@@ -54,6 +58,7 @@ public class Games {
                     null,
                     null,
                     null,
+//                    null,
                     null
             };
 
