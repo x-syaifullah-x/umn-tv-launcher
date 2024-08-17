@@ -38,7 +38,7 @@ import com.umntv.launcher.util.Convert;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class NewsDetailsFragment extends DetailsSupportFragment {
     private static final String TAG = "VideoDetailsFragment";

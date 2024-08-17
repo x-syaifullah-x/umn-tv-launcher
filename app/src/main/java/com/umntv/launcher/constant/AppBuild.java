@@ -1,6 +1,6 @@
 package com.umntv.launcher.constant;
 
-import media.umn.tv.BuildConfig;
+import net.n0ender.com.BuildConfig;
 
 public class AppBuild {
 

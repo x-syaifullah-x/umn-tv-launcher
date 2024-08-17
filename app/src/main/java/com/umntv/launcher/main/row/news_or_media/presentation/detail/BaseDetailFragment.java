@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class BaseDetailFragment extends DetailsSupportFragment {
     private final List<OverviewItem> items;

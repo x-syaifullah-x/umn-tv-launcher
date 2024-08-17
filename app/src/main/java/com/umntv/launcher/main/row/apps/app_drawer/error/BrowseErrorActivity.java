@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.main.MainFragment;
 
 /*

@@ -5,7 +5,7 @@ import com.umntv.launcher.main.base.OverviewItem;
 
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class DataSource {
 
@@ -13,9 +13,10 @@ public class DataSource {
             R.drawable.asian_media_jade_cinema_ic_abc,
             R.drawable.asian_media_jade_cinema_ic_abc_bg,
             "DINERO DATA",
-            "VENDORS SUPPORT",
-            "Find info about your local vendor",
-            "Data that works for you\n\nsupport@dinerodata.net",
+            "DINERO DATA",
+//            "Find info about your local vendor",
+            "Data that works for you support@dinerodata.net",
+            "",
             new ApkData(
                     "https://dinerodata.net/?page_id=13",
                     "jade.umn.net",
@@ -52,8 +53,8 @@ public class DataSource {
     );
 
     public static final List<OverviewItem> items = List.of(
-            DINERO_DATA,
             TECH_SUPPORT,
+            DINERO_DATA,
             ORAMAL_ENTERPRISES
     );
 }

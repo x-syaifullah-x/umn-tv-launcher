@@ -8,7 +8,7 @@ import androidx.leanback.widget.Presenter;
 
 import com.bumptech.glide.Glide;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class CardPresenter extends Presenter {
 

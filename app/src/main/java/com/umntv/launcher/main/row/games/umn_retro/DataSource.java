@@ -5,17 +5,17 @@ import com.umntv.launcher.main.base.OverviewItem;
 
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class DataSource {
 
     private static final OverviewItem UMN_RETRO = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
             R.drawable.ic_umn_retro_umn_retro,
-            "RETRO GAMES",
-            "WELCOME TO UMN RETRO",
-            OverviewItem.SUBTITLE_DEFAULT,
-            "UMN Retro is a Kodi-based platform that allows users to play over 10,000+ vintage retro video games and original format.\nSee Instructors for more information.",
+            "RETRO CENTER",
+            "WELCOME TO N0RENDER RETRO CENTER",
+            "Datadogs Communication | LaunchBOX | RetroArch",
+            "N0Render Retro Center is a LaunchBOX / RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/UMN_RETRO_UMNTV_1.apk",
                     "retro.umn.net",
@@ -24,12 +24,12 @@ public class DataSource {
     );
 
     private static final OverviewItem INSTRUCTIONS = new OverviewItem(
-            R.drawable.ic_umn_retro_umn_retro,
-            R.drawable.ic_umn_retro_umn_retro,
+            R.drawable.ic_umn_retro_umn_retro_ins,
+            R.drawable.ic_umn_retro_umn_retro_ins,
             "INSTRUCTION",
-            "WELCOME TO UMN INSTRUCTION",
-            OverviewItem.SUBTITLE_DEFAULT,
-            "UMN Retro is a Kodi-based platform that allows users to play over 10,000+ vintage retro video games and original format.\nSee Instructors for more information.",
+            "WELCOME TO N0RENDER INSTRUCTION",
+            "Datadogs Communication | LaunchBOX | RetroArch",
+            "N0Render Retro Center is a LaunchBOX / RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
             new ApkData(
                     "https://n0render.com/retrot/",
                     null,

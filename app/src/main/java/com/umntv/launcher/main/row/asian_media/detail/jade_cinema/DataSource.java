@@ -2,7 +2,7 @@ package com.umntv.launcher.main.row.asian_media.detail.jade_cinema;
 
 import android.text.Html;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
@@ -124,8 +124,8 @@ public class DataSource {
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
-            ITEM_EXOTIC_KOREAN,
-            ITEM_KOREAN_SOFT_CORE,
+//            ITEM_EXOTIC_KOREAN,
+//            ITEM_KOREAN_SOFT_CORE,
             ITEM_KOREAN_SUB,
             ITEM_LIST_CRAWLER
     );

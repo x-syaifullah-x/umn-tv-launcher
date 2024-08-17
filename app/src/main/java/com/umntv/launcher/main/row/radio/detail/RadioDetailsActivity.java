@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.umntv.launcher.util.Admob;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class RadioDetailsActivity extends FragmentActivity {
 

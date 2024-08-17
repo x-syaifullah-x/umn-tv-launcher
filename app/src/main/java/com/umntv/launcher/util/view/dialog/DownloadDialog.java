@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public abstract class DownloadDialog extends AbstractDownload {
 

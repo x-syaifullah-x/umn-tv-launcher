@@ -10,7 +10,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.main.rss.feed.RssFeedResult;
 import com.umntv.launcher.main.rss.feed.RssFeedService;
 

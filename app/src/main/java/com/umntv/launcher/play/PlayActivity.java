@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class PlayActivity extends FragmentActivity {
 

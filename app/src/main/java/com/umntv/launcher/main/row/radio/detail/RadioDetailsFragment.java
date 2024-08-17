@@ -43,7 +43,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class RadioDetailsFragment extends DetailsSupportFragment {
     private static final String TAG = "RadioDetailsFragment";

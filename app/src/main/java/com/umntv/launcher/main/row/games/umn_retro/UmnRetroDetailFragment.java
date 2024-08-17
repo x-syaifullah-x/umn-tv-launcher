@@ -13,7 +13,7 @@ import com.umntv.launcher.main.base.BaseDetailFragment;
 import com.umntv.launcher.main.base.OverviewItem;
 import com.umntv.launcher.util.Admob;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class UmnRetroDetailFragment extends BaseDetailFragment {
     public UmnRetroDetailFragment() {

@@ -9,7 +9,7 @@ import com.umntv.launcher.main.row.utilities.details.preload_tv.DetailPreloadTvF
 import com.umntv.launcher.main.row.utilities.details.remote_support.DetailRemoteSupporTvFragment;
 import com.umntv.launcher.util.Admob;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class UtilitiesDetailsActivity extends FragmentActivity {
 

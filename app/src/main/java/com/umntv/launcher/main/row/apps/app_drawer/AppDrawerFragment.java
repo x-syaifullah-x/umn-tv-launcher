@@ -12,7 +12,7 @@ import androidx.leanback.widget.Row;
 import androidx.leanback.widget.RowPresenter;
 import androidx.leanback.widget.VerticalGridPresenter;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardPresenter;
 import com.umntv.launcher.main.row.apps.app_drawer.error.BrowseErrorActivity;

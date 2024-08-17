@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.BaseDetailFragment;
 import com.umntv.launcher.util.Admob;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class YoutubeShortsFragment extends BaseDetailFragment {
     public YoutubeShortsFragment() {

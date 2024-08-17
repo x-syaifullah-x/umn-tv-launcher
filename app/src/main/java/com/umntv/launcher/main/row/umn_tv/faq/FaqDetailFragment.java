@@ -8,7 +8,7 @@ import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
 import com.umntv.launcher.util.Admob;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class FaqDetailFragment extends BaseDetailFragment {
 

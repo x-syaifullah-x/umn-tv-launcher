@@ -15,7 +15,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 
 import com.google.android.material.textfield.TextInputLayout;
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class DialogPassword extends Dialog {
 

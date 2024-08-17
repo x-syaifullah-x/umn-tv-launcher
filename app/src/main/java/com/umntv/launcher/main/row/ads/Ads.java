@@ -5,12 +5,13 @@ import com.umntv.launcher.util.ResourceHelpers;
 import java.util.ArrayList;
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public final class Ads {
 
     public static final String TITLE_LEEWAY_ENDEAVORS = "LEEWAY ENDEAVORS";
     public static final String VENDORS_SUPPORT = "VENDORS SUPPORT";
+    public static final String GLOBAL_GIRLS_NET = "GLOBAL GIRLS NET";
 
     private static final List<AdsCard> list = new ArrayList<>();
 
@@ -26,7 +27,7 @@ public final class Ads {
             };
             String[] title = {
                     VENDORS_SUPPORT,
-                    "GLOBAL GIRLS NET",
+                    GLOBAL_GIRLS_NET,
                     "PLATINUM STAFFING",
                     "THE DALE STUDIOS",
                     TITLE_LEEWAY_ENDEAVORS

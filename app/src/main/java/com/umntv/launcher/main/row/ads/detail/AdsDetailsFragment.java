@@ -32,7 +32,7 @@ import androidx.leanback.widget.RowPresenter;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.base.CardVisitor;
 import com.umntv.launcher.main.MainActivity;
 import com.umntv.launcher.main.row.ads.Ads;

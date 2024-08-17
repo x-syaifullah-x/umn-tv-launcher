@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentActivity;
 
 import java.io.File;
 
-import media.umn.tv.BuildConfig;
-import media.umn.tv.R;
+import net.n0ender.com.BuildConfig;
+import net.n0ender.com.R;
 
 public class MainActivity extends FragmentActivity {
 

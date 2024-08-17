@@ -16,7 +16,7 @@ import android.widget.TextView;
 import androidx.leanback.widget.SearchOrbView;
 import androidx.leanback.widget.TitleViewAdapter;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class WeatherDateTitleView extends FrameLayout implements TitleViewAdapter.Provider {
     private final Context mContext;

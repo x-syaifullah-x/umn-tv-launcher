@@ -64,7 +64,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class MainFragment extends BrowseSupportFragment {
     private static final String TAG = "MainFragment";

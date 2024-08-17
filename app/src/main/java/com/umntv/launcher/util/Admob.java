@@ -14,7 +14,7 @@ import com.google.android.gms.ads.MobileAds;
 import java.util.ArrayList;
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class Admob {
 

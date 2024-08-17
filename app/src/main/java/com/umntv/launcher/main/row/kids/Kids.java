@@ -1,6 +1,6 @@
 package com.umntv.launcher.main.row.kids;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import com.umntv.launcher.util.ResourceHelpers;
 

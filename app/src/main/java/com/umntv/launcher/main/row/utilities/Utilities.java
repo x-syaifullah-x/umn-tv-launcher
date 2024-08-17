@@ -1,6 +1,6 @@
 package com.umntv.launcher.main.row.utilities;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity;
 import com.umntv.launcher.util.ResourceHelpers;
 

@@ -1,6 +1,6 @@
 package com.umntv.launcher.main.row.umn_tv.media_center;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

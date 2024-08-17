@@ -5,7 +5,7 @@ import com.umntv.launcher.main.base.OverviewItem;
 
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class DataSource {
 

@@ -20,7 +20,7 @@ import androidx.leanback.widget.DetailsOverviewRow;
 import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import com.umntv.launcher.constant.AppBuild;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource;

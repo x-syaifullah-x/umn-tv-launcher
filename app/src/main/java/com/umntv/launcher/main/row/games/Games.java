@@ -1,6 +1,6 @@
 package com.umntv.launcher.main.row.games;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import com.umntv.launcher.main.row.games.umn_games.UmnGamesDetailFragment;
 import com.umntv.launcher.main.row.games.umn_retro.UmnRetroDetailFragment;
@@ -16,7 +16,7 @@ public class Games {
     public static List<GamesCardApp> setup() {
         if (games.isEmpty()) {
             String[] title = {
-                    "RETRO GAMES",
+                    "RETRO CENTER",
                     "DOWNLOAD GAMES",
                     "MINECRAFT",
                     "PLAYSTATION",

@@ -9,7 +9,7 @@ import com.umntv.launcher.util.ResourceHelpers;
 import java.util.ArrayList;
 import java.util.List;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 public class MoviesApps {
 
@@ -19,7 +19,7 @@ public class MoviesApps {
         if (!list.isEmpty()) return list;
 
         String[] title = {
-                "AI smeartassist".toUpperCase(),
+                "AI SMART ASSIST",
                 "TV E-mail".toUpperCase(),
                 "Zoog VPN".toUpperCase(),
                 "SEND FILES TO TV",

@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.umntv.launcher.main.row.ads.Ads;
 import com.umntv.launcher.main.row.ads.AdsCard;
+import com.umntv.launcher.main.row.ads.detail.global_girl_net.GlobalGirlNetFragment;
 import com.umntv.launcher.main.row.ads.detail.support.SupportFragment;
 
 import java.io.Serializable;
@@ -27,6 +28,10 @@ public class AdsDetailsActivity extends FragmentActivity {
                 if (a.getTitle().equals(Ads.VENDORS_SUPPORT)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(android.R.id.content, new SupportFragment())
+                            .commitNow();
+                } else if (a.getTitle().equals(Ads.GLOBAL_GIRLS_NET)) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(android.R.id.content, new GlobalGirlNetFragment())
                             .commitNow();
                 } else {
                     getSupportFragmentManager().beginTransaction()

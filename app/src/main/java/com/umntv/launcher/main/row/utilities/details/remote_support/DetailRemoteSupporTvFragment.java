@@ -21,7 +21,7 @@ import androidx.leanback.widget.DetailsOverviewRow;
 import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.Download;

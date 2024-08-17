@@ -2,7 +2,7 @@ package com.umntv.launcher.main.row.news_or_media.data.repository;
 
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.OverviewItem;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.core.content.ContextCompat;
 
-import media.umn.tv.R;
+import net.n0ender.com.R;
 
 /*
  * This class demonstrates how to extend ErrorFragment
