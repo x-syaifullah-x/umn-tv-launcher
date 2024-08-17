@@ -19,9 +19,9 @@ public class Utilities {
                 null,
                 UtilitiesDetailsActivity.DATA_EXTRA_REMOTE_SUPPORT,
                 null,
-                null,
+//                null,
                 UtilitiesDetailsActivity.DATA_EXTRA_PRELOAD_TV,
-                null,
+//                null,
 //                UtilitiesDetailsActivity.DATA_EXTRA_REMOTE_SUPPORT,
                 null
         };
@@ -30,9 +30,9 @@ public class Utilities {
                 "FX FILE EXPLORER",
                 "REMOTE SUPPORT",
                 "FTP FILE MANAGER",
-                "SEND FILES TO TV",
+//                "SEND FILES TO TV",
                 "PRELOAD TV",
-                "SCREEN CAST",
+//                "SCREEN CAST",
 //                "REMOTE SUPPORT",
                 "DOWNLOADER"
         };
@@ -40,9 +40,9 @@ public class Utilities {
                 R.drawable.ic_utilities_fx,
                 R.drawable.ic_utilities_remote_support,
                 R.drawable.ic_utilities_ftp,
-                R.drawable.ic_utilities_send_files_to_tv,
+//                R.drawable.ic_utilities_send_files_to_tv,
                 R.drawable.ic_utilities_preload_tv_new,
-                R.drawable.ic_utilities_screen_cast,
+//                R.drawable.ic_utilities_screen_cast,
 //                R.drawable.ic_utilities_remote_support,
                 R.drawable.ic_utilities_downloader,
         };
@@ -50,9 +50,9 @@ public class Utilities {
                 "nextapp.fx",
                 null,
                 "io.github.visnkmr.wirelessexplorer",
-                "com.yablio.sendfilestotv",
+//                "com.yablio.sendfilestotv",
                 null,
-                "com.ionitech.airscreen",
+//                "com.ionitech.airscreen",
 //                null,
                 "com.esaba.downloader"
         };
@@ -61,9 +61,9 @@ public class Utilities {
                 "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk",
                 null,
                 "https://umntv.net/UMNTV/wireless.apk",
+//                null,
                 null,
-                null,
-                null,
+//                null,
 //                null,
                 null
         };

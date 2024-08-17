@@ -10,6 +10,7 @@ import media.umn.tv.R;
 public final class Ads {
 
     public static final String TITLE_LEEWAY_ENDEAVORS = "LEEWAY ENDEAVORS";
+    public static final String VENDORS_SUPPORT = "VENDORS SUPPORT";
 
     private static final List<AdsCard> list = new ArrayList<>();
 
@@ -24,14 +25,14 @@ public final class Ads {
                     ""
             };
             String[] title = {
-                    "YOUR AD HERE",
+                    VENDORS_SUPPORT,
                     "GLOBAL GIRLS NET",
                     "PLATINUM STAFFING",
                     "THE DALE STUDIOS",
                     TITLE_LEEWAY_ENDEAVORS
             };
             String[] description = {
-                    "Advertise your business for as little as $5 per month",
+                    "Find info about your local vendor",
                     "Grow your business by placing your ads on our platform for as little as $5 a month.\nUsers will have a direct link to your information or content.\nContact us support@umntv.com",
                     "Create your own brands from your ideas, or assemble your brands from already created products.\nMobile phone application. Electronic device, software development, global Marketing\nconsulting and tools. Global girls inc is for businesses that`s ready to create their brands\nand or launch their products and services globally.\nglobalgirlsinc.net",
                     "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters\nthat are specialists in their respective fields. We staff manufacturing machining. IT, medical,\nexecutive level, engineering, administration and more.\n\nPhone: 1(763) 560-8430 中国人 EXT. 300'",
@@ -46,7 +47,7 @@ public final class Ads {
                     ResourceHelpers.toStringUri(R.drawable.ic_ads_leeway_endeavors)
             };
             String[] detailImageUrl = {
-                    ResourceHelpers.toStringUri(R.drawable.ic_ads_your_add_here),
+                    ResourceHelpers.toStringUri(R.drawable.ic_ads_your_add_here_new),
                     ResourceHelpers.toStringUri(R.drawable.ic_ads_global_inc_bg),
                     ResourceHelpers.toStringUri(R.drawable.ic_ads_platinum),
                     ResourceHelpers.toStringUri(R.drawable.ic_ads_dale_studios),

@@ -55,7 +55,7 @@ public class DetailPreloadTvFragment extends DetailsSupportFragment {
                 new DetailPreloadItem(title, body)
         );
         row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
-        row.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_utilities_preload_tv));
+        row.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_utilities_preload_tv_new));
 
         ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
 
@@ -134,7 +134,7 @@ public class DetailPreloadTvFragment extends DetailsSupportFragment {
 
     private void initializeBackground() {
         mDetailsBackground.enableParallax();
-        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.ic_utilities_preload_tv);
+        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.ic_utilities_preload_tv_new);
         mDetailsBackground.setCoverBitmap(b);
     }
 }

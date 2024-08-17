@@ -19,52 +19,40 @@ public class MoviesApps {
         if (!list.isEmpty()) return list;
 
         String[] title = {
-                "NETFLIX",
-                "DISNEY+",
-                "PRIME VIDEO",
-                "APPLE +",
-                "ALLBLK",
-                "HULU",
-                "HBO MAX",
-                "ZEUS NETWORK",
+                "AI smeartassist".toUpperCase(),
+                "TV E-mail".toUpperCase(),
+                "Zoog VPN".toUpperCase(),
+                "SEND FILES TO TV",
+                "Screencast".toUpperCase(),
         };
         int[] resourceId = {
-                R.drawable.ic_support_netflix,
-                R.drawable.ic_disney_plus,
-                R.drawable.ic_support_prime_video,
-                R.drawable.ic_support_apple_tv_plus,
-                R.drawable.ic_support_allblk,
-                R.drawable.ic_support_hulu,
-                R.drawable.ic_support_hbo_max,
-                R.drawable.ic_zuy_fl
+                R.drawable.ai_smeartassist_ic,
+                R.drawable.ic_tv_mail,
+                R.drawable.ic_zoog_vpn,
+                R.drawable.ic_utilities_send_files_to_tv,
+                R.drawable.ic_utilities_screen_cast,
         };
         String[] packageName = {
-                "com.netflix.mediaclient",
-                "com.disney.disneyplus",
-                "com.amazon.amazonvideo.livingroom",
-                "com.apple.atve.androidtv.appletv",
-                "com.umc.androidtv",
-                "com.hulu.livingroomplus",
-                "com.hbo.hbonow",
-                "com.thezeusnetwork.www",
+                "com.gowittgroup.smartassist",
+                "not.a.bug.tvmail",
+                "com.zoogvpn.android",
+                "com.yablio.sendfilestotv",
+                "com.ionitech.airscreen"
         };
 
         String[] apkUrl = {
                 null,
-                "https://umntvdealers.net/UMNTV/Apks/disneyplus-2-15-1-rc3.apk",
                 null,
                 null,
                 null,
                 null,
-                null,
-                null
         };
 
         for (int index = 0; index < title.length; ++index) {
             MoviesAppsCard s = new MoviesAppsCard();
             s.setTitle(title[index]);
             s.setIconDrawable(ContextCompat.getDrawable(c, resourceId[index]));
-            s.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.bg_row_support));
+            s.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.bg_row_support_aa));
             s.setPackageName(packageName[index]);
             s.setApkUrl(apkUrl[index]);
             list.add(s);

@@ -10,7 +10,7 @@ import media.umn.tv.R;
 public final class Radio {
 
     public final static String TRAP_BEATS_NAME = "FIT WORKOUT";
-    public final static String HMONG_SONGS = "TUNELN RADIO";
+    public final static String HMONG_SONGS = "TUNEIN";
     public final static String THAI_LAO_KARAOKE = "VLC";
     public final static String UMN_PLAYLIST = "FITON";
     public final static String STUDY_MUSIC = "PANDORA";

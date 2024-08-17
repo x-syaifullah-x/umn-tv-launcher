@@ -10,10 +10,10 @@
     <string name="games">GAMES</string>
     <string name="radio">RADIO/WORKOUT</string>
     <string name="asian_series">ASIAN MEDIA</string>
-    <string name="auto_payment">MOVIES APPS</string>
+    <string name="auto_payment">TOOLS</string>
     <string name="news">NEWS / MEDIA</string>
     <string name="utility">UTILITIES</string>
-    <string name="image">ADS</string>
+    <string name="image">SUPPORT</string>
     <string name="app">APPS</string>
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>

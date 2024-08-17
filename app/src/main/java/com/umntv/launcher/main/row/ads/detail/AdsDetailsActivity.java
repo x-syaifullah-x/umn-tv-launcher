@@ -1,9 +1,16 @@
 package com.umntv.launcher.main.row.ads.detail;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
+
+import com.umntv.launcher.main.row.ads.Ads;
+import com.umntv.launcher.main.row.ads.AdsCard;
+import com.umntv.launcher.main.row.ads.detail.support.SupportFragment;
+
+import java.io.Serializable;
 
 public class AdsDetailsActivity extends FragmentActivity {
 
@@ -15,9 +22,18 @@ public class AdsDetailsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new AdsDetailsFragment())
-                    .commitNow();
+            Serializable s = getIntent().getSerializableExtra(AdsDetailsActivity.ITEM);
+            if (s instanceof AdsCard a) {
+                if (a.getTitle().equals(Ads.VENDORS_SUPPORT)) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(android.R.id.content, new SupportFragment())
+                            .commitNow();
+                } else {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(android.R.id.content, new AdsDetailsFragment())
+                            .commitNow();
+                }
+            }
         }
     }
 }
