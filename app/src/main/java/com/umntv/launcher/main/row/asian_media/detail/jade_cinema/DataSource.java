@@ -14,8 +14,8 @@ public class DataSource {
     private static final OverviewItem ITEM_JADE_CINEMA = new OverviewItem(
             R.drawable.asian_media_jade_cinema_ic,
             R.drawable.ic_asian_media_jade_cinema_detail_bg,
-            "JADE CINEMA",
-            "WELCOME TO JADE CINEMA",
+            "ASIAN MEDIA",
+            "WELCOME TO ASIAN MEDIA",
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema is a Kodi-based platform that allows users to search for TV shows and movies specifically in Asian countries.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
             new ApkData(
@@ -28,8 +28,8 @@ public class DataSource {
     private static final OverviewItem ITEM_JADE_ANIME = new OverviewItem(
             R.drawable.ic_asian_media_jade_anime_detail_bg,
             R.drawable.ic_asian_media_jade_anime_detail_bg,
-            "JADE ANIME",
-            "WELCOME TO JADE ANIME",
+            "ANIME",
+            "WELCOME TO ANIME",
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade anime allows users to search for their favorite anime movies and series.",
             new ApkData(
@@ -53,48 +53,11 @@ public class DataSource {
             )
     );
 
-
-    public static String URL_EXOTIC_KOREAN = "https://koreanpornmovie.com";
-
-    public static String TITLE_EXOTIC_KOREAN = "EXOTIC KOREAN";
-
-    private static final OverviewItem ITEM_EXOTIC_KOREAN = new OverviewItem(
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            TITLE_EXOTIC_KOREAN,
-            "WELCOME TO " + TITLE_EXOTIC_KOREAN,
-            OverviewItem.SUBTITLE_DEFAULT,
-            "Exotic Movies allow users to enjoy the latest exotic movies from multiple different countries and languages.",
-            new ApkData(
-                    URL_EXOTIC_KOREAN,
-                    "",
-                    true
-            )
-    );
-
-    public static String URL_KOREAN_SOFT_CORE = "https://fullxcinema.com/tag/korean-erotic-movies";
-
-    public static String TITLE_KOREAN_SOFT_CORE = "KOREAN SOFTCORE";
-
-    private static final OverviewItem ITEM_KOREAN_SOFT_CORE = new OverviewItem(
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            TITLE_KOREAN_SOFT_CORE,
-            "WELCOME TO " + TITLE_KOREAN_SOFT_CORE,
-            OverviewItem.SUBTITLE_DEFAULT,
-            "Erotic Korean allows users to enjoy the latest exotic movies from Korea.",
-            new ApkData(
-                    URL_KOREAN_SOFT_CORE,
-                    "",
-                    true
-            )
-    );
-
     private static final OverviewItem ITEM_KOREAN_SUB = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "KOREAN SUB",
-            "WELCOME TO KOREAN SUB",
+            "XXX KOREAN",
+            "WELCOME TO XXX KOREAN",
             OverviewItem.SUBTITLE_DEFAULT,
             "Korean sub allows users to enjoy the latest exotic movies from Korea." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
             new ApkData(
@@ -109,8 +72,8 @@ public class DataSource {
     private static final OverviewItem ITEM_LIST_CRAWLER = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "LIST CRAWLER",
-            "WELCOME TO LIST CRAWLER",
+            "LIST CRAWLERS",
+            "WELCOME TO LIST CRAWLERS",
             OverviewItem.SUBTITLE_DEFAULT,
             "WE TAKE ON RESPONSIBILITY" + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
             new ApkData(
@@ -124,8 +87,6 @@ public class DataSource {
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
-//            ITEM_EXOTIC_KOREAN,
-//            ITEM_KOREAN_SOFT_CORE,
             ITEM_KOREAN_SUB,
             ITEM_LIST_CRAWLER
     );

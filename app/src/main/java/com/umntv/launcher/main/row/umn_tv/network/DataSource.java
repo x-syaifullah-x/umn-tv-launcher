@@ -9,6 +9,34 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
+    private static final OverviewItem MY_ACCOUNT = new OverviewItem(
+            R.drawable.ic_umn_tv_network_detail_whats_new_account,
+            R.drawable.ic_umn_tv_network_detail_whats_new_account,
+            "MY ACCOUNT",
+            "WELCOME TO MY ACCOUNT",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "",
+            new ApkData(
+                    "https://umntv.net/UMNTV/UMNXPD.apk",
+                    "com.doc.paymentchecker",
+                    false
+            )
+    );
+
+    private static final OverviewItem SPEED_TEST = new OverviewItem(
+            R.drawable.ic_umn_tv_network_detail_whats_new_speed_test,
+            R.drawable.ic_umn_tv_network_detail_whats_new_speed_test,
+            "SPEED TEST",
+            "WELCOME TO SPEED TEST",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "",
+            new ApkData(
+                    "https://umntvdealers.net/UMNTV/Apks/FAST%20Speed%20Test_.apk",
+                    "com.netflix.Speedtest",
+                    false
+            )
+    );
+
     private static final OverviewItem ITEM_WHATS_NEWS = new OverviewItem(
             R.drawable.ic_umn_tv_network_detail_whats_new,
             R.drawable.ic_umn_tv_network_detail_whats_new,
@@ -23,7 +51,23 @@ public class DataSource {
             )
     );
 
+    private static final OverviewItem FAQ = new OverviewItem(
+            R.drawable.ic_umn_tv_network_detail_whats_new,
+            R.drawable.ic_umn_tv_network_detail_whats_new,
+            "FAQ",
+            "WELCOME TO FAQ",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "",
+            new ApkData(
+                    "https://www.youtube.com/playlist?list=PLhB5qMsDNiM-iqWKYpQTSS6S_I4IoDWRf",
+                    null,
+                    false
+            )
+    );
     public static final List<OverviewItem> items = List.of(
-            ITEM_WHATS_NEWS
+            MY_ACCOUNT,
+            SPEED_TEST,
+            ITEM_WHATS_NEWS,
+            FAQ
     );
 }

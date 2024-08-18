@@ -53,8 +53,8 @@ public class DataSource {
     );
 
     private static final OverviewItem PLUS_18_LIVE_CHAT = new OverviewItem(
-            R.drawable.ic_umn_tv_media_center_18_plus_bg,
-            R.drawable.ic_umn_tv_media_center_18_plus_bg,
+            R.drawable.ic_umn_tv_media_center_18_plus_bg_live_chat,
+            R.drawable.ic_umn_tv_media_center_18_plus_bg_live_chat,
             "18+ LIVE CHAT",
             "WELCOME TO 18+ LIVE CHAT",
             OverviewItem.SUBTITLE_DEFAULT,

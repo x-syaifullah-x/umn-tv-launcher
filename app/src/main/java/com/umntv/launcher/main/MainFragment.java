@@ -277,10 +277,10 @@ public class MainFragment extends BrowseSupportFragment {
         mSettings = requireView().findViewById(R.id.title_settings);
         mClean = requireView().findViewById(R.id.title_clean);
         mSound = requireActivity().findViewById(R.id.title_sound);
-        mInfo = requireActivity().findViewById(R.id.info);
+//        mInfo = requireActivity().findViewById(R.id.info);
         mNetPlusTv = requireActivity().findViewById(R.id.net_plus_tv);
         adjustScreen = requireActivity().findViewById(R.id.adjust_screen);
-        accountProfile = requireActivity().findViewById(R.id.account_profile);
+//        accountProfile = requireActivity().findViewById(R.id.account_profile);
     }
 
     private void linkEventListeners() {
@@ -314,20 +314,20 @@ public class MainFragment extends BrowseSupportFragment {
                 ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
             }
         });
-        mInfo.setOnClickListener(view -> {
-//            String link = "https://www.youtube.com/playlist?list=PLhB5qMsDNiM9Rk_4Ah7KEIptB80Oisr90";
-//            Intent i = new Intent(Intent.ACTION_VIEW);
-//            i.setData(Uri.parse(link));
-//            startActivity(i);
-            @SuppressWarnings("SpellCheckingInspection")
-            String packageName = "com.netflix.Speedtest";
-            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-            if (launchIntent != null) {
-                requireActivity().startActivity(launchIntent);
-            } else {
-                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FAST%20Speed%20Test_.apk");
-            }
-        });
+//        mInfo.setOnClickListener(view -> {
+////            String link = "https://www.youtube.com/playlist?list=PLhB5qMsDNiM9Rk_4Ah7KEIptB80Oisr90";
+////            Intent i = new Intent(Intent.ACTION_VIEW);
+////            i.setData(Uri.parse(link));
+////            startActivity(i);
+//            @SuppressWarnings("SpellCheckingInspection")
+//            String packageName = "com.netflix.Speedtest";
+//            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+//            if (launchIntent != null) {
+//                requireActivity().startActivity(launchIntent);
+//            } else {
+//                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FAST%20Speed%20Test_.apk");
+//            }
+//        });
 
         mNetPlusTv.setOnClickListener(view -> promptNetPlusTv());
 
@@ -339,7 +339,7 @@ public class MainFragment extends BrowseSupportFragment {
 
         mClean.setOnClickListener(view -> promptClean());
 
-        accountProfile.setOnClickListener(v -> promptAccountProfile());
+//        accountProfile.setOnClickListener(v -> promptAccountProfile());
     }
 
     private void workaroundFocus() {

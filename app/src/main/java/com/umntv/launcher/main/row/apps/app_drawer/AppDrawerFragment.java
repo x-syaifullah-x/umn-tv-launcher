@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.leanback.app.DetailsSupportFragmentBackgroundController;
 import androidx.leanback.app.VerticalGridSupportFragment;
 import androidx.leanback.widget.ArrayObjectAdapter;
 import androidx.leanback.widget.OnItemViewClickedListener;
@@ -24,6 +25,8 @@ public class AppDrawerFragment extends VerticalGridSupportFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         setupFragment();
 

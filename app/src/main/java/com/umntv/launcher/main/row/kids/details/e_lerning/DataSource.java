@@ -11,7 +11,7 @@ public class DataSource {
 
     private static final OverviewItem PRESCHOOL = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "PRESCHOOL",
             "WELCOME TO E-LEARNING PRESCHOOL",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -25,7 +25,7 @@ public class DataSource {
 
     private static final OverviewItem MATHEMATICS = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "MATHEMATICS",
             "WELCOME TO E-LEARNING MATHEMATICS",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -39,7 +39,7 @@ public class DataSource {
 
     private static final OverviewItem CODING = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "CODING",
             "WELCOME TO E-LEARNING CODING",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -53,7 +53,7 @@ public class DataSource {
 
     private static final OverviewItem ENGLISH = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "ENGLISH",
             "WELCOME TO E-LEARNING ENGLISH",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -67,7 +67,7 @@ public class DataSource {
 
     private static final OverviewItem GRAMMAR = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "GRAMMAR",
             "WELCOME TO E-LEARNING GRAMMAR",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -81,7 +81,7 @@ public class DataSource {
 
     private static final OverviewItem MANDARIN = new OverviewItem(
             R.drawable.kids_ic_e_learning,
-            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
             "MANDARIN",
             "WELCOME TO E-LEARNING MANDARIN",
             OverviewItem.SUBTITLE_DEFAULT,

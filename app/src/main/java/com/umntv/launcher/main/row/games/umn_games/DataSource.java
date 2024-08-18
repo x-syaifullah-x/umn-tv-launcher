@@ -10,10 +10,10 @@ import net.n0ender.com.R;
 public class DataSource {
 
     private static final OverviewItem UMN_PS_1 = new OverviewItem(
-            R.drawable.ic_games_umn_games_ps1,
-            R.drawable.ic_games_umn_games_ps1,
-            "UMN_PS1",
-            "WELCOME TO UMN_PS1",
+            R.drawable.ic_games_umn_games_ps1_ic,
+            R.drawable.ic_games_umn_games_ps1_bg,
+            "PLAYSTATION",
+            "WELCOME TO PLAYSTATION",
             OverviewItem.SUBTITLE_DEFAULT,
             "UMN_PS1 offers unlimited online game-playing of the original Sony PlayStation.<br/>" +
                     "SD cards or memory sticks are recommended for game storage.<br/>See Instructors for more information.<br/><br/><font color='black'>NOTE: YOU WILL NEED TO DOWNLOAD THE PS1 BIOS FILE BEFORE PLAYING</font>",
@@ -25,10 +25,10 @@ public class DataSource {
     );
 
     private static final OverviewItem UMN_PSP = new OverviewItem(
-            R.drawable.ic_games_umn_games_psp,
-            R.drawable.ic_games_umn_games_psp,
-            "UMN_PSP",
-            "WELCOME TO UMN_PSP",
+            R.drawable.ic_retro_umn_games_umn_psp_bg,
+            R.drawable.ic_games_umn_games_ps1_bg,
+            "SONY PSP",
+            "WELCOME TO SONY PSP",
             OverviewItem.SUBTITLE_DEFAULT,
             "UMN_PSP offers unlimited online game-playing of the original Sony PlayStation Portable.<br/>" +
                     "SD cards or memory sticks are recommended for game storage.<br/>" +
@@ -57,9 +57,9 @@ public class DataSource {
 
     private static final OverviewItem UMN_N64 = new OverviewItem(
             R.drawable.ic_games_umn_games_n64,
-            R.drawable.ic_games_umn_games_n64,
-            "UMN_N64",
-            "WELCOME TO UMN_N64",
+            R.drawable.ic_games_umn_games_n64_bg,
+            "NINTENDO 64",
+            "WELCOME TO NINTENDO 64",
             OverviewItem.SUBTITLE_DEFAULT,
             "UMN_N64 offers game-playing on the Nintendo 64.\n" +
                     "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
@@ -71,8 +71,10 @@ public class DataSource {
     );
 
     private static final OverviewItem INSTRUCTIONS = new OverviewItem(
-            R.drawable.ic_games_umn_games_instructions,
-            R.drawable.ic_games_umn_games_instructions,
+//            R.drawable.ic_games_umn_games_instructions,
+//            R.drawable.ic_games_umn_games_instructions,
+            R.drawable.ic_umn_retro_umn_retro_ins,
+            R.drawable.ic_umn_retro_umn_retro_ins_bg,
             "INSTRUCTIONS",
             "WELCOME TO INSTRUCTIONS",
             OverviewItem.SUBTITLE_DEFAULT,
@@ -87,7 +89,7 @@ public class DataSource {
     public static final List<OverviewItem> items = List.of(
             UMN_PS_1,
             UMN_PSP,
-            UMN_ARCADE,
+//            UMN_ARCADE,
             UMN_N64,
             INSTRUCTIONS
     );

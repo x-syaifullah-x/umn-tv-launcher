@@ -16,7 +16,7 @@ public class DataSource {
 
     private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "DOWNLOAD CENTER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -30,7 +30,7 @@ public class DataSource {
 
     private static final OverviewItem N0_BROWSER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "N0BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -44,7 +44,7 @@ public class DataSource {
 
     private static final OverviewItem N0_RENDER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "GAME BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -58,7 +58,7 @@ public class DataSource {
 
     private static final OverviewItem JIO_BROWSER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "JIO BROWSER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -72,7 +72,7 @@ public class DataSource {
 
     private static final OverviewItem UPDATE_LAUNCHER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "UPDATE LAUNCHER",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",
@@ -87,7 +87,7 @@ public class DataSource {
 
     private static final OverviewItem UMN_LITE = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
-            R.drawable.umn_tv_ic_download_center,
+            R.drawable.umn_tv_ic_download_center_bg_bg,
             "UMN LITE",
             "WELCOME TO UMN DOWNLOAD CENTER",
             "",

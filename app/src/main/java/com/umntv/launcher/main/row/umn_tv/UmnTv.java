@@ -14,7 +14,7 @@ public class UmnTv {
     public static final String TITLE_DOWNLOAD_CENTER = "DOWNLOAD CENTER";
     public static final String TITLE_APP_DRAWER = "APP DRAWER";
 
-    public static final String TITLE_NETWORK = "NETWORK SPACE";
+    public static final String TITLE_NETWORK = "NETWORK CENTER";
 
     private static final List<UmnTvCard> umnTvCards = new ArrayList<>();
 
@@ -25,7 +25,7 @@ public class UmnTv {
                     TITLE_MEDIA_CENTER,
                     TITLE_NETWORK,
                     TITLE_DOWNLOAD_CENTER,
-                    TITLE_FAQ,
+//                    TITLE_FAQ,
                     TITLE_APP_DRAWER
             };
             String[] apkLinkDownload = {
@@ -33,7 +33,7 @@ public class UmnTv {
                     null,
                     null,
                     null,
-                    null,
+//                    null,
                     null
             };
             String[] link = {
@@ -42,7 +42,7 @@ public class UmnTv {
 //                    "https://umntvdealers.net/?page_id=34",
                     null,
                     null,
-                    null,
+//                    null,
                     null
             };
             int[] cardImage = {
@@ -50,7 +50,7 @@ public class UmnTv {
                     R.drawable.umn_tv_ic_media_center,
                     R.drawable.umn_tv_ic_network,
                     R.drawable.umn_tv_ic_download_center,
-                    R.drawable.umn_tv_ic_movies_and_series,
+//                    R.drawable.umn_tv_ic_movies_and_series,
                     R.drawable.ic_apps_app_drawer
             };
             String[] packageName = {
@@ -66,7 +66,7 @@ public class UmnTv {
                     ResourceHelpers.toStringUri(R.drawable.ic_umn_tv_media_center_bg_dark),
                     ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_network),
                     ResourceHelpers.toStringUri(R.drawable.umn_tv_ic_download_center_bg),
-                    ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_movies_and_series),
+//                    ResourceHelpers.toStringUri(R.drawable.umn_tv_bg_movies_and_series),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_app_drawer_bg)
             };
 
