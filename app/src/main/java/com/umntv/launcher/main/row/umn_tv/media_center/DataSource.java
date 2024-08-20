@@ -40,8 +40,8 @@ public class DataSource {
     private static final OverviewItem WORLD_START_TV = new OverviewItem(
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
-            "UMN SPORTS",
-            "WELCOME TO UMN SPORTS",
+            "SPORTS",
+            "WELCOME TO SPORTS",
             OverviewItem.SUBTITLE_DEFAULT,
             "You can find live sports events. Live pay-per-view events and replays",
 //            "UMN SPORTS is an 18 + application that allows users to browse for the latest funniest, violent, and toxic videos trending on social media.",

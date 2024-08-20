@@ -1,5 +1,6 @@
 package com.umntv.launcher.main.row.games.umn_retro;
 
+import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -31,14 +32,15 @@ public class UmnRetroDetailFragment extends BaseDetailFragment {
     protected void openOrDownload(ApkData apkData) {
         if (apkData.packageName == null){
             Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse(apkData.url);
             try {
-                intent.setData(Uri.parse(apkData.url));
+                intent.setData(uri);
                 intent.setPackage("com.jio.web.androidtv");
                 startActivity(intent);
-            } catch (Throwable t) {
+            } catch (ActivityNotFoundException t) {
                 Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                String uriString = apkData.url;
-                intent.setData(Uri.parse(uriString));
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(uri);
                 startActivity(intent);
             }
         } else {

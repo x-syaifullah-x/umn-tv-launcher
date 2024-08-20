@@ -1,5 +1,6 @@
 package com.umntv.launcher.main.row.umn_tv.network;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
@@ -21,16 +22,17 @@ public class NetworkDetailFragment extends BaseDetailFragment {
 
     @Override
     public void openOrDownload(ApkData apkData) {
-        if (apkData.url.isEmpty() || apkData.packageName == null || apkData.packageName.isEmpty()) {
+        if (apkData.packageName == null || apkData.packageName.isEmpty()) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse(apkData.url);
             try {
-                intent.setData(Uri.parse(apkData.url));
+                intent.setData(uri);
                 intent.setPackage("com.jio.web.androidtv");
                 startActivity(intent);
-            } catch (Throwable t) {
+            } catch (ActivityNotFoundException t) {
                 Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                String uriString = apkData.url;
-                intent.setData(Uri.parse(uriString));
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(uri);
                 startActivity(intent);
             }
         } else {
