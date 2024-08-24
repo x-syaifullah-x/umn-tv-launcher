@@ -13,9 +13,9 @@ public class DataSource {
             R.drawable.umn_tv_ic_media_center,
             R.drawable.ic_umn_tv_media_center_icon_new,
             "MEDIA CENTER",
-            "WELCOME TO UMN MEDIA CENTER",
+            "WELCOME TO MEDIA CENTER",
             OverviewItem.SUBTITLE_DEFAULT,
-            "UMN Media Center is a Kodi-based platform that allows users to search the web for content.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
+            "Media Center is a Kodi-based platform that allows users to search the web for content.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/Media_Center_UMNTV_1.apk",
                     "mc.umn.net",
@@ -58,7 +58,7 @@ public class DataSource {
             "18+ LIVE CHAT",
             "WELCOME TO 18+ LIVE CHAT",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Universal Media 18 + live chat allows users to view and chat with live nude women, men, or couples from around the world.\nIt also gives you access to an unlimited supply of XXX videos, clips, and movies.",
+            "18 + live chat allows users to view and chat with live nude women, men, or couples from around the world.\nIt also gives you access to an unlimited supply of XXX videos, clips, and movies.<br/>Users must be 18 years of age or older.",
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/Live_Chat_UMNTV_1.apk",
                     "lc.umn.net",

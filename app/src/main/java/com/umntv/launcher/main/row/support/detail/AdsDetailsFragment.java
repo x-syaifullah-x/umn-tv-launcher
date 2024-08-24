@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads.detail;
+package com.umntv.launcher.main.row.support.detail;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -35,8 +35,8 @@ import com.bumptech.glide.request.transition.Transition;
 import net.n0ender.com.R;
 import com.umntv.launcher.base.CardVisitor;
 import com.umntv.launcher.main.MainActivity;
-import com.umntv.launcher.main.row.ads.Ads;
-import com.umntv.launcher.main.row.ads.AdsCard;
+import com.umntv.launcher.main.row.support.Ads;
+import com.umntv.launcher.main.row.support.AdsCard;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

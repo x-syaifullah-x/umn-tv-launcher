@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads.detail.global_girl_net;
+package com.umntv.launcher.main.row.support.detail.global_girl_net;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
@@ -33,8 +33,8 @@ public class DataSource {
                     "Download it on your mobile device today.<br/>" +
                     "Network with our global community.",
             new ApkData(
-                    "https://globelgirl-2c269.web.app",
-                    null,
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "com.umn.n0.browser,https://globelgirl-2c269.web.app",
                     false
             )
     );
@@ -48,8 +48,8 @@ public class DataSource {
             "Check out the newest and the latest products on the market.<br/>" +
                     "Shop for your business, shop for your family, shopping for adventure.",
             new ApkData(
-                    "https://globalgnet.net",
-                    null,
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "com.umn.n0.browser,https://globalgnet.net",
                     false
             )
     );
@@ -63,8 +63,8 @@ public class DataSource {
             "Home and business accounting software!<br/>" +
                     "Organize your home and/or business with user-friendly accounting software",
             new ApkData(
-                    "https://account.globalgnet.net",
-                    null,
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "com.umn.n0.browser,https://account.globalgnet.net",
                     false
             )
     );

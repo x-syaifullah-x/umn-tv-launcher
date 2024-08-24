@@ -22,12 +22,14 @@ public class NewsOrMediaRepository {
                     "YOUTUBE",
                     "YOUTUBE KIDS",
                     "YOUTUBE TV",
+                    "TUBI",
 //                    YOUTUBE_ENJOYABLES,
 //                    INT_NEWS,
                     "TIKTOK",
                     "FACEBOOK",
             };
             String[] description = {
+                    null,
                     null,
                     null,
                     null,
@@ -47,6 +49,7 @@ public class NewsOrMediaRepository {
                     "com.google.android.youtube.tv",
                     "com.google.android.youtube.tvkids",
                     "com.google.android.youtube.tvunplugged",
+                    "com.tubitv",
 //                    null,
 //                    null,
                     "com.tiktok.tv",
@@ -60,6 +63,7 @@ public class NewsOrMediaRepository {
                     null,
                     null,
                     null,
+                    null,
 //                    null,
 //                    null,
                     null,
@@ -69,6 +73,7 @@ public class NewsOrMediaRepository {
 //                    null,
             };
             String[] bannerImage = {
+                    ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
                     ResourceHelpers.toStringUri(R.drawable.ic_apps_banner),
@@ -85,6 +90,7 @@ public class NewsOrMediaRepository {
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube),
                     ResourceHelpers.toStringUri(R.drawable.kids_ic_youtube_kids),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_youtube_tv),
+                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_tubi),
 //                    ResourceHelpers.toStringUri(R.drawable.news_and_media_bg_yotube_enjoy_ables),
 //                    ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_int_news),
                     ResourceHelpers.toStringUri(R.drawable.news_or_media_ic_titok),
@@ -106,6 +112,7 @@ public class NewsOrMediaRepository {
 //            };
 
             String[] apkUrl = {
+                    null,
                     null,
                     null,
                     null,

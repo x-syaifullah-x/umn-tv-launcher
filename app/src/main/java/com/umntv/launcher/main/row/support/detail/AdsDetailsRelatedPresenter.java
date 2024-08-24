@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads.detail;
+package com.umntv.launcher.main.row.support.detail;
 
 import androidx.leanback.widget.Presenter;
 

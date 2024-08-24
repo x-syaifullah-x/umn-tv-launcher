@@ -18,9 +18,9 @@ public class DataSource {
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "DOWNLOAD CENTER",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "WELCOME TO DOWNLOAD CENTER",
             "",
-            "Expand your way of thinking by exploring the UMN Download Center.",
+            "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     "https://umntv.net/UMNTV/N0Browser.apk",
                     PACKAGE_NAME_N0_BROWSER,
@@ -32,9 +32,9 @@ public class DataSource {
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "N0BROWSER",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "WELCOME TO DOWNLOAD CENTER",
             "",
-            "Expand your way of thinking by exploring the UMN Download Center.",
+            "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     "https://umntv.net/UMNTV/N0Browser.apk",
                     PACKAGE_NAME_N0_BROWSER,
@@ -46,9 +46,9 @@ public class DataSource {
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "GAME BROWSER",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "WELCOME TO DOWNLOAD CENTER",
             "",
-            "Expand your way of thinking by exploring the UMN Download Center.",
+            "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     URL_GAME_BROWSER,
                     PACKAGE_NAME_N0_RENDER,
@@ -60,9 +60,9 @@ public class DataSource {
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "JIO BROWSER",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "WELCOME TO DOWNLOAD CENTER",
             "",
-            "Expand your way of thinking by exploring the UMN Download Center.",
+            "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     "https://umntv.net/UMNTV/Browser.apk",
                     "com.jio.web.androidtv",
@@ -73,12 +73,12 @@ public class DataSource {
     private static final OverviewItem UPDATE_LAUNCHER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
-            "UPDATE LAUNCHER",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "N0Render Launcher".toUpperCase(),
+            "WELCOME TO DOWNLOAD CENTER",
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/T95%20Launcher.apk",
+                    "https://n0render.com/N0Launcher/N0Launcher.apk",
 //                    "com.umntv.launcher",
                     "-",
                     false
@@ -89,7 +89,7 @@ public class DataSource {
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "UMN LITE",
-            "WELCOME TO UMN DOWNLOAD CENTER",
+            "WELCOME TO DOWNLOAD CENTER",
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(

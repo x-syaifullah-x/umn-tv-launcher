@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -53,7 +54,8 @@ public abstract class DownloadDialog extends AbstractDownload {
         this.directoryDestination = directoryDestination;
 
         @SuppressLint("InflateParams")
-        View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_direct_download, null);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_direct_download, null, false);
+
 
         alertDialog = createDialogDownload(view);
 
@@ -107,7 +109,8 @@ public abstract class DownloadDialog extends AbstractDownload {
             fileName = Uri.parse(header.getUrl().getPath()).getLastPathSegment();
         }
 
-        String messageDownload = "please wait " + fileName + " is downloaded...";
+//        String messageDownload = "please wait " + fileName + " is downloaded...";
+        String messageDownload = "N0Render Download Center";
         String contentLengthInMegaByte = Convert.toMegaByteString(header.getContentLength());
         handler.post(() -> {
             tvMessage.setText(messageDownload);

@@ -1,11 +1,9 @@
 package com.umntv.launcher.main.row.asian_media.detail.jade_cinema;
 
-import android.text.Html;
-
-import net.n0ender.com.R;
-
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
+
+import net.n0ender.com.R;
 
 import java.util.List;
 
@@ -45,7 +43,7 @@ public class DataSource {
             "18+ JADE CHAT",
             "WELCOME TO 18+ JADE CHAT",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.",
+            "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.<br/>Users must be 18 years of age or older.",
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/KODI 19/JADE_CHAT_UMNTV_1.apk",
                     "jc.umn.net",
@@ -53,16 +51,36 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem ITEM_KOREAN_SUB = new OverviewItem(
+    private static final OverviewItem XXX_KOREAN = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             "XXX KOREAN",
             "WELCOME TO XXX KOREAN",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Korean sub allows users to enjoy the latest exotic movies from Korea." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
+            "Korean sub allows users to enjoy the latest exotic movies from Korea.<br/>Users must be 18 years of age or older." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
             new ApkData(
-                    "https://krx18.com/genre/eng-sub",
-                    "",
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "com.umn.n0.browser,https://krx18.com/genre/eng-sub",
+                    true
+            )
+    );
+
+    public static String URL_CHINESE_XXX_MEDIA = "https://n0render.com/N0Launcher/Chinese%20xxx.apk";
+
+    public static String XXX_CHINESE_MEDIA_PACKAGE_NAME = "com.hhllssqq.app";
+
+    private static final OverviewItem XXX_CHINESE_MEDIA = new OverviewItem(
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
+            "CHINESE XXX MEDIA",
+            "WELCOME TO CHINESE XXX MEDIA",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "This application provides and direct connection to Chinese XXX media culture.<br/>" +
+                    "Datadogs Communications takes no responsibility for the content of this application.<br/>" +
+                    "Users must be 18 years of age or older.<br/> This application requires a traditional mouse and keyboard separate or combined.",
+            new ApkData(
+                    URL_CHINESE_XXX_MEDIA,
+                    XXX_CHINESE_MEDIA_PACKAGE_NAME,
                     true
             )
     );
@@ -75,10 +93,10 @@ public class DataSource {
             "LIST CRAWLERS",
             "WELCOME TO LIST CRAWLERS",
             OverviewItem.SUBTITLE_DEFAULT,
-            "WE TAKE ON RESPONSIBILITY" + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
+            "WE TAKE ON RESPONSIBILITY.<br/>Users must be 18 years of age or older." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
             new ApkData(
-                    URL_LIST_CRAWLER,
-                    "",
+                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "com.umn.n0.browser," + URL_LIST_CRAWLER,
                     true
             )
     );
@@ -87,7 +105,8 @@ public class DataSource {
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
-            ITEM_KOREAN_SUB,
+            XXX_KOREAN,
+            XXX_CHINESE_MEDIA,
             ITEM_LIST_CRAWLER
     );
 }

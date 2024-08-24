@@ -38,7 +38,7 @@ public class DataSource {
     );
 
     private static final OverviewItem ITEM_WHATS_NEWS = new OverviewItem(
-            R.drawable.ic_umn_tv_network_detail_whats_new,
+            R.drawable.ic_umn_tv_network_detail_whats_new_bg_bg,
             R.drawable.ic_umn_tv_network_detail_whats_new_bg_bg,
             "WHAT'S NEW",
             "WELCOME TO WHAT'S NEW",
@@ -52,7 +52,7 @@ public class DataSource {
     );
 
     private static final OverviewItem FAQ = new OverviewItem(
-            R.drawable.ic_umn_tv_network_detail_whats_new,
+            R.drawable.ic_umn_tv_network_detail_whats_new_bg,
             R.drawable.ic_umn_tv_network_detail_whats_new_bg,
             "FAQ",
             "WELCOME TO FAQ",

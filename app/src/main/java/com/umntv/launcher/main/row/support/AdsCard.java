@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads;
+package com.umntv.launcher.main.row.support;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardVisitor;

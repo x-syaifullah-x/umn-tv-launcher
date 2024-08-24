@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads.detail.support;
+package com.umntv.launcher.main.row.support.detail.support;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

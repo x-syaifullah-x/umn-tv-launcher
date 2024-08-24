@@ -1,8 +1,8 @@
-package com.umntv.launcher.main.row.ads.detail;
+package com.umntv.launcher.main.row.support.detail;
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import com.umntv.launcher.main.row.ads.AdsCard;
+import com.umntv.launcher.main.row.support.AdsCard;
 
 public class AdsDetailsDescriptionPresenter extends AbstractDetailsDescriptionPresenter {
 

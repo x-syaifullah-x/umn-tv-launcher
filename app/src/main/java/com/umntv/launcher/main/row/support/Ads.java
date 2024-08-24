@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.ads;
+package com.umntv.launcher.main.row.support;
 
 import com.umntv.launcher.util.ResourceHelpers;
 

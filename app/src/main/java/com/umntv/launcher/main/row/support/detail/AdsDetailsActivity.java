@@ -1,15 +1,14 @@
-package com.umntv.launcher.main.row.ads.detail;
+package com.umntv.launcher.main.row.support.detail;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.umntv.launcher.main.row.ads.Ads;
-import com.umntv.launcher.main.row.ads.AdsCard;
-import com.umntv.launcher.main.row.ads.detail.global_girl_net.GlobalGirlNetFragment;
-import com.umntv.launcher.main.row.ads.detail.support.SupportFragment;
+import com.umntv.launcher.main.row.support.Ads;
+import com.umntv.launcher.main.row.support.AdsCard;
+import com.umntv.launcher.main.row.support.detail.global_girl_net.GlobalGirlNetFragment;
+import com.umntv.launcher.main.row.support.detail.support.SupportFragment;
 
 import java.io.Serializable;
 
