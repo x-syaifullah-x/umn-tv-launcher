@@ -1,9 +1,12 @@
 package com.umntv.launcher.main.row.utilities.details.preload_tv;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -22,104 +25,163 @@ import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
 import net.n0ender.com.R;
 
+import com.umntv.launcher.main.base.ApkData;
+import com.umntv.launcher.main.base.BaseDetailFragment;
+import com.umntv.launcher.main.base.OverviewItem;
+import com.umntv.launcher.util.view.dialog.DialogEnterCode;
+import com.umntv.launcher.util.view.dialog.DialogPassword;
 import com.umntv.launcher.util.view.dialog.Download;
 
-public class DetailPreloadTvFragment extends DetailsSupportFragment {
+import java.util.List;
 
-    private DetailsSupportFragmentBackgroundController mDetailsBackground;
+public class DetailPreloadTvFragment extends BaseDetailFragment {
 
-    private ClassPresenterSelector mPresenterSelector;
+//    private DetailsSupportFragmentBackgroundController mDetailsBackground;
+//
+//    private ClassPresenterSelector mPresenterSelector;
+//
+//    private ArrayObjectAdapter mAdapter;
 
-    private ArrayObjectAdapter mAdapter;
+    public DetailPreloadTvFragment() {
+        super(DataSource.items);
+    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mDetailsBackground = new DetailsSupportFragmentBackgroundController(this);
-        mPresenterSelector = new ClassPresenterSelector();
-        mAdapter = new ArrayObjectAdapter(mPresenterSelector);
-
-        setupDetailsOverviewRow();
-        setupDetailsOverviewRowPresenter();
-
-        setAdapter(mAdapter);
-        initializeBackground();
-    }
-
-    private void setupDetailsOverviewRow() {
-        String title = "LIVE TV SETTINGS<GENERAL<RESTORE";
-        String body = "LIVE TV < SETTINGS < GENERAL < RESTORE < (Select local backup)<(Internal shared storage) < download < PRELOADED#";
-//        String body = "Some of these apps are available in the Google play-store\n\n\nUPDATE LAUNCHER INTEL. Please Clear Launcher data after installation";
-        final DetailsOverviewRow row = new DetailsOverviewRow(
-                new DetailPreloadItem(title, body)
-        );
-        row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
-        row.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_utilities_preload_tv_new));
-
-        ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
-
-        for (int i = 0; i < data.length; i++) {
-            actionAdapter.add(new Action(i, data[i][0]));
+    protected void openOrDownload(ApkData apkData) {
+        if (apkData.url.equalsIgnoreCase(DataSource.URL_SELF_LOAD)) {
+            new DialogEnterCode(requireContext())
+                    .setOnConfirmListener(code -> {
+                        download(apkData.url + "/" + code + ".tmb");
+                    }).show();
+            return;
         }
 
-        row.setActionsAdapter(actionAdapter);
-        mAdapter.add(row);
+        if (apkData.url.equalsIgnoreCase(DataSource.URL_CODE_REQUEST)) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(apkData.url));
+            startActivity(i);
+            return;
+        }
+
+        download(apkData.url);
     }
 
-    private final String[][] data = new String[][]{
-//            {"Standard", "https://drive.google.com/uc?export=download&id=17AUtwlkvtz-c9W9BbA-mZaOVA6ZVu9Wm"},
-//            {"UNIVERSAL", "https://drive.google.com/uc?export=download&id=1ALtxZ1SIn5tIYLU4gpt4epQNHn0qDubA"},
-//            {"DOMESTIC", "https://drive.google.com/uc?export=download&id=1Teu5bZ8jpxZvHyOvet3uqWbtIrsNnBIH"},
-//            {"CUSTOMER 1", "https://drive.google.com/uc?export=download&id=1kUA69jkju6v8lbPw9IymyFUNQMhHAlqB"},
-//            {"CUSTOMER 2", "https://drive.google.com/uc?export=download&id=1OcZAtM3kT17qPiNad63PDB8s7h7yXW_b"},
+    //    @Override
+//    public void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//
+//        mDetailsBackground = new DetailsSupportFragmentBackgroundController(this);
+//        mPresenterSelector = new ClassPresenterSelector();
+//        mAdapter = new ArrayObjectAdapter(mPresenterSelector);
+//
+//        setupDetailsOverviewRow();
+//        setupDetailsOverviewRowPresenter();
+//
+//        setAdapter(mAdapter);
+//        initializeBackground();
+//    }
 
-            {"Standard", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Standard%20-%20Copy.txt"},
-            {"UNIVERSAL", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Universal%20-%20Copy.txt"},
-            {"DOMESTIC", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Domestic%20-%20Copy.txt"},
-            {"CUSTOMER 1", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Custom%201%20-%20Copy.txt"},
-            {"CUSTOMER 2", "https://umntv.net/UMNTV/UMNTV%20PRELOAD/Customer%202.txt"},
-    };
+//    private void setupDetailsOverviewRow() {
+//        String title = "LIVE TV SETTINGS<GENERAL<RESTORE";
+//        String body = "LIVE TV < SETTINGS < GENERAL < RESTORE < (Select local backup)<(Internal shared storage) < download < PRELOADED#";
+////        String body = "Some of these apps are available in the Google play-store\n\n\nUPDATE LAUNCHER INTEL. Please Clear Launcher data after installation";
+//        final DetailsOverviewRow row = new DetailsOverviewRow(
+//                new DetailPreloadItem(title, body)
+//        );
+//        row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
+//        row.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_utilities_preload_tv_new));
+//
+//        ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
+//
+//        for (int i = 0; i < data.length; i++) {
+//            actionAdapter.add(new Action(i, data[i][0]));
+//        }
+//
+//        row.setActionsAdapter(actionAdapter);
+//        mAdapter.add(row);
+//    }
 
-    private void setupDetailsOverviewRowPresenter() {
-        // Set detail background.
-        FullWidthDetailsOverviewRowPresenter detailsPresenter = new FullWidthDetailsOverviewRowPresenter(
-                new DetailPreloadDescriptionPresenter()
-        );
+//    private static final String LINK_SELF_LOAD = "https://n0render.com/Selfload";
 
-        detailsPresenter.setBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.selected_background));
+//    private static final String CODE_REQUEST = "https://n0render.com/self-loaded-preload";
 
-        // Hook up transition element.
-        FullWidthDetailsOverviewSharedElementHelper sharedElementHelper = new FullWidthDetailsOverviewSharedElementHelper();
-        sharedElementHelper.setSharedElementEnterTransition(getActivity(), "hero");
-        detailsPresenter.setListener(sharedElementHelper);
-        detailsPresenter.setParticipatingEntranceTransition(true);
+    /**
+     * [0] TITLE
+     * [1] LINK
+     * [2] PASSWORD
+     */
+//    private final String[][] data = new String[][]{
+//            {"WELCOME", "https://n0render.com/N0Launcher/Preloads/welcome.tmb", "_+N0"},
+//            {"WELCOME BACK", "https://n0render.com/N0Launcher/Preloads/welcome2.tmb", "_+N0"},
+//            {"MAC", "https://n0render.com/N0Launcher/Preloads/mac.tmb", "_+N0"},
+//            {"CUSTOMER 1", "https://n0render.com/N0Launcher/Preloads/cus1.tmb", "_+N0"},
+//            {"CUSTOMER 2", "https://n0render.com/N0Launcher/Preloads/cus2.tmb", "_+N0"},
+//            {"SELF LOAD", LINK_SELF_LOAD, ""},
+//            {"Code Request", CODE_REQUEST, ""},
+//    };
 
-        detailsPresenter.setOnActionClickedListener(action -> {
+//    private void setupDetailsOverviewRowPresenter() {
+//        // Set detail background.
+//        FullWidthDetailsOverviewRowPresenter detailsPresenter = new FullWidthDetailsOverviewRowPresenter(
+//                new DetailPreloadDescriptionPresenter()
+//        );
+//
+//        detailsPresenter.setBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.selected_background));
+//
+//        // Hook up transition element.
+//        FullWidthDetailsOverviewSharedElementHelper sharedElementHelper = new FullWidthDetailsOverviewSharedElementHelper();
+//        sharedElementHelper.setSharedElementEnterTransition(getActivity(), "hero");
+//        detailsPresenter.setListener(sharedElementHelper);
+//        detailsPresenter.setParticipatingEntranceTransition(true);
+//
+//        detailsPresenter.setOnActionClickedListener(action -> {
+//
+//            String title = data[(int) action.getId()][0];
+//            String link = data[(int) action.getId()][1];
+//            String password = data[(int) action.getId()][2];
+//
+//            if (password.isEmpty() && link.equalsIgnoreCase(CODE_REQUEST)) {
+//                Intent i = new Intent(Intent.ACTION_VIEW);
+//                i.setData(Uri.parse(link));
+//                startActivity(i);
+//                return;
+//            }
+//
+//            if (password.isEmpty() && link.equalsIgnoreCase(LINK_SELF_LOAD)) {
+//                new DialogEnterCode(requireContext())
+//                        .setOnConfirmListener(code -> {
+//                            download(LINK_SELF_LOAD + code + ".tmb");
+//                        }).show();
+//                return;
+//            }
+//
+//            new DialogPassword(requireContext(), password)
+//                    .setInputPasswordHint("Please enter the password to access " + title)
+//                    .setOnConfirmListener(() -> download(link))
+//                    .show();
+//        });
+//        mPresenterSelector.addClassPresenter(DetailsOverviewRow.class, detailsPresenter);
+//    }
+    private void download(String link) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            Download.toPublicDirectoryDownload(requireContext(), link);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                int checkSelfPermission = ActivityCompat.checkSelfPermission(
+                        requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE
+                );
+                boolean isGranted = checkSelfPermission == PackageManager.PERMISSION_GRANTED;
 
-            String link = data[(int) action.getId()][1];
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                Download.toPublicDirectoryDownload(requireContext(), link);
-            } else {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    int checkSelfPermission = ActivityCompat.checkSelfPermission(
-                            requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE
-                    );
-                    boolean isGranted = checkSelfPermission == PackageManager.PERMISSION_GRANTED;
-
-                    if (isGranted) {
-                        Download.toPublicDirectoryDownload(requireContext(), link);
-                    } else {
-                        this.link = link;
-                        requestPermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                    }
-                } else {
+                if (isGranted) {
                     Download.toPublicDirectoryDownload(requireContext(), link);
+                } else {
+                    this.link = link;
+                    requestPermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 }
+            } else {
+                Download.toPublicDirectoryDownload(requireContext(), link);
             }
-        });
-        mPresenterSelector.addClassPresenter(DetailsOverviewRow.class, detailsPresenter);
+        }
     }
 
     private String link = null;
@@ -132,9 +194,9 @@ public class DetailPreloadTvFragment extends DetailsSupportFragment {
         }
     });
 
-    private void initializeBackground() {
-        mDetailsBackground.enableParallax();
-        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.ic_utilities_preload_tv_new);
-        mDetailsBackground.setCoverBitmap(b);
-    }
+//    private void initializeBackground() {
+//        mDetailsBackground.enableParallax();
+//        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.ic_utilities_preload_tv_new);
+//        mDetailsBackground.setCoverBitmap(b);
+//    }
 }

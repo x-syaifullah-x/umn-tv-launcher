@@ -85,7 +85,7 @@ public class DataSource {
             )
     );
 
-    public static String URL_LIST_CRAWLER = "https://callescort.org";
+    public static String URL_LIST_CRAWLER = "https://adultsearch.com";
 
     private static final OverviewItem ITEM_LIST_CRAWLER = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
@@ -105,7 +105,7 @@ public class DataSource {
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
             ITEM_18_PLUS_JADE_CHAT,
-            XXX_KOREAN,
+//            XXX_KOREAN,
             XXX_CHINESE_MEDIA,
             ITEM_LIST_CRAWLER
     );

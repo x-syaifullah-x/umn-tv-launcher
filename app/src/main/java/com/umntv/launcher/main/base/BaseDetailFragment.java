@@ -1,13 +1,9 @@
 package com.umntv.launcher.main.base;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
@@ -20,13 +16,13 @@ import androidx.leanback.widget.DetailsOverviewRow;
 import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
-import net.n0ender.com.R;
-
 import com.umntv.launcher.constant.AppBuild;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.DialogPassword;
+
+import net.n0ender.com.R;
 
 import java.util.List;
 
@@ -60,7 +56,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
     private void setupDetailsOverviewRow() {
         OverviewItem overviewItem = items.get(0);
         final DetailsOverviewRow row = new DetailsOverviewRow(overviewItem);
-        row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
+//        row.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.default_background));
         row.setImageDrawable(ContextCompat.getDrawable(requireContext(), overviewItem.icon));
         initializeBackground(overviewItem.bg);
 
@@ -112,6 +108,46 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 
     protected void onActionClickListener(OverviewItem overviewItem) {
         if (overviewItem.apkData.isPrivate) {
+            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_WELCOME)) {
+                new DialogPassword(requireContext(), "_+N0")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
+
+            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_WELCOME_BACK)) {
+                new DialogPassword(requireContext(), "_+N0")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
+
+            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_MAC)) {
+                new DialogPassword(requireContext(), "_+N0")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
+
+            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_CUSTOMER_1)) {
+                new DialogPassword(requireContext(), "_+N0")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
+
+            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_CUSTOMER_2)) {
+                new DialogPassword(requireContext(), "_+N0")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
+
             if (overviewItem.apkData.packageName.contains(DataSource.URL_LIST_CRAWLER)) {
                 new DialogPassword(requireContext(), "2023")
                         .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
