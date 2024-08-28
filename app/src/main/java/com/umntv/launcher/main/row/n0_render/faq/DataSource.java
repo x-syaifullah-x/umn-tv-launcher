@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.faq;
+package com.umntv.launcher.main.row.n0_render.faq;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

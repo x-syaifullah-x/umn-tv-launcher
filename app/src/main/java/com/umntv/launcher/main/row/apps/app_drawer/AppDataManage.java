@@ -8,11 +8,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.constant.AppBuild;
-import com.umntv.launcher.main.row.umn_tv.detail.download_center.DataSource;
+import com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource;
 
 import java.util.ArrayList;
 import java.util.Iterator;

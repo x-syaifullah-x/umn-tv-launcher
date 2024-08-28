@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.media_center;
+package com.umntv.launcher.main.row.n0_render.media_center;
 
 import net.n0ender.com.R;
 

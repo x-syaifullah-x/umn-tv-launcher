@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.network;
+package com.umntv.launcher.main.row.n0_render.network;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

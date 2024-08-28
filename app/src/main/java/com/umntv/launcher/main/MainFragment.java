@@ -52,8 +52,8 @@ import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepo
 import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.radio.Radio;
 import com.umntv.launcher.main.row.radio.RadioCard;
-import com.umntv.launcher.main.row.umn_tv.UmnTv;
-import com.umntv.launcher.main.row.umn_tv.UmnTvCard;
+import com.umntv.launcher.main.row.n0_render.UmnTv;
+import com.umntv.launcher.main.row.n0_render.UmnTvCard;
 import com.umntv.launcher.main.row.utilities.Utilities;
 import com.umntv.launcher.main.row.utilities.UtilitiesCard;
 import com.umntv.launcher.service.AccessService;

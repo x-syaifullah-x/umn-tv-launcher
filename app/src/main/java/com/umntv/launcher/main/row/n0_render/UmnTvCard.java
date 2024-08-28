@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv;
+package com.umntv.launcher.main.row.n0_render;
 
 import androidx.annotation.Nullable;
 

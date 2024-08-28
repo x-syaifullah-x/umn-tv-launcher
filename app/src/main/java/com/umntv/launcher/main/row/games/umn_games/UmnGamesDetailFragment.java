@@ -38,7 +38,7 @@ public class UmnGamesDetailFragment extends BaseDetailFragment {
             requireContext().startActivity(launchIntent);
         } catch (Throwable e) {
             ApkData aaa = new ApkData(
-                    com.umntv.launcher.main.row.umn_tv.detail.download_center.DataSource.URL_GAME_BROWSER,
+                    com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource.URL_GAME_BROWSER,
                     apkData.packageName,
                     false
             );

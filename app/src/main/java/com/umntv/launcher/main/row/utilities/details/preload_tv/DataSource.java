@@ -105,9 +105,9 @@ public class DataSource {
             R.drawable.ic_utilities_preload_tv_new,
             R.drawable.ic_utilities_preload_tv_new,
             "CODE REQUEST",
-            "LIVE TV SETTINGS<GENERAL<RESTORE",
+            "REQUEST CODE",
             "",
-            "LIVE TV < SETTINGS < GENERAL < RESTORE < (Select local backup) < (Internal shared storage) < download < PRELOADED#",
+            "Please use your account activation email to request your preload backup.",
             new ApkData(
                     URL_CODE_REQUEST,
                     null,

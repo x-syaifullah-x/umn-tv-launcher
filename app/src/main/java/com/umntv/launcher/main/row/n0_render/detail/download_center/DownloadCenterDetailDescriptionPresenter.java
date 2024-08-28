@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.detail.download_center;
+package com.umntv.launcher.main.row.n0_render.detail.download_center;
 
 import android.graphics.Typeface;
 

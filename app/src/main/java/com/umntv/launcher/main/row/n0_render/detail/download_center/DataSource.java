@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.detail.download_center;
+package com.umntv.launcher.main.row.n0_render.detail.download_center;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;
@@ -12,7 +12,7 @@ public class DataSource {
     public static final String PACKAGE_NAME_N0_RENDER = "com.umn.n0.render";
     public static final String PACKAGE_NAME_N0_BROWSER = "com.umn.n0.browser";
 
-    public static final String URL_GAME_BROWSER = "https://umntv.net/UMNTV/Game_Browser.apk";
+    public static final String URL_GAME_BROWSER = "https://n0render.com/N0Launcher/N0Games.apk";
 
     private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
@@ -36,7 +36,7 @@ public class DataSource {
             "",
             "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
-                    "https://umntv.net/UMNTV/N0Browser.apk",
+                    "https://n0render.com/N0Launcher/N0Browser.apk",
                     PACKAGE_NAME_N0_BROWSER,
                     false
             )

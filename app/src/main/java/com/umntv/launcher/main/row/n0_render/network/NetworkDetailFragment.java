@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.umn_tv.network;
+package com.umntv.launcher.main.row.n0_render.network;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
