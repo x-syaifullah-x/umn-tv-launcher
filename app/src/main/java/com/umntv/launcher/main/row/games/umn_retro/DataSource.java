@@ -68,14 +68,39 @@ public class DataSource {
             )
     );
 
+    public static final OverviewItem UMN_RETRO_MODE = new OverviewItem(
+            R.drawable.ic_umn_retro_umn_retro,
+            R.drawable.ic_umn_retro_umn_retro_bg_bg,
+            "RETRO MODE",
+            "WELCOME TO N0RENDER RETRO MODE",
+            "Datadogs Communications | BATOCERA | LIBERELEC",
+            "N0Render Retro Mode is a batocera-based platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.",
+            new ApkData(
+                    "https://n0render.com/N0Launcher/RetroMode.apk",
+                    "info.retromode.libreelec",
+                    true
+            )
+    );
+
+    private static final OverviewItem INSTRUCTIONS_RETRO_MODE = new OverviewItem(
+            R.drawable.ic_umn_retro_umn_retro_ins,
+            R.drawable.ic_umn_retro_umn_retro_ins_bg,
+            "R-M INSTRUCTION",
+            "WELCOME TO N0RENDER R-M INSTRUCTION",
+            "Datadogs Communications | BATOCERA | LIBERELEC",
+            "N0Render Retro Mode is a batocera-based platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.",
+            new ApkData(
+                    "https://n0render.com/retro-mode",
+                    null,
+                    false
+            )
+    );
     public static final List<OverviewItem> items = List.of(
             UMN_RETRO,
             INSTRUCTIONS,
-//            MINECRAFT,
-//            UNKILLED,
-//            PAC_MAN256,
-//            CHESS,
             GAME_PAD,
-            REMOTE_ADB
+            REMOTE_ADB,
+            UMN_RETRO_MODE,
+            INSTRUCTIONS_RETRO_MODE
     );
 }

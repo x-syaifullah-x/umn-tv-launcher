@@ -108,6 +108,13 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 
     protected void onActionClickListener(OverviewItem overviewItem) {
         if (overviewItem.apkData.isPrivate) {
+            if (overviewItem.apkData.packageName.equalsIgnoreCase(com.umntv.launcher.main.row.games.umn_retro.DataSource.UMN_RETRO_MODE.apkData.packageName)) {
+                new DialogPassword(requireContext(), "retro_mode")
+                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                        .show();
+                return;
+            }
             if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_WELCOME)) {
                 new DialogPassword(requireContext(), "_+N0")
                         .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)

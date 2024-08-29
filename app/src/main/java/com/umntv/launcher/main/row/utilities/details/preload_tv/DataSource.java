@@ -104,7 +104,7 @@ public class DataSource {
     private static final OverviewItem CODE_REQUEST = new OverviewItem(
             R.drawable.ic_utilities_preload_tv_new,
             R.drawable.ic_utilities_preload_tv_new,
-            "CODE REQUEST",
+            "REQUEST CODE",
             "REQUEST CODE",
             "",
             "Please use your account activation email to request your preload backup.",

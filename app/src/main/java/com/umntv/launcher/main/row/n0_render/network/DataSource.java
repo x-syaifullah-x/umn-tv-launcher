@@ -17,8 +17,8 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "",
             new ApkData(
-                    "https://umntv.net/UMNTV/UMNXPD.apk",
-                    "com.doc.paymentchecker",
+                    "https://n0render.com/N0Launcher/N0accounting.apk",
+                    "net.n0.render",
                     false
             )
     );

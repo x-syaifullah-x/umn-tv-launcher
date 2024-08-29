@@ -32,7 +32,8 @@ public class AppDataManage {
             "com.furnaghan.android.photoscreensaver",
             com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.XXX_CHINESE_MEDIA_PACKAGE_NAME,
             DataSource.PACKAGE_NAME_N0_BROWSER,
-            DataSource.PACKAGE_NAME_N0_RENDER
+            DataSource.PACKAGE_NAME_GAME_BROWSER,
+            DataSource.PACKAGE_NAME_NO_RENDER
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {

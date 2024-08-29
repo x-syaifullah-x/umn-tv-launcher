@@ -9,7 +9,8 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
-    public static final String PACKAGE_NAME_N0_RENDER = "com.umn.n0.render";
+    public static final String PACKAGE_NAME_NO_RENDER = "com.umn.n0.render";
+    public static final String PACKAGE_NAME_GAME_BROWSER = "com.noreokensoftware.norenderx";
     public static final String PACKAGE_NAME_N0_BROWSER = "com.umn.n0.browser";
 
     public static final String URL_GAME_BROWSER = "https://n0render.com/N0Launcher/N0Games.apk";
@@ -51,7 +52,7 @@ public class DataSource {
             "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     URL_GAME_BROWSER,
-                    PACKAGE_NAME_N0_RENDER,
+                    PACKAGE_NAME_GAME_BROWSER,
                     false
             )
     );
