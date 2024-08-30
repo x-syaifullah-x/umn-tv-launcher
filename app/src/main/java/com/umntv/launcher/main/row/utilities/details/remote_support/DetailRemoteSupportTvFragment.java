@@ -1,12 +1,10 @@
-package com.umntv.launcher.main.row.utilities.details.preload_tv;
+package com.umntv.launcher.main.row.utilities.details.remote_support;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -28,61 +26,64 @@ import net.n0ender.com.R;
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
 import com.umntv.launcher.main.base.OverviewItem;
+import com.umntv.launcher.util.AndroidStore;
+import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.DialogEnterCode;
-import com.umntv.launcher.util.view.dialog.DialogPassword;
 import com.umntv.launcher.util.view.dialog.Download;
 
 import java.util.List;
 
-public class DetailPreloadTvFragment extends BaseDetailFragment {
+public class DetailRemoteSupportTvFragment extends BaseDetailFragment {
 
-    public DetailPreloadTvFragment() {
+    public DetailRemoteSupportTvFragment() {
         super(DataSource.items);
     }
 
     @Override
-    protected void openOrDownload(ApkData apkData) {
-        if (apkData.url.equalsIgnoreCase(DataSource.URL_SELF_LOAD)) {
-            new DialogEnterCode(requireContext())
+    protected void onActionClickListener(OverviewItem overviewItem) {
+        if (overviewItem.titleAction.equalsIgnoreCase(DataSource.APK_UPLOAD.titleAction)) {
+            new DialogEnterCode(requireContext(), "Download And Install")
                     .setOnConfirmListener(code -> {
-                        download(apkData.url + "/" + code + ".tmb");
+                        String link = "https://n0render.com/N0Launcher/apkinstaller/" + code + ".apk";
+                        ApkUtil.downloadToCacheDirAndInstall(requireContext(), link);
                     }).show();
             return;
         }
+        super.onActionClickListener(overviewItem);
+    }
 
-        if (apkData.url.equalsIgnoreCase(DataSource.URL_CODE_REQUEST)) {
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(apkData.url));
-            startActivity(i);
+    @Override
+    protected void openOrDownload(ApkData apkData) {
+        boolean isApk = apkData.packageName != null;
+        if (isApk) {
+            super.openOrDownload(apkData);
             return;
         }
 
-        download(apkData.url);
-    }
-
-    private void download(String link) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            Download.toPublicDirectoryDownload(requireContext(), link);
-        } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                int checkSelfPermission = ActivityCompat.checkSelfPermission(
-                        requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE
-                );
-                boolean isGranted = checkSelfPermission == PackageManager.PERMISSION_GRANTED;
-
-                if (isGranted) {
-                    Download.toPublicDirectoryDownload(requireContext(), link);
-                } else {
-                    this.link = link;
-                    requestPermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                }
-            } else {
-                Download.toPublicDirectoryDownload(requireContext(), link);
-            }
+            Download.toPublicDirectoryDownload(requireContext(), apkData.url);
+            return;
         }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            int checkSelfPermission = ActivityCompat.checkSelfPermission(
+                    requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE
+            );
+            boolean isGranted = checkSelfPermission == PackageManager.PERMISSION_GRANTED;
+
+            if (isGranted) {
+                Download.toPublicDirectoryDownload(requireContext(), apkData.url);
+            } else {
+                this.link = apkData.url;
+                requestPermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            }
+            return;
+        }
+
+        Download.toPublicDirectoryDownload(requireContext(), apkData.url);
     }
 
-    private String link = null;
+    String link = null;
 
     ActivityResultLauncher<String> requestPermission = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
         if (result) {

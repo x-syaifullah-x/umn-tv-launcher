@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import com.umntv.launcher.main.row.utilities.details.preload_tv.DetailPreloadTvFragment;
-import com.umntv.launcher.main.row.utilities.details.remote_support.DetailRemoteSupporTvFragment;
+import com.umntv.launcher.main.row.utilities.details.remote_support.DetailRemoteSupportTvFragment;
 import com.umntv.launcher.util.Admob;
 
 import net.n0ender.com.R;
@@ -27,7 +27,7 @@ public class UtilitiesDetailsActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             if (getIntent().getBooleanExtra(DATA_EXTRA_REMOTE_SUPPORT, false)) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main_browse_fragment, DetailRemoteSupporTvFragment.class, null)
+                        .replace(R.id.main_browse_fragment, DetailRemoteSupportTvFragment.class, null)
                         .commitNow();
             } else if (getIntent().getBooleanExtra(DATA_EXTRA_PRELOAD_TV, false)) {
                 getSupportFragmentManager().beginTransaction()

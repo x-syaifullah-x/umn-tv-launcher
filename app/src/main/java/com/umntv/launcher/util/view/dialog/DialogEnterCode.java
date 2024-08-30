@@ -4,8 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
@@ -26,6 +24,13 @@ public class DialogEnterCode extends Dialog {
 
     public DialogEnterCode(@NonNull Context context) {
         super(context);
+    }
+
+    private String buttonEnterText = null;
+
+    public DialogEnterCode(@NonNull Context context, String buttonEnterText) {
+        super(context);
+        this.buttonEnterText = buttonEnterText;
     }
 
     private OnConfirmListener onConfirmListener;
@@ -49,6 +54,9 @@ public class DialogEnterCode extends Dialog {
             etPassword.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
 
             Button btnConfirm = findViewById(R.id.btn_confirm);
+            if (buttonEnterText != null) {
+                btnConfirm.setText(buttonEnterText);
+            }
             btnConfirm.setOnClickListener(v -> {
                 String inputPassword = etPassword.getText().toString();
                 if (onConfirmListener != null) {

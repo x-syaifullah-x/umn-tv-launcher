@@ -191,8 +191,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 //                launchIntent.addCategory("android.intent.category.LEANBACK_LAUNCHER");
             requireContext().startActivity(launchIntent);
         } catch (Throwable e) {
-            e.printStackTrace();
-            if (apkData.url.contains("https://play.google.com/")) {
+            if (apkData.url.contains("https://play.google.com")) {
                 AndroidStore.open(requireContext(), apkData.packageName);
             } else {
                 ApkUtil.downloadToCacheDirAndInstall(requireContext(), apkData.url);
