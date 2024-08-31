@@ -61,7 +61,7 @@ public class DataSource {
             new ApkData(
                     "https://umntvdealers.net/UMNTV/Apks/zip-upload.zip",
                     null,
-                    false
+                    true
             )
     );
 

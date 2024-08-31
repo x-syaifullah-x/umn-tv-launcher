@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.games.umn_games;
+package com.umntv.launcher.main.row.games.download_games;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

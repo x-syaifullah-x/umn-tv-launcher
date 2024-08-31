@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.games.umn_retro;
+package com.umntv.launcher.main.row.games.retro_center;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

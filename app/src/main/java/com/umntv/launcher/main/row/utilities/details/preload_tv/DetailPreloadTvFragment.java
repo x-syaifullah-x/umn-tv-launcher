@@ -1,11 +1,8 @@
 package com.umntv.launcher.main.row.utilities.details.preload_tv;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,31 +10,26 @@ import android.os.Bundle;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.leanback.app.DetailsSupportFragment;
-import androidx.leanback.app.DetailsSupportFragmentBackgroundController;
-import androidx.leanback.widget.Action;
-import androidx.leanback.widget.ArrayObjectAdapter;
-import androidx.leanback.widget.ClassPresenterSelector;
-import androidx.leanback.widget.DetailsOverviewRow;
-import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
-import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
-
-import net.n0ender.com.R;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
-import com.umntv.launcher.main.base.OverviewItem;
+import com.umntv.launcher.util.Admob;
 import com.umntv.launcher.util.view.dialog.DialogEnterCode;
-import com.umntv.launcher.util.view.dialog.DialogPassword;
 import com.umntv.launcher.util.view.dialog.Download;
 
-import java.util.List;
+import net.n0ender.com.R;
 
 public class DetailPreloadTvFragment extends BaseDetailFragment {
 
     public DetailPreloadTvFragment() {
         super(DataSource.items);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
     @Override

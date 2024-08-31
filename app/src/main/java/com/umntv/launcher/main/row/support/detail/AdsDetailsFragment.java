@@ -37,6 +37,7 @@ import com.umntv.launcher.base.CardVisitor;
 import com.umntv.launcher.main.MainActivity;
 import com.umntv.launcher.main.row.support.Ads;
 import com.umntv.launcher.main.row.support.AdsCard;
+import com.umntv.launcher.util.Admob;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -76,6 +77,8 @@ public class AdsDetailsFragment extends DetailsSupportFragment {
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
         }
+
+        Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
     private void initializeBackground(AdsCard data) {

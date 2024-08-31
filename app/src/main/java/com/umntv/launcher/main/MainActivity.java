@@ -17,9 +17,9 @@ public class MainActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (BuildConfig.DEBUG) {
-            deleteCache(this);
-        }
+//        if (BuildConfig.DEBUG) {
+//            deleteCache(this);
+//        }
 
         setContentView(R.layout.activity_main);
 

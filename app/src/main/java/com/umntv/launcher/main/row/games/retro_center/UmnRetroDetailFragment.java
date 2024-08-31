@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.games.umn_retro;
+package com.umntv.launcher.main.row.games.retro_center;
 
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;

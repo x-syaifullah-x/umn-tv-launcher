@@ -2,8 +2,8 @@ package com.umntv.launcher.main.row.games;
 
 import net.n0ender.com.R;
 
-import com.umntv.launcher.main.row.games.umn_games.UmnGamesDetailFragment;
-import com.umntv.launcher.main.row.games.umn_retro.UmnRetroDetailFragment;
+import com.umntv.launcher.main.row.games.download_games.UmnGamesDetailFragment;
+import com.umntv.launcher.main.row.games.retro_center.UmnRetroDetailFragment;
 import com.umntv.launcher.util.ResourceHelpers;
 
 import java.util.ArrayList;
@@ -47,9 +47,8 @@ public class Games {
                     null,
                     null,
                     "https://umntv.net/UMNTV/MINECTt.apk",
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_PS1.apk",
+                    "https://n0render.com/N0Launcher/PS0Render.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_PSP.apk",
-//                    "https://umntv.net/UMNTV_Builds/Images/UMN_Arcade.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk"
             };
             Class[] a = {
