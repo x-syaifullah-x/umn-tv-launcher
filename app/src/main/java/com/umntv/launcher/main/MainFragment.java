@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -31,6 +32,9 @@ import androidx.leanback.widget.Presenter;
 import androidx.leanback.widget.Row;
 import androidx.leanback.widget.RowPresenter;
 
+import com.applovin.mediation.ads.MaxAdView;
+import com.applovin.sdk.AppLovinSdk;
+import com.applovin.sdk.AppLovinSdkUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
@@ -83,20 +87,18 @@ public class MainFragment extends BrowseSupportFragment {
     private ImageButton mClean;
     private ImageButton mNetPlusTv;
     private ImageButton mSound;
-    private ImageButton mInfo;
     private ImageButton adjustScreen;
-
-    private ImageButton accountProfile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Admob.setup(requireActivity().findViewById(R.id.adView));
+        
         prepareBackgroundManager();
         setupUIElements();
         loadRows();
         setupEventListeners();
-        Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
     @Override
@@ -121,6 +123,7 @@ public class MainFragment extends BrowseSupportFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+
         if (null != mBackgroundTimer) {
             Log.d(TAG, "onDestroy: " + mBackgroundTimer);
             mBackgroundTimer.cancel();

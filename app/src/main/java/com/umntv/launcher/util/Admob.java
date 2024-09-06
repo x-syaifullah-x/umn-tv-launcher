@@ -20,19 +20,18 @@ public class Admob {
 
     public static void setup(View view) {
         try {
-            if (view instanceof AdView) {
-                AdView adView = (AdView) view;
-//                MobileAds.initialize(adView.getContext(), initializationStatus -> {});
+            if (view instanceof AdView adView) {
+//                                MobileAds.initialize(adView.getContext(), initializationStatus -> {});
                 adView.bringToFront();
                 AdRequest adRequest = new AdRequest.Builder().build();
                 adView.loadAd(adRequest);
-            } else if (view instanceof MaxAdView) {
-                MaxAdView adView = (MaxAdView) view;
+            } else if (view instanceof MaxAdView adView) {
                 Context context = adView.getContext();
-                AppLovinSdkSettings settings = new AppLovinSdkSettings(context);
+                AppLovinSdk.getInstance(context).setMediationProvider("max");
+//                AppLovinSdkSettings settings = new AppLovinSdkSettings(context);
 //                List<String> adUnitIds = new ArrayList<>();
 //                settings.setInitializationAdUnitIds(adUnitIds);
-                AppLovinSdk.getInstance(settings, context).setMediationProvider("max");
+//                AppLovinSdk.getInstance(settings, context).setMediationProvider("max");
                 adView.bringToFront();
                 adView.loadAd();
             }

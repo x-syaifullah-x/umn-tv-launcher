@@ -148,7 +148,7 @@ ext {
     vGlide = "4.16.0"
     vLeanback = "1.0.0"
     // https://developers.google.com/admob/android/quick-start
-    vPlayServicesAds = "23.1.0"
+    vPlayServicesAds = "23.3.0"
 }
 
 def addRepos(RepositoryHandler handler) {

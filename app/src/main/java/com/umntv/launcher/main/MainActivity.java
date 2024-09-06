@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.applovin.mediation.ads.MaxAdView;
+import com.umntv.launcher.util.Admob;
+
 import java.io.File;
 
 import net.n0ender.com.BuildConfig;
@@ -24,6 +27,10 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
+            MaxAdView v = findViewById(R.id.adView);
+//            v.loadAd();
+            Admob.setup(v);
+
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_browse_fragment, new MainFragment())
                     .commitNow();

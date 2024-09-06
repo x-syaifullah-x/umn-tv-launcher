@@ -13,7 +13,7 @@ public class DataSource {
     public static final String PACKAGE_NAME_GAME_BROWSER = "com.noreokensoftware.norenderx";
     public static final String PACKAGE_NAME_N0_BROWSER = "com.umn.n0.browser";
 
-    public static final String URL_GAME_BROWSER = "https://n0render.com/N0Launcher/N0Games.apk";
+    public static final String URL_GAME_BROWSER = "https://n0render.com/N0Launcher/Game_Browser.apk";
 
     private static final OverviewItem DOWNLOAD_CENTER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
@@ -43,7 +43,7 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem N0_RENDER = new OverviewItem(
+    private static final OverviewItem GAME_BROWSER = new OverviewItem(
             R.drawable.umn_tv_ic_download_center,
             R.drawable.umn_tv_ic_download_center_bg_bg,
             "GAME BROWSER",
@@ -52,7 +52,7 @@ public class DataSource {
             "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
                     URL_GAME_BROWSER,
-                    PACKAGE_NAME_GAME_BROWSER,
+                    PACKAGE_NAME_NO_RENDER,
                     false
             )
     );
@@ -105,7 +105,7 @@ public class DataSource {
             UPDATE_LAUNCHER,
             UMN_LITE,
             N0_BROWSER,
-            N0_RENDER,
+            GAME_BROWSER,
             JIO_BROWSER
     );
 }

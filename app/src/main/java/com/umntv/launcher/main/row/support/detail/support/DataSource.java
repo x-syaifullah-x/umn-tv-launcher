@@ -39,15 +39,15 @@ public class DataSource {
     );
 
     private static final OverviewItem ORAMAL_ENTERPRISES = new OverviewItem(
-            R.drawable.asian_media_jade_cinema_ic_abc,
-            R.drawable.asian_media_jade_cinema_ic_abc_bg,
-            "ORAMAL ENTERPRISES",
-            "VENDORS SUPPORT",
-            "Find info about your local vendor",
-            "Data that works for you\n\nsupport@dinerodata.net",
+            R.drawable.asian_media_jade_cinema_ic_abc_ormal_ic,
+            R.drawable.asian_media_jade_cinema_ic_abc_ormal,
+            "ORAMAL ENTERPRISE",
+            "ORAMAL ENTERPRISE",
+            "Support local businesses",
+            "support@oramal.com",
             new ApkData(
                     "http://oramal.com/?page_id=18",
-                    "jade.umn.net",
+                    "",
                     false
             )
     );
