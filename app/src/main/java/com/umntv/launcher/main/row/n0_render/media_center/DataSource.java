@@ -17,27 +17,13 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Media Center is a Kodi-based platform that allows users to search the web for content.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/Media_Center_UMNTV_1.apk",
-                    "mc.umn.net",
+                    "https://n0render.com/N0Launcher/Kodi/Media_Center_1.apk",
+                    "tv.lets.www",
                     false
             )
     );
 
-    private static final OverviewItem TOPAZ_CINEMA = new OverviewItem(
-            R.drawable.ic_umn_tv_media_center_bg_topaz_cinema_new,
-            R.drawable.ic_umn_tv_media_center_bg_topaz_cinema_new,
-            "TOPAZ CINEMA",
-            "WELCOME TO TOPAZ CINEMA",
-            OverviewItem.SUBTITLE_DEFAULT,
-            "Topaz Cinema is a Universal Media exclusive application.\nIt allows users to browse their favorite topaz-colored people mainly from the Americas.",
-            new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/Topaz_Cinema_UMNTV_1.apk",
-                    "tc.umn.net",
-                    false
-            )
-    );
-
-    private static final OverviewItem WORLD_START_TV = new OverviewItem(
+    public static final OverviewItem SPORTS = new OverviewItem(
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
             R.drawable.ic_umn_tv_media_center_world_start_tv_bg_new,
             "SPORTS",
@@ -46,9 +32,9 @@ public class DataSource {
             "You can find live sports events. Live pay-per-view events and replays",
 //            "UMN SPORTS is an 18 + application that allows users to browse for the latest funniest, violent, and toxic videos trending on social media.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/World_Star_UMNTV_1.apk",
-                    "ws.umn.net",
-                    false
+                    "https://n0render.com/N0Launcher/Kodi/N0Sports_1.apk",
+                    "tv.lets.sports",
+                    true
             )
     );
 
@@ -60,16 +46,16 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "18 + live chat allows users to view and chat with live nude women, men, or couples from around the world.\nIt also gives you access to an unlimited supply of XXX videos, clips, and movies.<br/>Users must be 18 years of age or older.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/Live_Chat_UMNTV_1.apk",
-                    "lc.umn.net",
+                    "https://n0render.com/N0Launcher/Kodi/Live_chat_1.apk",
+                    "tv.lets.chat",
                     true
             )
     );
 
     public static final List<OverviewItem> items = List.of(
             MEDIA_CENTER,
-            TOPAZ_CINEMA,
-            WORLD_START_TV,
+//            TOPAZ_CINEMA,
+            SPORTS,
             PLUS_18_LIVE_CHAT
     );
 }

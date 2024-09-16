@@ -94,7 +94,7 @@ public class MainFragment extends BrowseSupportFragment {
         super.onCreate(savedInstanceState);
 
         Admob.setup(requireActivity().findViewById(R.id.adView));
-        
+
         prepareBackgroundManager();
         setupUIElements();
         loadRows();
@@ -493,8 +493,21 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void promptSettings() {
-        Intent intent = new Intent(Settings.ACTION_SETTINGS);
-        startActivity(intent);
+
+        String packageName = "com.android.tv.settings";
+        Intent launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
+        System.out.println(launchIntent);
+        if (launchIntent == null) {
+            launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
+        }
+
+        if (launchIntent != null) {
+            startActivity(launchIntent);
+            return;
+        }
+
+        launchIntent = new Intent(Settings.ACTION_SETTINGS);
+        startActivity(launchIntent);
     }
 
     private void promptClean() {

@@ -4,11 +4,10 @@ plugins {
 }
 
 android {
-
     namespace build_versions.application_id
 
     compileSdk build_versions.compile_sdk
-    buildToolsVersion build_versions.build_tools
+    buildToolsVersion = build_versions.build_tools
 
     defaultConfig {
         minSdk build_versions.min_sdk

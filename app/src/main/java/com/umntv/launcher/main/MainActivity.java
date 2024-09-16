@@ -20,9 +20,9 @@ public class MainActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        if (BuildConfig.DEBUG) {
-//            deleteCache(this);
-//        }
+        if (BuildConfig.DEBUG) {
+            deleteCache(this);
+        }
 
         setContentView(R.layout.activity_main);
 
@@ -97,10 +97,12 @@ public class MainActivity extends FragmentActivity {
     public static boolean deleteDir(File dir) {
         if (dir != null && dir.isDirectory()) {
             String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
-                if (!success) {
-                    return false;
+            if (children != null) {
+                for (String child : children) {
+                    boolean success = deleteDir(new File(dir, child));
+                    if (!success) {
+                        return false;
+                    }
                 }
             }
             return dir.delete();

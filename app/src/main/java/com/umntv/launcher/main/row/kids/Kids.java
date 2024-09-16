@@ -16,7 +16,7 @@ public class Kids {
     public static List<KidsCard> setup() {
         if (kids.isEmpty()) {
             String[] downloadUrl = {
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/UMN_Kids_UMNTV_1.apk",
+                    "https://n0render.com/N0Launcher/Kodi/EKids_Media_1.apk",
                     null,
                     "https://umntv.net/UMNTV/IXL_7.0.0_Apkpure.apk",
                     null
@@ -34,7 +34,7 @@ public class Kids {
                     R.drawable.kids_ic_kids_nursery
             };
             String[] packageName = {
-                    "kids.umn.net",
+                    "tv.lets.kids",
                     null,
                     "com.ixl.ixlmath",
                     "net.colorcity.kidsy",

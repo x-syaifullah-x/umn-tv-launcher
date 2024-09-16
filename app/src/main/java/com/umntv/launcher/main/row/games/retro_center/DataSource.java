@@ -17,8 +17,8 @@ public class DataSource {
             "Datadogs Communication | LaunchBOX | RetroArch",
             "N0Render Retro Center is a LaunchBOX / RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
             new ApkData(
-                    "https://n0render.com/N0Launcher/N0Games.apk",
-                    "com.noreokensoftware.norenderx",
+                    "https://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
+                    "com.retroarch.aarch64",
                     false
             )
     );

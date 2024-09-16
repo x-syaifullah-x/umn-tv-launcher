@@ -17,8 +17,8 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema is a Kodi-based platform that allows users to search for TV shows and movies specifically in Asian countries.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/JADE_Cinema_UMNTV_1.apk",
-                    "jade.umn.net",
+                    "https://n0render.com/N0Launcher/Kodi/Asian_Media_1.apk",
+                    "tv.lets.asianmedia",
                     false
             )
     );
@@ -37,30 +37,16 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem ITEM_18_PLUS_JADE_CHAT = new OverviewItem(
+    private static final OverviewItem ASIAN_LIVE_CHAT = new OverviewItem(
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
             R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "18+ JADE CHAT",
+            "ASIAN LIVE CHAT",
             "WELCOME TO 18+ JADE CHAT",
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.<br/>Users must be 18 years of age or older.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/JADE_CHAT_UMNTV_1.apk",
-                    "jc.umn.net",
-                    true
-            )
-    );
-
-    private static final OverviewItem XXX_KOREAN = new OverviewItem(
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            R.drawable.asian_media_jade_cinema_18_plus_jade_chat_bg,
-            "XXX KOREAN",
-            "WELCOME TO XXX KOREAN",
-            OverviewItem.SUBTITLE_DEFAULT,
-            "Korean sub allows users to enjoy the latest exotic movies from Korea.<br/>Users must be 18 years of age or older." + "<br><br>\t\t\t\t\t\t\t\t\t\t\t" + "<b>(AD BLOCKER DISABLE NEEDED)</b>",
-            new ApkData(
-                    "https://umntv.net/UMNTV/N0Browser.apk",
-                    "com.umn.n0.browser,https://krx18.com/genre/eng-sub",
+                    "https://n0render.com/N0Launcher/Kodi/Asian_Chat_1.apk",
+                    "tv.lets.asian",
                     true
             )
     );
@@ -104,8 +90,7 @@ public class DataSource {
     public static final List<OverviewItem> items = List.of(
             ITEM_JADE_CINEMA,
             ITEM_JADE_ANIME,
-            ITEM_18_PLUS_JADE_CHAT,
-//            XXX_KOREAN,
+            ASIAN_LIVE_CHAT,
             XXX_CHINESE_MEDIA,
             ITEM_LIST_CRAWLER
     );
