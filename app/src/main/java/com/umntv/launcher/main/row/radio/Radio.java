@@ -10,8 +10,8 @@ import net.n0ender.com.R;
 public final class Radio {
 
     public final static String TRAP_BEATS_NAME = "FIT WORKOUT";
-    public final static String HMONG_SONGS = "TUNEIN";
-    public final static String THAI_LAO_KARAOKE = "VLC";
+    public final static String RADIONLINE = "RADIONLINE";
+    public final static String VLC_PLAYER = "VLC PLAYER";
     public final static String UMN_PLAYLIST = "FITON";
     public final static String STUDY_MUSIC = "PANDORA";
 
@@ -20,13 +20,12 @@ public final class Radio {
     public static List<RadioCard> setup() {
         if (radio.isEmpty()) {
             String[] apkLinkDownloadApk = {
-//                    "https://umntv.net/UMNTV/TV-RADIO.apk",
+                    "https://n0render.com/N0Launcher/Radio-Workout/de.radio.android_tv.apk",
+                    "https://n0render.com/N0Launcher/Radio-Workout/fiton.android_1.3.8.com.apk",
+                    "https://n0render.com/N0Launcher/Radio-Workout/pandora.android.apk",
                     null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
+                    "https://n0render.com/N0Launcher/Radio-Workout/radioline_3.0.0.apk",
+                    "https://n0render.com/N0Launcher/Radio-Workout/vlc_1.7.5.apk"
             };
 
             String[] packageName = {
@@ -34,7 +33,7 @@ public final class Radio {
                     "com.fiton.android",
                     "com.pandora.android.atv",
                     "com.joyer.tv.fitness",
-                    "tunein.player",
+                    "com.radioline.android.radioline",
                     "org.videolan.vlc"
             };
 
@@ -52,8 +51,8 @@ public final class Radio {
                     UMN_PLAYLIST,
                     STUDY_MUSIC,
                     TRAP_BEATS_NAME,
-                    HMONG_SONGS,
-                    THAI_LAO_KARAOKE,
+                    RADIONLINE,
+                    VLC_PLAYER,
             };
 
             String[] description = {
@@ -79,7 +78,7 @@ public final class Radio {
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_karaoke),
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_studio_music),
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_trap_beats),
-                    ResourceHelpers.toStringUri(R.drawable.ic_radio_hmong_songs),
+                    ResourceHelpers.toStringUri(R.drawable.ic_radioline),
                     ResourceHelpers.toStringUri(R.drawable.ic_radio_thai),
             };
 

@@ -10,7 +10,6 @@ import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -32,9 +31,6 @@ import androidx.leanback.widget.Presenter;
 import androidx.leanback.widget.Row;
 import androidx.leanback.widget.RowPresenter;
 
-import com.applovin.mediation.ads.MaxAdView;
-import com.applovin.sdk.AppLovinSdk;
-import com.applovin.sdk.AppLovinSdkUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
@@ -50,8 +46,8 @@ import com.umntv.launcher.main.row.games.Games;
 import com.umntv.launcher.main.row.games.GamesCardApp;
 import com.umntv.launcher.main.row.kids.Kids;
 import com.umntv.launcher.main.row.kids.KidsCard;
-import com.umntv.launcher.main.row.movies_apps.MoviesApps;
-import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
+import com.umntv.launcher.main.row.tools.Tools;
+import com.umntv.launcher.main.row.tools.ToolsCard;
 import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
 import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.radio.Radio;
@@ -147,7 +143,7 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void addSupportRow() {
-        List<MoviesAppsCard> list = MoviesApps.setup(requireContext());
+        List<ToolsCard> list = Tools.setup(requireContext());
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
         listRowAdapter.addAll(0, list);
 

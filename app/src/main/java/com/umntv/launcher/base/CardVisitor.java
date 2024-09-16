@@ -18,7 +18,7 @@ import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DetailFragment;
 import com.umntv.launcher.main.row.games.GamesCardApp;
 import com.umntv.launcher.main.row.kids.KidsCard;
-import com.umntv.launcher.main.row.movies_apps.MoviesAppsCard;
+import com.umntv.launcher.main.row.tools.ToolsCard;
 import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
 import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.IntNewsFragment;
@@ -43,7 +43,7 @@ public class CardVisitor extends CardVisitorKt {
         super(context);
     }
 
-    public void click(MoviesAppsCard card) {
+    public void click(ToolsCard card) {
         String packageName = card.getPackageName();
         if (packageName != null) {
             Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(packageName);

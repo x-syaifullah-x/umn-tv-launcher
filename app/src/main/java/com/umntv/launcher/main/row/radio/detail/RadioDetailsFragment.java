@@ -6,7 +6,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
@@ -36,8 +35,6 @@ import com.umntv.launcher.base.CardVisitor;
 import com.umntv.launcher.main.MainActivity;
 import com.umntv.launcher.main.row.radio.Radio;
 import com.umntv.launcher.main.row.radio.RadioCard;
-import com.umntv.launcher.util.Convert;
-import com.umntv.launcher.util.ResourceHelpers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -86,7 +83,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
 
     private final UmnPlayList[] STUDY_MUSIC_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_chill_music_lab, "CHILL MUSIC LAB", "Iron Man Workshop Radio", CHILL_MUSIC_LAB_URL, umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_radio_studio_music_detail, "LOFI HIP HOP", "Lofi Girl", "https://www.youtube.com/watch_popup?autoplay=1&v=jfKfPfyJRdk", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_chillhop, "CHILLHOP", "CHILLHOP", "https://www.youtube.com/watch_popup?autoplay=1&v=5yx6BWlEVcY", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_channels4_profile, "LIVE WORK MUSIC", "Live Work Music", LIVE_WORK_MUSIC_URL, umnPlayListDescription)};
 
-    private final UmnPlayList[] TAI_LAO_KARAOKE_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_iconv_thanavorakit_ounthawatphinyo, "LAO POP", "Thanavorakit Kounthawatphinyo", "https://www.youtube.com/watch_popup?v=gz7RtAxOiQg&list=PL4283C063EB547564", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_lovi, "Thai Songs 2022", Radio.THAI_LAO_KARAOKE, "https://www.youtube.com/watch_popup?v=XqQMisU5En8&list=PL5D7fjEEs5yfIBCACamjy0KpfKESoudtn", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_taispop, "Thai Pop 2022", "Illslick thelegandary", "https://www.youtube.com/watch_popup?v=jthza-s_NEg&list=PLFlUhB2ijJJMzGsf-N7LBEIsLltBAdfYb", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_genie_records_logo, "Thai songs 2019", "Genierock", "https://www.youtube.com/embed/wqJsZYibWcI?list=PLeQlgf5H84mfXRDGtaFiGOOef-szLM7Ov", umnPlayListDescription),};
+    private final UmnPlayList[] TAI_LAO_KARAOKE_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_iconv_thanavorakit_ounthawatphinyo, "LAO POP", "Thanavorakit Kounthawatphinyo", "https://www.youtube.com/watch_popup?v=gz7RtAxOiQg&list=PL4283C063EB547564", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_lovi, "Thai Songs 2022", Radio.VLC_PLAYER, "https://www.youtube.com/watch_popup?v=XqQMisU5En8&list=PL5D7fjEEs5yfIBCACamjy0KpfKESoudtn", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_taispop, "Thai Pop 2022", "Illslick thelegandary", "https://www.youtube.com/watch_popup?v=jthza-s_NEg&list=PLFlUhB2ijJJMzGsf-N7LBEIsLltBAdfYb", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_genie_records_logo, "Thai songs 2019", "Genierock", "https://www.youtube.com/embed/wqJsZYibWcI?list=PLeQlgf5H84mfXRDGtaFiGOOef-szLM7Ov", umnPlayListDescription),};
 
     private final UmnPlayList[] HMONG_PLAY_LIST = {new UmnPlayList(0, R.drawable.ic_maiv_thoj_nkmvl, "HMONG 2021", "Maiv Thoj NKMVL", "https://www.youtube.com/embed/jvtv6rAZWMk?list=PLvoKM51-PIMXnUNXu4n1KzJGDqa_MXMo9", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_cheenou, "HMONG 2022", "Cheenou", "https://www.youtube.com/watch_popup?v=bKxGY5iLDRo&list=PLFmyqQIM32VjlsMYKWSWzlRfEv8enID4a", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_hmong_rapper_productions, "hmong rap", "Hmong rapper productions", "https://www.youtube.com/embed/qCuCgfRI65g?list=PLAOXhd6xBn72Fh23AOSDOw6GofGp__UDU", umnPlayListDescription), new UmnPlayList(0, R.drawable.ic_itsnikkithao, "Xav Kom Yog Koj", "ITSNIKKITHAO", "https://www.youtube.com/embed/__d8qhCYEl4?list=PLedROBSbMY4EISB8azcZ-r9otZX9vJ0QC", umnPlayListDescription),};
 
@@ -174,7 +171,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     actionAdapter.add(new Action(i, TRAP_BEATS_PLAY_LIST[i].titleTab));
                 }
             }
-            case Radio.HMONG_SONGS -> {
+            case Radio.RADIONLINE -> {
                 for (int i = 0; i < HMONG_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, HMONG_PLAY_LIST[i].titleTab));
                 }
@@ -189,7 +186,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     actionAdapter.add(new Action(i, STUDY_MUSIC_PLAY_LIST[i].titleTab));
                 }
             }
-            case Radio.THAI_LAO_KARAOKE -> {
+            case Radio.VLC_PLAYER -> {
                 for (int i = 0; i < TAI_LAO_KARAOKE_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, TAI_LAO_KARAOKE_PLAY_LIST[i].titleTab));
                 }
@@ -230,7 +227,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
                         }
-                        case Radio.HMONG_SONGS -> {
+                        case Radio.RADIONLINE -> {
                             UmnPlayList umnPlayList = HMONG_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -266,7 +263,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
                         }
-                        case Radio.THAI_LAO_KARAOKE -> {
+                        case Radio.VLC_PLAYER -> {
                             UmnPlayList umnPlayList = TAI_LAO_KARAOKE_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -303,7 +300,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     }
                     break;
                 }
-                case Radio.HMONG_SONGS: {
+                case Radio.RADIONLINE: {
                     UmnPlayList umnPlayList = HMONG_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
@@ -348,7 +345,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     }
                     break;
                 }
-                case Radio.THAI_LAO_KARAOKE: {
+                case Radio.VLC_PLAYER: {
                     UmnPlayList umnPlayList = TAI_LAO_KARAOKE_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {

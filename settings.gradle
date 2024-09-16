@@ -1,4 +1,4 @@
-rootProject.name = "Mate Launcher ( net.n0ender.com )"
+rootProject.name = "N0 Launcher-( net.n0ender.com )"
 include ":app"
 
 /**

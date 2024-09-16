@@ -1,11 +1,11 @@
-package com.umntv.launcher.main.row.movies_apps;
+package com.umntv.launcher.main.row.tools;
 
 import androidx.annotation.Nullable;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardVisitor;
 
-public class MoviesAppsCard extends Card {
+public class ToolsCard extends Card {
 
     @Nullable
     private String packageName;

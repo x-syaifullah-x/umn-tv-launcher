@@ -31,8 +31,8 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade anime allows users to search for their favorite anime movies and series.",
             new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/KODI 19/JADE_Anime_UMNTV_1.apk",
-                    "anime.umn.net",
+                    "https://n0render.com/N0Launcher/Kodi/Anime_.apk",
+                    "tv.lets.anime",
                     false
             )
     );

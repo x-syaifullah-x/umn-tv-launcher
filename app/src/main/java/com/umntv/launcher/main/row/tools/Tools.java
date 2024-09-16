@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.movies_apps;
+package com.umntv.launcher.main.row.tools;
 
 import android.content.Context;
 
@@ -11,15 +11,16 @@ import java.util.List;
 
 import net.n0ender.com.R;
 
-public class MoviesApps {
+public class Tools {
 
-    private static final List<MoviesAppsCard> list = new ArrayList<>();
+    private static final List<ToolsCard> list = new ArrayList<>();
 
-    public static List<MoviesAppsCard> setup(Context c) {
+    public static List<ToolsCard> setup(Context c) {
         if (!list.isEmpty()) return list;
 
         String[] title = {
                 "AI SMART ASSIST",
+                "TELEGRAM",
                 "TV E-mail".toUpperCase(),
                 "Zoog VPN".toUpperCase(),
                 "SEND FILES TO TV",
@@ -27,6 +28,7 @@ public class MoviesApps {
         };
         int[] resourceId = {
                 R.drawable.ai_smeartassist_ic,
+                R.drawable.tools_telegram_ic,
                 R.drawable.ic_tv_mail,
                 R.drawable.ic_zoog_vpn,
                 R.drawable.ic_utilities_send_files_to_tv,
@@ -34,6 +36,7 @@ public class MoviesApps {
         };
         String[] packageName = {
                 "com.gowittgroup.smartassist",
+                "cassian.telegram.ooa.pro",
                 "not.a.bug.tvmail",
                 "com.zoogvpn.android",
                 "com.yablio.sendfilestotv",
@@ -42,14 +45,15 @@ public class MoviesApps {
 
         String[] apkUrl = {
                 null,
-                null,
+                "https://n0render.com/N0Launcher/telegram_2.5.9-176.apk",
+                "https://n0render.com/N0Launcher/TVmail.apk",
                 null,
                 null,
                 null,
         };
 
         for (int index = 0; index < title.length; ++index) {
-            MoviesAppsCard s = new MoviesAppsCard();
+            ToolsCard s = new ToolsCard();
             s.setTitle(title[index]);
             s.setIconDrawable(ContextCompat.getDrawable(c, resourceId[index]));
             s.setBackgroundStringUri(ResourceHelpers.toStringUri(R.drawable.bg_row_support_aa));
@@ -57,7 +61,6 @@ public class MoviesApps {
             s.setApkUrl(apkUrl[index]);
             list.add(s);
         }
-
         return list;
     }
 }
