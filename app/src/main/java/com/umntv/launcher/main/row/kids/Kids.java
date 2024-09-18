@@ -18,7 +18,7 @@ public class Kids {
             String[] downloadUrl = {
                     "https://n0render.com/N0Launcher/Kodi/EKids_Media_1.apk",
                     null,
-                    "https://umntv.net/UMNTV/IXL_7.0.0_Apkpure.apk",
+                    "https://n0render.com/N0Launcher/IXL_7.0.0_Apkpure.apk",
                     null
             };
             String[] title = {
@@ -59,5 +59,4 @@ public class Kids {
         }
         return kids;
     }
-
 }

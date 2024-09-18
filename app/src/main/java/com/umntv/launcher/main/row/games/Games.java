@@ -38,7 +38,7 @@ public class Games {
                     null,
                     "com.mojang.minecraftpe",
                     "com.epsxe.ePSXe",
-                    "org.ppsspp.ppsspp",
+                    "org.ppsspp.ppssppgold",
 //                    "com.seleuco.mame4droid",
                     "org.mupen64plusae.v3.fzurita",
             };
@@ -48,7 +48,7 @@ public class Games {
                     null,
                     "https://umntv.net/UMNTV/MINECTt.apk",
                     "https://n0render.com/N0Launcher/PS0Render.apk",
-                    "https://umntv.net/UMNTV_Builds/Images/UMN_PSP.apk",
+                    "https://n0render.com/N0Launcher/PPSSPP%20Gold.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk"
             };
             Class[] a = {
