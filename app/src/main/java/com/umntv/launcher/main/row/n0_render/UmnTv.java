@@ -29,7 +29,7 @@ public class UmnTv {
                     TITLE_APP_DRAWER
             };
             String[] apkLinkDownload = {
-                    "https://umntv.net/UMNTV/UMN LIVE [2.7.0] 100.apk",
+                    "https://n0render.com/N0Launcher/tivimate.apk",
                     null,
                     null,
                     null,

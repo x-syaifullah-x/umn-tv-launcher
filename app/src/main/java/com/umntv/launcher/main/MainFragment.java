@@ -284,24 +284,6 @@ public class MainFragment extends BrowseSupportFragment {
 
     private void linkEventListeners() {
         adjustScreen.setOnClickListener(v -> {
-//            try {
-//                ComponentName name = new ComponentName(
-//                        "com.android.tv.settings",
-//                        "com.android.tv.settings.device.display.DisplayActivity"
-//                );
-//                Intent i = new Intent(Intent.ACTION_MAIN);
-//
-//                i.addCategory(Intent.CATEGORY_LAUNCHER);
-//                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-//                i.setComponent(name);
-//
-//                startActivity(i);
-//
-//            } catch (Exception e) {
-//                ToastHelpers.showLong(v.getContext(), "not supported");
-//                e.printStackTrace();
-//            }
-
             String packageName = "nextapp.fx";
             Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
             if (launchIntent == null) {
@@ -310,7 +292,7 @@ public class MainFragment extends BrowseSupportFragment {
             if (launchIntent != null) {
                 requireActivity().startActivity(launchIntent);
             } else {
-                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
+                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk");
             }
         });
 //        mInfo.setOnClickListener(view -> {
@@ -442,7 +424,7 @@ public class MainFragment extends BrowseSupportFragment {
         if (launchIntent != null) {
             requireActivity().startActivity(launchIntent);
         } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/QuickSupport-15.21.113.apk");
+            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/TeamViewerQS.apk");
         }
     }
 
@@ -453,7 +435,7 @@ public class MainFragment extends BrowseSupportFragment {
         if (launchIntent != null) {
             requireActivity().startActivity(launchIntent);
         } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntv.net/UMNTV/SOUND BOOST.apk");
+            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/SOUND%20BOOST.apk");
         }
     }
 
@@ -525,17 +507,6 @@ public class MainFragment extends BrowseSupportFragment {
 //            AndroidStore.open(requireContext(), packageName);
 ////            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
 //        }
-    }
-
-    private void promptAccountProfile() {
-        @SuppressWarnings("SpellCheckingInspection")
-        String packageName = "com.doc.paymentchecker";
-        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-        if (launchIntent != null) {
-            requireActivity().startActivity(launchIntent);
-        } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntv.net/UMNTV/UMNXPD.apk");
-        }
     }
 
     private boolean isAccessibilitySettingsOn(Context context) {

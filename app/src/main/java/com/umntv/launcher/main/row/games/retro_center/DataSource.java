@@ -14,8 +14,8 @@ public class DataSource {
             R.drawable.ic_umn_retro_umn_retro_bg_bg,
             "RETRO CENTER",
             "WELCOME TO N0RENDER RETRO CENTER",
-            "Datadogs Communication | LaunchBOX | RetroArch",
-            "N0Render Retro Center is a LaunchBOX / RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
+            "Datadogs Communication | Muhammad Usama Nazir | RetroArch",
+            "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
             new ApkData(
                     "https://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
                     "com.retroarch.aarch64",
@@ -69,7 +69,7 @@ public class DataSource {
     );
 
     private static final String SUB_TITLE_RETRO_MODE = "Datadogs Communications | EmuELEC | LIBERELEC";
-    private static final String BODY_RETRO_MODE = "N0Render Retro Mode is a EmuELEC platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.";
+    private static final String BODY_RETRO_MODE = "N0Render Retro Mode is a EmuELEC platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.<br><br>Special Thanks to: Muhammad Usama Nazir";
 
     public static final OverviewItem UMN_RETRO_MODE = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
