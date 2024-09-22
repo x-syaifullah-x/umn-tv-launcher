@@ -1,0 +1,26 @@
+apply from: './dependencies.gradle'
+
+buildscript {
+    apply from: './dependencies.gradle'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$versions.gradlePlugin"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+
+        classpath "com.novoda:bintray-release:$versions.bintrayPlugin"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    tasks.withType(Javadoc).all {
+        enabled = false
+    }
+}
