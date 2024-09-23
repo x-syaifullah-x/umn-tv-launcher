@@ -128,16 +128,16 @@ public class MainFragment extends BrowseSupportFragment {
 
     private void loadRows() {
         if (rowsAdapter.size() == 0) {
-            addUmnTvRow();
+            addN0RenderRow();
             addNewsRow();
-            addKidsRow();
-            addGamesRow();
-            addRadioRow();
-            addAsianMediaRow();
-            addAppsRow();
+//            addKidsRow();
+//            addGamesRow();
+//            addRadioRow();
+//            addAsianMediaRow();
+//            addAppsRow();
             addUtilitiesRow();
-            addAdsRow();
-            addSupportRow();
+//            addAdsRow();
+//            addSupportRow();
             setAdapter(rowsAdapter);
         }
     }
@@ -187,7 +187,7 @@ public class MainFragment extends BrowseSupportFragment {
         rowsAdapter.add(new ListRow(header, listRowAdapter));
     }
 
-    private void addUmnTvRow() {
+    private void addN0RenderRow() {
         List<UmnTvCard> list = UmnTv.setupUmnTv();
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
         listRowAdapter.addAll(0, list);
