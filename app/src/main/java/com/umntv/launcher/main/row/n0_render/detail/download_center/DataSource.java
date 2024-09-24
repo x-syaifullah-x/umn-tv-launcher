@@ -94,8 +94,8 @@ public class DataSource {
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://umntv.net/UMNTV/T95%20Launcher%20LT.apk",
-                    "com.umntv.launcher.lite",
+                    "https://n0render.com/N0Launcher/N0lite.apk",
+                    "com.umntv.launcher.lite", // DOWNLOAD ONLY
                     false
             )
     );
