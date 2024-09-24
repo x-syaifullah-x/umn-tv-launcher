@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-    branches: [  MATE-LAUNCHER(net.n0ender.com) ]
+    branches: [  N0-LAUNCHER(net.n0ender.com) ]
 #  pull_request:
 #    branches: [ started ]
 

@@ -9,13 +9,16 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
+    private static final String SUB_TITLE_UMN_RETRO = "Datadogs Communication | Muhammad Usama Nazir | RetroArch";
+    private static final String BODY_UMN_RETRO = "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.";
+
     private static final OverviewItem UMN_RETRO = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
             R.drawable.ic_umn_retro_umn_retro_bg_bg,
             "RETRO CENTER",
             "WELCOME TO N0RENDER RETRO CENTER",
-            "Datadogs Communication | Muhammad Usama Nazir | RetroArch",
-            "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
+            SUB_TITLE_UMN_RETRO,
+            BODY_UMN_RETRO,
             new ApkData(
                     "https://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
                     "com.retroarch.aarch64",
@@ -28,8 +31,8 @@ public class DataSource {
             R.drawable.ic_umn_retro_umn_retro_ins_bg,
             "INSTRUCTION",
             "WELCOME TO N0RENDER INSTRUCTION",
-            "Datadogs Communication | LaunchBOX | RetroArch",
-            "N0Render Retro Center is a LaunchBOX / RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.",
+            SUB_TITLE_UMN_RETRO,
+            BODY_UMN_RETRO,
             new ApkData(
                     "https://n0render.com/retrot/",
                     null,
