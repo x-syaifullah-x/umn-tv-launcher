@@ -92,8 +92,6 @@ dependencies {
 
     implementation "com.github.bumptech.glide:glide:$vGlide"
 
-    implementation "com.pierfrancescosoffritti.androidyoutubeplayer:core:$vAndroidYoutubePlayer"
-
     testImplementation "junit:junit:$vJunit"
     testImplementation "org.mockito:mockito-core:$vMockito"
     testImplementation "org.mockito:mockito-inline:$vMockitoInline"

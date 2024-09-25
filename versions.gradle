@@ -146,9 +146,6 @@ ext {
     // https://square.github.io/okhttp/changelogs/changelog_4x
     vSquareupOkhttp3 = "4.12.0"
 
-    //https://github.com/PierfrancescoSoffritti/android-youtube-player
-    vAndroidYoutubePlayer = "10.0.5"
-
     vLeanback = "1.0.0"
     // https://developers.google.com/admob/android/quick-start
     vPlayServicesAds = "23.3.0"
@@ -157,10 +154,9 @@ ext {
 def addRepos(RepositoryHandler handler) {
     handler.gradlePluginPortal()
     handler.google()
-    handler.mavenCentral {
-        url "https://jcenter.bintray.com"
-    }
+    handler.mavenCentral()
     handler.maven {
+//        url "https://jcenter.bintray.com"
         url "https://oss.sonatype.org/content/repositories/snapshots"
         url "https://jitpack.io"
     }
