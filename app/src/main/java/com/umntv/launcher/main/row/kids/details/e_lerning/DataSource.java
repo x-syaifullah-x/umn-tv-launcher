@@ -9,15 +9,33 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
+    private static final String TITLE_PRESCHOOL = "Learning with Ms. Houston";
+
     private static final OverviewItem PRESCHOOL = new OverviewItem(
             R.drawable.kids_ic_e_learning,
             R.drawable.kids_ic_e_learning_bg,
             "PRESCHOOL",
             "WELCOME TO E-LEARNING PRESCHOOL",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube.<br/><br/><b>Learning with Ms. Houston<b>",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+preschool",
+//                    "https://www.youtube.com/results?search_query=e+learning+preschool",
+                    "https://www.youtube.com/watch_popup?v=U9e3rX-kQSY&list=PL9fYuDY46BTNyT6uKGKAMwWqFQP-XMoWk",
+                    null,
+                    false
+            )
+    );
+
+    private static final OverviewItem SIGHT_WORDS = new OverviewItem(
+            R.drawable.kids_ic_e_learning,
+            R.drawable.kids_ic_e_learning_bg,
+            "SIGHT WORDS",
+            "WELCOME TO E-LEARNING SIGHT WORDS",
+            OverviewItem.SUBTITLE_DEFAULT,
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube<br/><br/>.<b>Learning Time Fun",
+            new ApkData(
+//                    "https://www.youtube.com/results?search_query=e+learning+preschool",
+                    "https://www.youtube.com/embed/xBzH7gAztaI?list=PL8CyQ6qMY4V6E_0EeHg8qtYqlEMEoA1WO",
                     null,
                     false
             )
@@ -29,9 +47,10 @@ public class DataSource {
             "MATHEMATICS",
             "WELCOME TO E-LEARNING MATHEMATICS",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube.<br/><br/>.<b>Professor Dave Explains",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+mathematics+for+kids",
+//                    "https://www.youtube.com/results?search_query=e+learning+mathematics+for+kids",
+                    "https://www.youtube.com/watch_popup?v=JbhBdOfMEPs&list=PLybg94GvOJ9FoGQeUMFZ4SWZsr30jlUYK",
                     null,
                     false
             )
@@ -43,9 +62,10 @@ public class DataSource {
             "CODING",
             "WELCOME TO E-LEARNING CODING",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube.<br/>Kids for Code.<br/>kids4code.org.<br/><b>Online coding classes, 100% free.",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+coding+for+kids",
+//                    "https://www.youtube.com/results?search_query=e+learning+coding+for+kids",
+                    "https://www.youtube.com/watch_popup?v=kxSU9jP85H8&list=PL_S_MAIn05n66k5lCb3joz_fcQehF1pIe",
                     null,
                     false
             )
@@ -57,9 +77,10 @@ public class DataSource {
             "ENGLISH",
             "WELCOME TO E-LEARNING ENGLISH",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube.<br><br/><b>Daily English Conversation",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+english+for+kids",
+//                    "https://www.youtube.com/results?search_query=e+learning+english+for+kids",
+                    "https://www.youtube.com/embed/nfcIc_PhLoo?list=PLTyvAtj9OYb00pBe-pnqIB18qXchcvLii",
                     null,
                     false
             )
@@ -73,7 +94,8 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+english+grammar+for+kids",
+//                    "https://www.youtube.com/results?search_query=e+learning+english+grammar+for+kids",
+                    "https://www.youtube.com/watch_popup?v=4ncLB3JPy_w&list=PL0HMo9RIVkoxyScPHjfleUL7q8Z3hOxqn",
                     null,
                     false
             )
@@ -85,9 +107,10 @@ public class DataSource {
             "MANDARIN",
             "WELCOME TO E-LEARNING MANDARIN",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube.<br/><br/><b>ChineseFor.Us - Learn Mandarin Chinese Online<br/>chinesefor.us/AllCourses",
             new ApkData(
-                    "https://www.youtube.com/results?search_query=e+learning+chinese+for+kids",
+//                    "https://www.youtube.com/results?search_query=e+learning+chinese+for+kids",
+                    "https://www.youtube.com/embed/McZW0iDsZns?list=PLWXyZU_NJb_chvMZ13hgOPB3Vcz7xhW3q",
                     null,
                     false
             )
@@ -95,10 +118,11 @@ public class DataSource {
 
     public static final List<OverviewItem> items = List.of(
             PRESCHOOL,
+            SIGHT_WORDS,
             MATHEMATICS,
             CODING,
-            ENGLISH,
             GRAMMAR,
+            ENGLISH,
             MANDARIN
     );
 }

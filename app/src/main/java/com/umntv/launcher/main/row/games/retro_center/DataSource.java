@@ -10,7 +10,7 @@ import net.n0ender.com.R;
 public class DataSource {
 
     private static final String SUB_TITLE_UMN_RETRO = "Datadogs Communication | Muhammad Usama Nazir | RetroArch";
-    private static final String BODY_UMN_RETRO = "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats. This application is still in beta. Please see the instructions for a smoother experience.";
+    private static final String BODY_UMN_RETRO = "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats.This application is still in beta.Please see the instructions for a smoother experience.<br/>RETRO GAMES WILL NOT WORK WITH KEYBOARD OR REMOTE.<br/>PLEASE ATTACH GAME CONTROLLER TO ENJOY THIS FUNCTION.";
 
     private static final OverviewItem UMN_RETRO = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
