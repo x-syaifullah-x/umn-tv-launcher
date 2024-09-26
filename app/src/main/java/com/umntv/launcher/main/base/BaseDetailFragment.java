@@ -115,41 +115,7 @@ public class BaseDetailFragment extends DetailsSupportFragment {
                         .show();
                 return;
             }
-            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_WELCOME)) {
-                new DialogPassword(requireContext(), "_+N0")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
-            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_WELCOME_BACK)) {
-                new DialogPassword(requireContext(), "_+N0")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
-            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_MAC)) {
-                new DialogPassword(requireContext(), "_+N0")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
-            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_CUSTOMER_1)) {
-                new DialogPassword(requireContext(), "_+N0")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
-            if (overviewItem.apkData.url.equalsIgnoreCase(com.umntv.launcher.main.row.utilities.details.preload_tv.DataSource.URL_CUSTOMER_2)) {
-                new DialogPassword(requireContext(), "_+N0")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
+
             if (overviewItem.apkData.packageName.contains(DataSource.URL_LIST_CRAWLER)) {
                 new DialogPassword(requireContext(), "2023")
                         .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)

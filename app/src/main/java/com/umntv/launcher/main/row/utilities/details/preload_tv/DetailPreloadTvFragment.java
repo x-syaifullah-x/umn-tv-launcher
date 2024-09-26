@@ -13,8 +13,10 @@ import androidx.core.app.ActivityCompat;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.BaseDetailFragment;
+import com.umntv.launcher.main.base.OverviewItem;
 import com.umntv.launcher.util.Admob;
 import com.umntv.launcher.util.view.dialog.DialogEnterCode;
+import com.umntv.launcher.util.view.dialog.DialogPassword;
 import com.umntv.launcher.util.view.dialog.Download;
 
 import net.n0ender.com.R;
@@ -30,6 +32,17 @@ public class DetailPreloadTvFragment extends BaseDetailFragment {
         super.onCreate(savedInstanceState);
 
         Admob.setup(requireActivity().findViewById(R.id.adView));
+    }
+
+    @Override
+    protected void onActionClickListener(OverviewItem overviewItem) {
+        if (overviewItem.apkData.isPrivate) {
+            new DialogPassword(requireContext(), "_+N0")
+                    .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                    .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                    .show();
+            return;
+        }
     }
 
     @Override

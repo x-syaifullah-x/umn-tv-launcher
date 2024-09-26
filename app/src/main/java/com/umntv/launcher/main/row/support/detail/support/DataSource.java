@@ -14,7 +14,6 @@ public class DataSource {
             R.drawable.asian_media_jade_cinema_ic_abc_bg,
             "DINERO DATA",
             "DINERO DATA",
-//            "Find info about your local vendor",
             "Data that works for you support@dinerodata.net",
             "",
             new ApkData(
@@ -43,8 +42,8 @@ public class DataSource {
             R.drawable.asian_media_jade_cinema_ic_abc_ormal,
             "ORAMAL ENTERPRISE",
             "ORAMAL ENTERPRISE",
-            "Support local businesses",
-            "<b>support@oramal.com",
+            "Support local businesses support@oramal.com",
+            "",
             new ApkData(
                     "http://oramal.com/?page_id=18",
                     "",

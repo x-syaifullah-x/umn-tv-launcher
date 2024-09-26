@@ -9,11 +9,11 @@ import java.util.List;
 
 public class DataSource {
 
-    public static final String URL_WELCOME = "https://n0render.com/N0Launcher/Preloads/welcome.tmb";
-    public static final String URL_WELCOME_BACK = "https://n0render.com/N0Launcher/Preloads/welcome2.tmb";
-    public static final String URL_MAC = "https://n0render.com/N0Launcher/Preloads/mac.tmb";
-    public static final String URL_CUSTOMER_1 = "https://n0render.com/N0Launcher/Preloads/cus1.tmb";
-    public static final String URL_CUSTOMER_2 = "https://n0render.com/N0Launcher/Preloads/cus2.tmb";
+    private static final String URL_WELCOME = "https://n0render.com/N0Launcher/Preloads/welcome.tmb";
+    private static final String URL_WELCOME_BACK = "https://n0render.com/N0Launcher/Preloads/welcomebk.tmb";
+    private static final String URL_MAC = "https://n0render.com/N0Launcher/Preloads/mac.tmb";
+    private static final String URL_CUSTOMER_1 = "https://n0render.com/N0Launcher/Preloads/cus1.tmb";
+    private static final String URL_CUSTOMER_2 = "https://n0render.com/N0Launcher/Preloads/cus2.tmb";
     public static final String URL_SELF_LOAD = "https://n0render.com/Selfload";
     public static final String URL_CODE_REQUEST = "n0browser://n0render.com/self-loaded-preload";
 
@@ -97,7 +97,7 @@ public class DataSource {
             new ApkData(
                     URL_SELF_LOAD,
                     null,
-                    false
+                    true
             )
     );
 
@@ -111,7 +111,7 @@ public class DataSource {
             new ApkData(
                     URL_CODE_REQUEST,
                     null,
-                    false
+                    true
             )
     );
 
