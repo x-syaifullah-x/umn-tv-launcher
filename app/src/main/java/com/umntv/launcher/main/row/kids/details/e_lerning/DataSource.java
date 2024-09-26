@@ -9,8 +9,6 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
-    private static final String TITLE_PRESCHOOL = "Learning with Ms. Houston";
-
     private static final OverviewItem PRESCHOOL = new OverviewItem(
             R.drawable.kids_ic_e_learning,
             R.drawable.kids_ic_e_learning_bg,
@@ -92,7 +90,7 @@ public class DataSource {
             "GRAMMAR",
             "WELCOME TO E-LEARNING GRAMMAR",
             OverviewItem.SUBTITLE_DEFAULT,
-            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube",
+            "Teach or learn with your child/children! E-learning videos, classes, and lessons are available on YouTube<br/><br/><b>LucyMax English",
             new ApkData(
 //                    "https://www.youtube.com/results?search_query=e+learning+english+grammar+for+kids",
                     "https://www.youtube.com/watch_popup?v=4ncLB3JPy_w&list=PL0HMo9RIVkoxyScPHjfleUL7q8Z3hOxqn",

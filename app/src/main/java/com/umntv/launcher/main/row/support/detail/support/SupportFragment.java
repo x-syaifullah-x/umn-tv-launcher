@@ -25,14 +25,21 @@ public class SupportFragment extends BaseDetailFragment {
         Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
+
     @Override
     protected void openOrDownload(ApkData apkData) {
         try {
-            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(apkData.url));
-            requireContext().startActivity(myIntent);
-        } catch (ActivityNotFoundException e) {
-            Toast.makeText(getContext(), "No application can handle this request." + " Please install a webbrowser", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
+            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
+            if (launchIntent == null) return;
+            launchIntent.setData(Uri.parse(apkData.url));
+//            intent.setPackage("com.jio.web.androidtv");
+            startActivity(launchIntent);
+        } catch (Throwable t) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            String uriString = apkData.url;
+            intent.setData(Uri.parse(uriString));
+            startActivity(intent);
         }
     }
 }

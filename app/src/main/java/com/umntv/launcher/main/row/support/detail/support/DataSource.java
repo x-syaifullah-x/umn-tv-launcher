@@ -19,7 +19,7 @@ public class DataSource {
             "",
             new ApkData(
                     "https://dinerodata.net/?page_id=13",
-                    "jade.umn.net",
+                    "",
                     false
             )
     );
@@ -33,7 +33,7 @@ public class DataSource {
             "",
             new ApkData(
                     "https://n0render.com/tech-support",
-                    "jade.umn.net",
+                    "",
                     false
             )
     );
@@ -44,7 +44,7 @@ public class DataSource {
             "ORAMAL ENTERPRISE",
             "ORAMAL ENTERPRISE",
             "Support local businesses",
-            "support@oramal.com",
+            "<b>support@oramal.com",
             new ApkData(
                     "http://oramal.com/?page_id=18",
                     "",
